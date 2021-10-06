@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Orirock",
+    "tier": 1,
+    "recipe": []
+  },
+  {
+    "name": "Orirock Cube",
+    "tier": 2,
+    "recipe": [
+      {
+        "name": "Orirock",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Orirock Cluster",
+    "tier": 3,
+    "recipe": [
+      {
+        "name": "Orirock Cube",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "Orirock Concentration",
+    "tier": 4,
+    "recipe": [
+      {
+        "name": "Orirock Cluster",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "Polymerization Preparation",
+    "tier": 5,
+    "recipe": [
+      {
+        "name": "Orirock Concentration",
+        "quantity": 1
+      },
+      {
+        "name": "Oriron Block",
+        "quantity": 1
+      },
+      {
+        "name": "Keton Colloid",
+        "quantity": 1
+      }
+    ]
+  }
+]
+D32 Steel
+Bipola Nanoflake
+Crystalline Electroassembly
+RMA70-24
+Grindstone Pentahydrate
+Manganese Trihydrate
+White Horse Kohl
+Optimized Device
+Keton Colloid
+Oriron Block
+Polyester Lump
+Sugar Lump
+Orirock Concentration
+Incandescent Alloy Block
+Polymerized Gel
+Crystalline Circuit
+Integrated Device
+Aketon
+Oriron Cluster
+Polyester Pack
+Sugar Pack
+Orirock Cluster
+Loxic Kohl
+Grindstone
+Manganese Ore
+RMA70-12
+Incandescent Alloy
+Coagulating Gel
+Crystalline Component
+Device
+Polyketon
+Oriron
+Polyester
+Sugar
+Orirock Cube
