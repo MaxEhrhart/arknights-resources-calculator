@@ -53,9 +53,12 @@
     ]
   }
 ]
+T5
 D32 Steel
 Bipola Nanoflake
 Crystalline Electroassembly
+
+T4
 RMA70-24
 Grindstone Pentahydrate
 Manganese Trihydrate
@@ -69,6 +72,8 @@ Orirock Concentration
 Incandescent Alloy Block
 Polymerized Gel
 Crystalline Circuit
+
+T3
 Integrated Device
 Aketon
 Oriron Cluster
@@ -82,9 +87,19 @@ RMA70-12
 Incandescent Alloy
 Coagulating Gel
 Crystalline Component
+
+T2
 Device
 Polyketon
 Oriron
 Polyester
 Sugar
 Orirock Cube
+
+T1
+Damaged Device
+Diketon
+Oriron Shard
+Ester
+Sugar Substitute
+Orirock
