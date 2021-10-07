@@ -33,9 +33,11 @@ class Operator:
     stars: int = 0
 
 
-def sum_skill_upgrade_resources(upgrades):
+def sum_skill_upgrade_resources(upgrades, user_op):
     resources = dict()
     for level in upgrades:
+        if level['level'] > int(user_op['skill_level']):
+            break
         for iteration, resource in enumerate(level['resources']):
             key = resource['name']
             value = resource['quantity']
@@ -47,17 +49,15 @@ def calc_resource(operator: dict):
     resources = dict()
     for op in operators_data:
         if operator['operator'] in op['name']:
-            resources = {**resources, **sum_skill_upgrade_resources(op['skills']['upgrade'])}
+            resources = {**resources, **sum_skill_upgrade_resources(op['skills']['upgrade'], operator)}
     print(operator['operator'], resources)
 
 
-# if __name__ == "__main__":
-# print(resources_data)
-# print(operators_data)
-with open(user_operators_path, mode="r", encoding="utf-8") as f:
-    csv_reader = csv.DictReader(f, delimiter=';')
-    for operator in csv_reader:
-        calc_resource(operator)
+if __name__ == "__main__":
+    with open(user_operators_path, mode="r", encoding="utf-8") as f:
+        csv_reader = csv.DictReader(f, delimiter=';')
+        for operator in csv_reader:
+            calc_resource(operator)
 
 
 # df_resources = pd.read_json(resources_path)
