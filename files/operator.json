@@ -129,6 +129,50 @@
           }
         }
       ]
-    }
+    },
+    "elite": [
+      {
+        "level": 1,
+        "resources": [
+          {
+            "name": "lmd",
+            "quantity": 30000
+          },
+          {
+            "name": "Guard Chip",
+            "quantity": 5
+          },
+          {
+            "name": "Polyester",
+            "quantity": 8
+          },
+          {
+            "name": "Device",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "resources": [
+          {
+            "name": "lmd",
+            "quantity": 180000
+          },
+          {
+            "name": "Guard Dualchip",
+            "quantity": 4
+          },
+          {
+            "name": "D32 Steel",
+            "quantity": 4
+          },
+          {
+            "name": "White Horse Kohl",
+            "quantity": 6
+          }
+        ]
+      }
+    ]
   }
 ]
