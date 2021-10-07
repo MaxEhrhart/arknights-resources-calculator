@@ -110,41 +110,41 @@
             }
           ]
         }
-      ]
-    },
-    "mastery": [
-      {
-        "S1": {
-          "name": "",
-          "level": 1,
-          "resources": [
-            {
-              "name": "",
-              "quantity": 1
-            }
-          ]
-        },
-        "S2": {
-          "name": "",
-          "level": 1,
-          "resources": [
-            {
-              "name": "",
-              "quantity": 1
-            }
-          ]
-        },
-        "S3": {
-          "name": "",
-          "level": 1,
-          "resources": [
-            {
-              "name": "",
-              "quantity": 1
-            }
-          ]
+      ],
+      "mastery": [
+        {
+          "S1": {
+            "name": "",
+            "level": 1,
+            "resources": [
+              {
+                "name": "",
+                "quantity": 1
+              }
+            ]
+          },
+          "S2": {
+            "name": "",
+            "level": 1,
+            "resources": [
+              {
+                "name": "",
+                "quantity": 1
+              }
+            ]
+          },
+          "S3": {
+            "name": "",
+            "level": 1,
+            "resources": [
+              {
+                "name": "",
+                "quantity": 1
+              }
+            ]
+          }
         }
-      }
-    ]
+      ]
+    }
   }
 ]
