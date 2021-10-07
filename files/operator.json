@@ -97,36 +97,124 @@
       ],
       "mastery": [
         {
-          "S1": {
-            "name": "",
-            "level": 1,
-            "resources": [
-              {
-                "name": "",
-                "quantity": 1
-              }
-            ]
-          },
-          "S2": {
-            "name": "",
-            "level": 1,
-            "resources": [
-              {
-                "name": "",
-                "quantity": 1
-              }
-            ]
-          },
-          "S3": {
-            "name": "",
-            "level": 1,
-            "resources": [
-              {
-                "name": "",
-                "quantity": 1
-              }
-            ]
-          }
+          "skill": 1,
+          "upgrade": [
+            {
+              "level": 1,
+              "resources": [
+                {
+                  "name": "Skill Summary - 3",
+                  "quantity": 6
+                },
+                {
+                  "name": "Oriron Block",
+                  "quantity": 4
+                },
+                {
+                  "name": "Sugar Pack",
+                  "quantity": 4
+                }
+              ]
+            },
+            {
+              "level": 2,
+              "resources": [
+                {
+                  "name": "",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "level": 3,
+              "resources": [
+                {
+                  "name": "",
+                  "quantity": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "skill": 2,
+          "upgrade": [
+            {
+              "level": 1,
+              "resources": [
+                {
+                  "name": "Skill Summary - 3",
+                  "quantity": 6
+                },
+                {
+                  "name": "Oriron Block",
+                  "quantity": 4
+                },
+                {
+                  "name": "Sugar Pack",
+                  "quantity": 4
+                }
+              ]
+            },
+            {
+              "level": 2,
+              "resources": [
+                {
+                  "name": "",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "level": 3,
+              "resources": [
+                {
+                  "name": "",
+                  "quantity": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "skill": 3,
+          "upgrade": [
+            {
+              "level": 1,
+              "resources": [
+                {
+                  "name": "Skill Summary - 3",
+                  "quantity": 6
+                },
+                {
+                  "name": "Oriron Block",
+                  "quantity": 4
+                },
+                {
+                  "name": "Sugar Pack",
+                  "quantity": 4
+                }
+              ]
+            },
+            {
+              "level": 2,
+              "resources": [
+                {
+                  "name": "",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "level": 3,
+              "resources": [
+                {
+                  "name": "",
+                  "quantity": 1
+                }
+              ]
+            }
+          ]
         }
       ]
     },
