@@ -1,8 +1,9 @@
 # encoding: utf-8
 import json
 import csv
-# import pandas as pd
 from dataclasses import dataclass
+from collections import Counter
+from multiprocessing.pool import ThreadPool as Pool
 
 resources_path = 'files/resource.json'
 operators_path = 'files/operator.json'
@@ -45,22 +46,51 @@ def sum_skill_upgrade_resources(upgrades, user_op):
     return resources
 
 
-def calc_resource(operator: dict):
+def sum_mastery_upgrade_resources(upgrades, user_op):
+    resources = dict()
+    for skill_mastery in upgrades:
+        for level in skill_mastery['upgrade']:
+            for resource in level['resources']:
+                key = resource['name']
+                value = resource['quantity']
+                resources[key] = resources.get(key, 0) + value
+    return resources
+
+
+def sum_elite_upgrade_resources(upgrades, user_op):
+    resources = dict()
+    for level in upgrades:
+        if level['level'] > int(user_op['elite']):
+            break
+        for iteration, resource in enumerate(level['resources']):
+            key = resource['name']
+            value = resource['quantity']
+            resources[key] = resources.get(key, 0) + value
+    return resources
+
+
+def calc_operator_resources(operator: dict):
     resources = dict()
     for op in operators_data:
-        if operator['operator'] in op['name']:
-            resources = {**resources, **sum_skill_upgrade_resources(op['skills']['upgrade'], operator)}
-    print(operator['operator'], resources)
+        if operator['name'] in op['name']:
+            skill_resources = sum_skill_upgrade_resources(op['skills']['upgrade'], operator)
+            elite_resources = sum_elite_upgrade_resources(op['elite'], operator)
+            mastery_resources = sum_mastery_upgrade_resources(op['skills']['mastery'], operator)
+            resources = Counter(skill_resources) + Counter(elite_resources) + Counter(mastery_resources)
+    return resources
+
+
+def calc_total_resources(operators):
+    from functools import reduce
+    resources = dict()
+    with Pool(8) as p:
+        operator_resources_list = p.map(calc_operator_resources,operators)
+    operator_resources_list = [calc_operator_resources(operator) for operator in operators]
+    return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
 
 
 if __name__ == "__main__":
     with open(user_operators_path, mode="r", encoding="utf-8") as f:
-        csv_reader = csv.DictReader(f, delimiter=';')
-        for operator in csv_reader:
-            calc_resource(operator)
-
-
-# df_resources = pd.read_json(resources_path)
-# df_operators = pd.read_json(operators_path)
-# print(df_resources)
-# print(df_operators)
+        operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
+        f.close()
+    print(calc_total_resources(operators))
