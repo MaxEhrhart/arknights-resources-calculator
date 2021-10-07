@@ -6,6 +6,10 @@
       "upgrade": [
         {
           "level": 1,
+          "resources": []
+        },
+        {
+          "level": 2,
           "resources": [
             {
               "name": "Skill Summary - 1",
@@ -14,7 +18,7 @@
           ]
         },
         {
-          "level": 2,
+          "level": 3,
           "resources": [
             {
               "name": "Skill Summary - 1",
@@ -31,82 +35,62 @@
           ]
         },
         {
-          "level": 3,
-          "name": "",
-          "resources": [
-            {
-              "name": "",
-              "quantity": 1
-            }
-          ]
-        },
-        {
           "level": 4,
-          "name": "",
           "resources": [
             {
-              "name": "",
-              "quantity": 1
+              "name": "Skill Summary - 2",
+              "quantity": 8
+            },
+            {
+              "name": "Oriron",
+              "quantity": 4
             }
           ]
         },
         {
           "level": 5,
-          "name": "",
           "resources": [
             {
-              "name": "",
-              "quantity": 1
+              "name": "Skill Summary - 2",
+              "quantity": 8
+            },
+            {
+              "name": "Polyketon",
+              "quantity": 4
+            },
+            {
+              "name": "Orirock Cube",
+              "quantity": 5
             }
           ]
         },
         {
           "level": 6,
-          "name": "",
           "resources": [
             {
-              "name": "",
-              "quantity": 1
+              "name": "Skill Summary - 2",
+              "quantity": 8
+            },
+            {
+              "name": "Sugar Pack",
+              "quantity": 7
             }
           ]
         },
         {
           "level": 7,
-          "name": "",
           "resources": [
             {
-              "name": "",
-              "quantity": 1
-            }
-          ]
-        },
-        {
-          "level": 8,
-          "name": "",
-          "resources": [
+              "name": "Skill Summary - 3",
+              "quantity": 8
+            },
             {
-              "name": "",
-              "quantity": 1
-            }
-          ]
-        },
-        {
-          "level": 9,
-          "name": "",
-          "resources": [
+              "name": "Polyester Pack",
+              "quantity": 4
+            },
             {
-              "name": "",
-              "quantity": 1
-            }
-          ]
-        },
-        {
-          "level": 10,
-          "name": "",
-          "resources": [
-            {
-              "name": "",
-              "quantity": 1
+              "name": "Manganese Ore",
+              "quantity": 5
             }
           ]
         }
