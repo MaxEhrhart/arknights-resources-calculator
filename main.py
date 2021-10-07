@@ -26,9 +26,15 @@ class Operator:
 
 if __name__ == "__main__":
     resources_path = 'files/resource.json'
-    # data = read_json(resources_path)
-    df_resources = pd.read_json(resources_path)
-    print(df_resources)
-    # print(json.dumps(data, indent=4, sort_keys=True))
+    operators_path = 'files/operator.json'
 
+    resources_data = read_json(resources_path)
+    print(resources_data)
 
+    operators_data = read_json(operators_path)
+    print(operators_data)
+
+    # df_resources = pd.read_json(resources_path)
+    # df_operators = pd.read_json(operators_path)
+    # print(df_resources)
+    # print(df_operators)

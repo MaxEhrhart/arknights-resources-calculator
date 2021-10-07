@@ -1,0 +1,150 @@
+[
+  {
+    "name": "Silverash",
+    "star": 6,
+    "skills": {
+      "upgrade": [
+        {
+          "level": 1,
+          "resources": [
+            {
+              "name": "Skill Summary - 1",
+              "quantity": 5
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "resources": [
+            {
+              "name": "Skill Summary - 1",
+              "quantity": 5
+            },
+            {
+              "name": "Ester",
+              "quantity": 6
+            },
+            {
+              "name": "Oriron Shard",
+              "quantity": 4
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "name": "",
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "name": "",
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "name": "",
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "level": 6,
+          "name": "",
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "level": 7,
+          "name": "",
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "level": 8,
+          "name": "",
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "level": 9,
+          "name": "",
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "level": 10,
+          "name": "",
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    "mastery": [
+      {
+        "S1": {
+          "name": "",
+          "level": 1,
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        "S2": {
+          "name": "",
+          "level": 1,
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        },
+        "S3": {
+          "name": "",
+          "level": 1,
+          "resources": [
+            {
+              "name": "",
+              "quantity": 1
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
