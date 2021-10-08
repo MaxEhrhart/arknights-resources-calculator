@@ -77,7 +77,7 @@ def sum_elite_upgrade_resources(upgrades, user_op):
 def calc_operator_resources(operator: dict):
     resources = dict()
     for op in operators_data:
-        if operator['name'].upper() in op['name'].upper():
+        if operator['name'].upper() == op['name'].upper():
             skill_resources = sum_skill_upgrade_resources(op['skills']['upgrade'], operator)
             elite_resources = sum_elite_upgrade_resources(op['elite'], operator)
             mastery_resources = sum_mastery_upgrade_resources(op['skills']['mastery'], operator)
