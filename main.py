@@ -77,20 +77,21 @@ def sum_elite_upgrade_resources(upgrades, user_op):
 def calc_operator_resources(operator: dict):
     resources = dict()
     for op in operators_data:
-        if operator['name'] in op['name']:
+        if operator['name'].upper() in op['name'].upper():
             skill_resources = sum_skill_upgrade_resources(op['skills']['upgrade'], operator)
             elite_resources = sum_elite_upgrade_resources(op['elite'], operator)
             mastery_resources = sum_mastery_upgrade_resources(op['skills']['mastery'], operator)
             resources = Counter(skill_resources) + Counter(elite_resources) + Counter(mastery_resources)
-            print(operator['name'], resources)
+            print(operator['name'], resources, sep=": ")
     return resources
 
 
 def calc_total_resources(operators):
     from functools import reduce
     resources = dict()
-    with Pool(8) as p:
-        operator_resources_list = p.map(calc_operator_resources, operators)
+    # with Pool(8) as p:
+    #     operator_resources_list = p.map(calc_operator_resources, operators)
+    operator_resources_list = [calc_operator_resources(operator) for operator in operators]
     return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
 
 
@@ -98,4 +99,5 @@ if __name__ == "__main__":
     with open(user_operators_path, mode="r", encoding="utf-8") as f:
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
         f.close()
-    print(calc_total_resources(operators))
+    print()
+    print("Total resources:", calc_total_resources(operators))
