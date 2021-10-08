@@ -82,6 +82,7 @@ def calc_operator_resources(operator: dict):
             elite_resources = sum_elite_upgrade_resources(op['elite'], operator)
             mastery_resources = sum_mastery_upgrade_resources(op['skills']['mastery'], operator)
             resources = Counter(skill_resources) + Counter(elite_resources) + Counter(mastery_resources)
+            print(operator['name'], resources)
     return resources
 
 
@@ -90,7 +91,6 @@ def calc_total_resources(operators):
     resources = dict()
     with Pool(8) as p:
         operator_resources_list = p.map(calc_operator_resources, operators)
-    operator_resources_list = [calc_operator_resources(operator) for operator in operators]
     return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
 
 

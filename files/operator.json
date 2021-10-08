@@ -271,7 +271,7 @@
         "level": 1,
         "resources": [
           {
-            "name": "lmd",
+            "name": "LMD",
             "quantity": 30000
           },
           {
@@ -292,7 +292,7 @@
         "level": 2,
         "resources": [
           {
-            "name": "lmd",
+            "name": "LMD",
             "quantity": 180000
           },
           {
