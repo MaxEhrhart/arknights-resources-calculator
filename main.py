@@ -49,7 +49,12 @@ def sum_skill_upgrade_resources(upgrades, user_op):
 def sum_mastery_upgrade_resources(upgrades, user_op):
     resources = dict()
     for skill_mastery in upgrades:
+        # sai do laco se a skill nao tem maestria
+        if int(user_op[f's{skill_mastery["skill"]}_mastery']) <= 0:
+            break
         for level in skill_mastery['upgrade']:
+            if level['level'] > int(user_op[f's{skill_mastery["skill"]}_mastery']):
+                break
             for resource in level['resources']:
                 key = resource['name']
                 value = resource['quantity']
@@ -84,7 +89,7 @@ def calc_total_resources(operators):
     from functools import reduce
     resources = dict()
     with Pool(8) as p:
-        operator_resources_list = p.map(calc_operator_resources,operators)
+        operator_resources_list = p.map(calc_operator_resources, operators)
     operator_resources_list = [calc_operator_resources(operator) for operator in operators]
     return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
 
