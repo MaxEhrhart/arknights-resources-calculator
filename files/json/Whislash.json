@@ -1,0 +1,248 @@
+{
+  "name": "Whislash",
+  "stars": 5,
+  "skills": {
+    "upgrade": [
+      {
+        "level": 1,
+        "resources": []
+      },
+      {
+        "level": 2,
+        "resources": [
+          {
+            "name": "Skill Summary - 1",
+            "quantity": 4
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "resources": [
+          {
+            "name": "Skill Summary - 1",
+            "quantity": 4
+          },
+          {
+            "name": "Oriron Shard",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 6
+          },
+          {
+            "name": "Polyester",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 6
+          },
+          {
+            "name": "Device",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 6
+          },
+          {
+            "name": "Manganese Ore",
+            "quantity": 4
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "resources": [
+          {
+            "name": "Skill Summary - 3",
+            "quantity": 6
+          },
+          {
+            "name": "Oriron Cluster",
+            "quantity": 2
+          },
+          {
+            "name": "Grindstone",
+            "quantity": 3
+          }
+        ]
+      }
+    ],
+    "mastery": [
+      {
+        "skill": 1,
+        "upgrade": [
+          {
+            "level": 1,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 5
+              },
+              {
+                "name": "RMA70-24",
+                "quantity": 3
+              },
+              {
+                "name": "Manganese Ore",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 6
+              },
+              {
+                "name": "Oriron Block",
+                "quantity": 3
+              },
+              {
+                "name": "Incandescent Alloy Block",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 10
+              },
+              {
+                "name": "D32 Steel",
+                "quantity": 4
+              },
+              {
+                "name": "Optimized Device",
+                "quantity": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "skill": 2,
+        "upgrade": [
+          {
+            "level": 1,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 5
+              },
+              {
+                "name": "Polymerized Gel",
+                "quantity": 3
+              },
+              {
+                "name": "Orirock Cluster",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 6
+              },
+              {
+                "name": "Optimized Device",
+                "quantity": 2
+              },
+              {
+                "name": "Oriron Block",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 10
+              },
+              {
+                "name": "Polymerization Preparation",
+                "quantity": 4
+              },
+              {
+                "name": "Manganese Trihydrate",
+                "quantity": 4
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "elite": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "name": "LMD",
+          "quantity": 20000
+        },
+        {
+          "name": "Guard Chip",
+          "quantity": 4
+        },
+        {
+          "name": "Orirock Cube",
+          "quantity": 6
+        },
+        {
+          "name": "Polyketon",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "resources": [
+        {
+          "name": "LMD",
+          "quantity": 120000
+        },
+        {
+          "name": "Guard Dualchip",
+          "quantity": 3
+        },
+        {
+          "name": "Keton Colloid",
+          "quantity": 7
+        },
+        {
+          "name": "Coagulating Gel",
+          "quantity": 12
+        }
+      ]
+    }
+  ]
+}

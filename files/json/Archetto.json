@@ -1,0 +1,312 @@
+{
+  "name": "Archetto",
+  "stars": 6,
+  "skills": {
+    "upgrade": [
+      {
+        "level": 1,
+        "resources": []
+      },
+      {
+        "level": 2,
+        "resources": [
+          {
+            "name": "Skill Summary - 1",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "resources": [
+          {
+            "name": "Skill Summary - 1",
+            "quantity": 5
+          },
+          {
+            "name": "Diketon",
+            "quantity": 6
+          },
+          {
+            "name": "Orirock",
+            "quantity": 4
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 8
+          },
+          {
+            "name": "Device",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 8
+          },
+          {
+            "name": "Orirock Cube",
+            "quantity": 5
+          },
+          {
+            "name": "Device",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 8
+          },
+          {
+            "name": "Manganese Ore",
+            "quantity": 6
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "resources": [
+          {
+            "name": "Skill Summary - 3",
+            "quantity": 8
+          },
+          {
+            "name": "Grindstone",
+            "quantity": 4
+          },
+          {
+            "name": "Orirock Cluster",
+            "quantity": 5
+          }
+        ]
+      }
+    ],
+    "mastery": [
+      {
+        "skill": 1,
+        "upgrade": [
+          {
+            "level": 1,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 8
+              },
+              {
+                "name": "Optimized Device",
+                "quantity": 3
+              },
+              {
+                "name": "Oriron Cluster",
+                "quantity": 4
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 12
+              },
+              {
+                "name": "RMA70-24",
+                "quantity": 4
+              },
+              {
+                "name": "Manganese Trihydrate",
+                "quantity": 7
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 15
+              },
+              {
+                "name": "Polymerization Preparation",
+                "quantity": 6
+              },
+              {
+                "name": "White Horse Kohl",
+                "quantity": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "skill": 2,
+        "upgrade": [
+          {
+            "level": 1,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 8
+              },
+              {
+                "name": "White Horse Kohl",
+                "quantity": 4
+              },
+              {
+                "name": "Aketon",
+                "quantity": 8
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 12
+              },
+              {
+                "name": "Crystalline Circuit",
+                "quantity": 4
+              },
+              {
+                "name": "Polymerized Gel",
+                "quantity": 8
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 15
+              },
+              {
+                "name": "D32 Steel",
+                "quantity": 6
+              },
+              {
+                "name": "RMA70-24",
+                "quantity": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "skill": 3,
+        "upgrade": [
+          {
+            "level": 1,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 8
+              },
+              {
+                "name": "Manganese Trihydrate",
+                "quantity": 4
+              },
+              {
+                "name": "Integrated Device",
+                "quantity": 4
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 12
+              },
+              {
+                "name": "Orirock Concentration",
+                "quantity": 4
+              },
+              {
+                "name": "Grindstone Pentahydrate",
+                "quantity": 9
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 15
+              },
+              {
+                "name": "Crystalline Electroassembly",
+                "quantity": 6
+              },
+              {
+                "name": "RMA70-24",
+                "quantity": 4
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "elite": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "name": "LMD",
+          "quantity": 30000
+        },
+        {
+          "name": "Sniper Chip",
+          "quantity": 5
+        },
+        {
+          "name": "Oriron",
+          "quantity": 7
+        },
+        {
+          "name": "Sugar",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "resources": [
+        {
+          "name": "LMD",
+          "quantity": 180000
+        },
+        {
+          "name": "Sniper Dualchip",
+          "quantity": 4
+        },
+        {
+          "name": "Polymerization Preparation",
+          "quantity": 4
+        },
+        {
+          "name": "Orirock Concentration",
+          "quantity": 8
+        }
+      ]
+    }
+  ]
+}

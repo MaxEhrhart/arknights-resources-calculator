@@ -1,0 +1,312 @@
+{
+  "name": "Ash",
+  "stars": 6,
+  "skills": {
+    "upgrade": [
+      {
+        "level": 1,
+        "resources": []
+      },
+      {
+        "level": 2,
+        "resources": [
+          {
+            "name": "Skill Summary - 1",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "resources": [
+          {
+            "name": "Skill Summary - 1",
+            "quantity": 5
+          },
+          {
+            "name": "Sugar Substitute",
+            "quantity": 5
+          },
+          {
+            "name": "Diketon",
+            "quantity": 4
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 8
+          },
+          {
+            "name": "Polyester",
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 8
+          },
+          {
+            "name": "Oriron",
+            "quantity": 4
+          },
+          {
+            "name": "Sugar",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "resources": [
+          {
+            "name": "Skill Summary - 2",
+            "quantity": 8
+          },
+          {
+            "name": "Crystalline Component",
+            "quantity": 6
+          }
+        ]
+      },
+      {
+        "level": 7,
+        "resources": [
+          {
+            "name": "Skill Summary - 3",
+            "quantity": 8
+          },
+          {
+            "name": "Orirock Cluster",
+            "quantity": 5
+          },
+          {
+            "name": "Integrated Device",
+            "quantity": 4
+          }
+        ]
+      }
+    ],
+    "mastery": [
+      {
+        "skill": 1,
+        "upgrade": [
+          {
+            "level": 1,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 8
+              },
+              {
+                "name": "Oriron Block",
+                "quantity": 4
+              },
+              {
+                "name": "Incandescent Alloy",
+                "quantity": 4
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 12
+              },
+              {
+                "name": "Manganese Trihydrate",
+                "quantity": 4
+              },
+              {
+                "name": "Optimized Device",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 15
+              },
+              {
+                "name": "D32 Steel",
+                "quantity": 6
+              },
+              {
+                "name": "Grindstone Pentahydrate",
+                "quantity": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "skill": 2,
+        "upgrade": [
+          {
+            "level": 1,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 8
+              },
+              {
+                "name": "Keton Colloid",
+                "quantity": 4
+              },
+              {
+                "name": "Coagulating Gel",
+                "quantity": 4
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 12
+              },
+              {
+                "name": "Grindstone Pentahydrate",
+                "quantity": 4
+              },
+              {
+                "name": "White Horse Kohl",
+                "quantity": 9
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 15
+              },
+              {
+                "name": "Crystalline Electroassembly",
+                "quantity": 6
+              },
+              {
+                "name": "Optimized Device",
+                "quantity": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "skill": 3,
+        "upgrade": [
+          {
+            "level": 1,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 8
+              },
+              {
+                "name": "Optimized Device",
+                "quantity": 3
+              },
+              {
+                "name": "Oriron Cluster",
+                "quantity": 4
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 12
+              },
+              {
+                "name": "RMA70-24",
+                "quantity": 4
+              },
+              {
+                "name": "Manganese Trihydrate",
+                "quantity": 7
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "resources": [
+              {
+                "name": "Skill Summary - 3",
+                "quantity": 15
+              },
+              {
+                "name": "Bipolar Nanoflake",
+                "quantity": 6
+              },
+              {
+                "name": "Keton Colloid",
+                "quantity": 5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "elite": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "name": "LMD",
+          "quantity": 30000
+        },
+        {
+          "name": "Sniper Chip",
+          "quantity": 5
+        },
+        {
+          "name": "Orirock Cube",
+          "quantity": 11
+        },
+        {
+          "name": "Oriron",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "resources": [
+        {
+          "name": "LMD",
+          "quantity": 180000
+        },
+        {
+          "name": "Sniper Dualchip",
+          "quantity": 4
+        },
+        {
+          "name": "D32 Steel",
+          "quantity": 4
+        },
+        {
+          "name": "Polymerized Gel",
+          "quantity": 6
+        }
+      ]
+    }
+  ]
+}
