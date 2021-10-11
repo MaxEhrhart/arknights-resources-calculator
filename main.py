@@ -2,12 +2,14 @@
 import json
 import csv
 from dataclasses import dataclass
-from collections import Counter
+from collections import Counter, OrderedDict
 from multiprocessing.pool import ThreadPool as Pool
+import os
+
 
 resources_path = 'files/resource.json'
-operators_path = 'files/operator.json'
-user_operators_path = 'files/user_operators.csv'
+operators_path = 'files/json'
+user_operators_path = 'files/csv/user_operators.csv'
 
 
 def read_json(file_path: str) -> dict:
@@ -19,7 +21,7 @@ def read_json(file_path: str) -> dict:
 
 
 resources_data = read_json(resources_path)
-operators_data = read_json(operators_path)
+operators_data = [read_json(operators_path+"/"+file) for file in os.listdir(operators_path)]
 
 
 @dataclass
@@ -82,7 +84,7 @@ def calc_operator_resources(operator: dict):
             elite_resources = sum_elite_upgrade_resources(op['elite'], operator)
             mastery_resources = sum_mastery_upgrade_resources(op['skills']['mastery'], operator)
             resources = Counter(skill_resources) + Counter(elite_resources) + Counter(mastery_resources)
-            print(operator['name'], resources, sep=": ")
+            # print(operator['name'], resources, sep=": ")
     return resources
 
 
@@ -100,4 +102,7 @@ if __name__ == "__main__":
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
         f.close()
     print()
-    print("Total resources:", calc_total_resources(operators))
+    total_resources = calc_total_resources(operators)
+    total_resources = OrderedDict(sorted(total_resources.items()))
+    print("Total resources:")
+    [print(resource, quantity, sep=": ") for resource, quantity in total_resources.items()]
