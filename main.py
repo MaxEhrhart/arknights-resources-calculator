@@ -152,7 +152,7 @@ def calc_resources_needed(global_resources, user_resources) -> dict:
 def save_as_csv(resources, file_path, show: bool = False) -> pd.DataFrame:
     print(resources)
     df = pd.DataFrame(data=resources.items(), columns=["Resource", "Quantity"])
-    df = df.astype({'Resource': 'string', 'Quantity': 'int16'})
+    df = df.astype({'Resource': 'string', 'Quantity': 'int32'})
     df.sort_values(by=['Resource'], inplace=True)
     df.reset_index(inplace=True, drop=True)
     df.to_csv(file_path, sep=';', header=True, encoding='utf8', index=False)
@@ -172,12 +172,10 @@ if __name__ == "__main__":
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
 
     print("Global resources.")
-    global_resources = save_as_csv(calc_global_resources(), operators_filepath, show=False)
-    global_resources = global_resources.set_index('Resource')
+    global_resources = save_as_csv(calc_global_resources(), operators_filepath, show=False).set_index('Resource')
 
     print("User total resources.")
-    user_resources = save_as_csv(calc_user_total_resources(operators), spent_filepath, show=False)
-    user_resources = user_resources.set_index('Resource')
+    user_resources = save_as_csv(calc_user_total_resources(operators), spent_filepath, show=False).set_index('Resource')
 
     print("Resources Needed:")
     user_resources = save_as_csv(calc_resources_needed(global_resources, user_resources), needed_filepath, show=True)
