@@ -2,28 +2,30 @@
 import json
 import csv
 from dataclasses import dataclass
-from collections import Counter, OrderedDict
-# from multiprocessing.pool import ThreadPool as Pool
+from collections import Counter, OrderedDict, defaultdict
+from multiprocessing.pool import ThreadPool as Pool
 import os
 from functools import reduce
 from typing import *
-
+from datetime import datetime
+import pandas as pd
+from pathlib import Path
 
 resources_path = 'files/resource.json'
 operators_path = 'files/json'
 user_operators_path = 'files/csv/user_operators.csv'
 
 
-def read_json(file_path: str) -> dict:
+def read_json(file_path: str, show: bool = False) -> dict:
     with open(file_path, mode='r', encoding='utf-8') as f:
-        print(f"Validating json: {file_path}")
+        print(f"Validating json: {file_path}") if show else None
         data = json.load(f)
         f.close()
     return data
 
 
-resources_data: dict = read_json(resources_path)
-operators_data: List[dict] = [read_json(operators_path + "/" + file) for file in os.listdir(operators_path)]
+resources_data = read_json(resources_path)
+operators_data = [read_json(operators_path + "/" + file, show=False) for file in os.listdir(operators_path)]
 
 
 @dataclass
@@ -92,9 +94,9 @@ def calc_operator_resources(operator: dict):
 
 def calc_user_total_resources(operators):
     resources = dict()
-    # with Pool(8) as p:
-    #     operator_resources_list = p.map(calc_operator_resources, operators)
-    operator_resources_list = [calc_operator_resources(operator) for operator in operators]
+    with Pool(12) as p:
+        operator_resources_list = p.map(calc_operator_resources, operators)
+    # operator_resources_list = [calc_operator_resources(operator) for operator in operators]
     return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
 
 
@@ -137,22 +139,45 @@ def calc_global_resources():
     return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
 
 
-def calc_resources_needed():
+def calc_resources_needed(global_resources, user_resources) -> dict:
+    needed_resources = global_resources.subtract(user_resources, fill_value=0).reset_index().to_dict('records')
     resources = dict()
+    for resource in needed_resources:
+        resource = list(resource.items())
+        resource_name, resource_quantity = resource[0][1], resource[1][1]
+        resources[resource_name] = int(resource_quantity)
     return resources
 
 
+def save_as_csv(resources, file_path, show: bool = False) -> pd.DataFrame:
+    print(resources)
+    df = pd.DataFrame(data=resources.items(), columns=["Resource", "Quantity"])
+    df = df.astype({'Resource': 'string', 'Quantity': 'int16'})
+    df.sort_values(by=['Resource'], inplace=True)
+    df.reset_index(inplace=True, drop=True)
+    df.to_csv(file_path, sep=';', header=True, encoding='utf8', index=False)
+    print(df.head(500)) if show else None
+    return df
+
+
 if __name__ == "__main__":
+    today = str(datetime.today()).split()[0]
+    reports_path = f'files/reports/{today}'
+    spent_filepath = f'{reports_path}/total-spent-resources.csv'
+    operators_filepath = f'{reports_path}/total-operators-resources.csv'
+    needed_filepath = f'{reports_path}/total-needed-resources.csv'
+    Path(reports_path).mkdir(parents=True, exist_ok=True)
+
     with open(user_operators_path, mode="r", encoding="utf-8") as f:
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
 
-    print("User total resources:")
-    total_resources = OrderedDict(sorted(calc_user_total_resources(operators).items()))
-    [print(resource, quantity, sep=": ") for resource, quantity in total_resources.items()]
+    print("Global resources.")
+    global_resources = save_as_csv(calc_global_resources(), operators_filepath, show=False)
+    global_resources = global_resources.set_index('Resource')
 
-    print("Global resources:")
-    global_resources = OrderedDict(sorted(calc_global_resources().items()))
-    [print(resource, quantity, sep=": ") for resource, quantity in global_resources.items()]
+    print("User total resources.")
+    user_resources = save_as_csv(calc_user_total_resources(operators), spent_filepath, show=False)
+    user_resources = user_resources.set_index('Resource')
 
-    # print("Resources Needed:")
-    # [print(resource, quantity, sep=": ") for resource, quantity in calc_resources_needed().items()]
+    print("Resources Needed:")
+    user_resources = save_as_csv(calc_resources_needed(global_resources, user_resources), needed_filepath, show=True)
