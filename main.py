@@ -156,7 +156,8 @@ def save_as_csv(resources, file_path, show: bool = False) -> pd.DataFrame:
     df.sort_values(by=['Resource'], inplace=True)
     df.reset_index(inplace=True, drop=True)
     df.to_csv(file_path, sep=';', header=True, encoding='utf8', index=False)
-    print(df.head(500)) if show else None
+    with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+        print(df.head(500)) if show else None
     return df
 
 
