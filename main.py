@@ -12,13 +12,13 @@ import pandas as pd
 from pathlib import Path
 
 resources_path = 'files/resource.json'
-operators_path = 'files/json'
+operators_path = 'files/operators'
 user_operators_path = 'files/csv/user_operators.csv'
 
 
 def read_json(file_path: str, show: bool = False) -> dict:
     with open(file_path, mode='r', encoding='utf-8') as f:
-        print(f"Validating json: {file_path}") if show else None
+        print(f"Validating operators: {file_path}") if show else None
         data = json.load(f)
         f.close()
     return data

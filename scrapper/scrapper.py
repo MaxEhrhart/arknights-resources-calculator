@@ -98,14 +98,14 @@ def get_skills_resources(stars):
 
 
 user_operators_path = '../files/csv/user_operators.csv'
-json_path = '../files/json/'
+json_path = '../files/operators/'
 
 with open(user_operators_path, mode="r", encoding="utf-8") as f:
     operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
     f.close()
 
 with Chrome(executable_path='chromedriver94.exe') as driver:
-    for iteration, operator in enumerate(operators, start=1):
+    for iteration, operator in enumerate(operators, start=1)[:1]:
         print(f"Progress: {iteration}/{len(operators)}.")
         stars = int(operator['stars'])
         name = operator["name"]
@@ -128,7 +128,9 @@ with Chrome(executable_path='chromedriver94.exe') as driver:
                 "skills": skills,
                 "elite": elite
             }
-            with open(json_path + name + ".json", 'w+', encoding='utf8') as f:
+
+            op_path = f'{json_path}/{stars}stars/{name}.json'
+            with open(op_path, 'w+', encoding='utf8') as f:
                 json.dump(operator_data, f)
             print("Done.")
         except TimeoutException:
