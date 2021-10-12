@@ -1,4 +1,6 @@
 # encoding: utf-8
+from pathlib import Path
+
 from selenium.webdriver import Chrome
 from time import sleep
 from selenium.webdriver.support.ui import WebDriverWait
@@ -98,14 +100,14 @@ def get_skills_resources(stars):
 
 
 user_operators_path = '../files/csv/user_operators.csv'
-json_path = '../files/operators/'
+json_path = '../files/operators'
 
 with open(user_operators_path, mode="r", encoding="utf-8") as f:
     operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
     f.close()
 
 with Chrome(executable_path='chromedriver94.exe') as driver:
-    for iteration, operator in enumerate(operators, start=1)[:1]:
+    for iteration, operator in enumerate(operators, start=1):
         print(f"Progress: {iteration}/{len(operators)}.")
         stars = int(operator['stars'])
         name = operator["name"]
@@ -130,8 +132,9 @@ with Chrome(executable_path='chromedriver94.exe') as driver:
             }
 
             op_path = f'{json_path}/{stars}stars/{name}.json'
-            with open(op_path, 'w+', encoding='utf8') as f:
-                json.dump(operator_data, f)
+            Path(op_path).parent.mkdir(parents=True, exist_ok=True)
+            with open(op_path, 'w+', encoding='utf-8') as f:
+                json.dump(operator_data, f, indent=4)
             print("Done.")
         except TimeoutException:
             print("Loading took too much time!")

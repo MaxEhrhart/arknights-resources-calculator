@@ -25,7 +25,7 @@ def read_json(file_path: str, show: bool = False) -> dict:
 
 
 resources_data = read_json(resources_path)
-operators_data = [read_json(operators_path + "/" + file, show=False) for file in os.listdir(operators_path)]
+operators_data = [read_json(str(path), show=False) for path in Path(operators_path).rglob('*.json')]
 
 
 @dataclass
