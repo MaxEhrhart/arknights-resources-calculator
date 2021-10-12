@@ -1,0 +1,248 @@
+{
+    "name": "Projekt Red",
+    "stars": 5,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            },
+            {
+                "level": 2,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Orirock",
+                        "quantity": 10
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": 3
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Polyester",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Sugar Pack",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 3",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Polyester Pack",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Manganese Ore",
+                        "quantity": 3
+                    }
+                ]
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 5
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Sugar Pack",
+                                "quantity": 1
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Optimized Device",
+                                "quantity": 2
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 5
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 10
+                            },
+                            {
+                                "name": "Polymerization Preparation",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Polyester Lump",
+                                "quantity": 4
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 2,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 5
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Polyester Pack",
+                                "quantity": 3
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "White Horse Kohl",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 5
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 10
+                            },
+                            {
+                                "name": "Bipolar Nanoflake",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 3
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 20000
+                },
+                {
+                    "name": "Specialist Chip",
+                    "quantity": 4
+                },
+                {
+                    "name": "Orirock Cube",
+                    "quantity": 7
+                },
+                {
+                    "name": "Device",
+                    "quantity": 2
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 120000
+                },
+                {
+                    "name": "Specialist Dualchip",
+                    "quantity": 3
+                },
+                {
+                    "name": "Manganese Trihydrate",
+                    "quantity": 7
+                },
+                {
+                    "name": "Oriron Cluster",
+                    "quantity": 14
+                }
+            ]
+        }
+    ]
+}
