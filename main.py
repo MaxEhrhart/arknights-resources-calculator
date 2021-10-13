@@ -150,7 +150,6 @@ def calc_resources_needed(global_resources, user_resources) -> dict:
 
 
 def save_as_csv(resources, file_path, show: bool = False) -> pd.DataFrame:
-    print(resources)
     df = pd.DataFrame(data=resources.items(), columns=["Resource", "Quantity"])
     df = df.astype({'Resource': 'string', 'Quantity': 'int32'})
     df.sort_values(by=['Resource'], inplace=True)
@@ -167,16 +166,41 @@ if __name__ == "__main__":
     spent_filepath = f'{reports_path}/total-spent-resources.csv'
     operators_filepath = f'{reports_path}/total-operators-resources.csv'
     needed_filepath = f'{reports_path}/total-needed-resources.csv'
+    sheet_path = f'{reports_path}/report.xlsx'
     Path(reports_path).mkdir(parents=True, exist_ok=True)
 
     with open(user_operators_path, mode="r", encoding="utf-8") as f:
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
 
     print("Global resources.")
-    global_resources = save_as_csv(calc_global_resources(), operators_filepath, show=False).set_index('Resource')
+    global_resources = save_as_csv(calc_global_resources(), operators_filepath, show=False) \
+        .set_index('Resource')
 
     print("User total resources.")
-    user_resources = save_as_csv(calc_user_total_resources(operators), spent_filepath, show=False).set_index('Resource')
+    user_resources = save_as_csv(calc_user_total_resources(operators), spent_filepath, show=False) \
+        .set_index('Resource') \
+        .reindex_like(global_resources) \
+        .fillna(0) \
+        .reset_index() \
+        .astype({'Resource': 'string', 'Quantity': 'int32'}) \
+        .set_index('Resource')
 
-    print("Resources Needed:")
-    user_resources = save_as_csv(calc_resources_needed(global_resources, user_resources), needed_filepath, show=True)
+    print("Needed resources.")
+    needed_resources = save_as_csv(
+        calc_resources_needed(global_resources, user_resources), needed_filepath, show=False
+    ).set_index('Resource')
+
+    writer = pd.ExcelWriter(sheet_path, engine='xlsxwriter')
+    workbook = writer.book
+    worksheet = workbook.add_worksheet('Comparison')
+    writer.sheets['Comparison'] = worksheet
+
+    merge_format = workbook.add_format({'bold': 1, 'border': 1, 'align': 'center', 'valign': 'vcenter'})
+    worksheet.merge_range('A1:B1', 'Spent Resources', merge_format)
+    worksheet.merge_range('C1:D1', 'Needed Resources', merge_format)
+    worksheet.merge_range('E1:F1', 'Total Resources', merge_format)
+
+    user_resources.to_excel(writer, sheet_name='Comparison', startrow=1, startcol=0)
+    needed_resources.to_excel(writer, sheet_name='Comparison', startrow=1, startcol=2)
+    global_resources.to_excel(writer, sheet_name='Comparison', startrow=1, startcol=4)
+    writer.save()
