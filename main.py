@@ -204,3 +204,4 @@ if __name__ == "__main__":
     needed_resources.to_excel(writer, sheet_name='Comparison', startrow=1, startcol=2)
     global_resources.to_excel(writer, sheet_name='Comparison', startrow=1, startcol=4)
     writer.save()
+    print(f"Report saved at {sheet_path}")
