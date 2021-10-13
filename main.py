@@ -240,3 +240,13 @@ if __name__ == "__main__":
     save_as_xlsx(resume, sheet_path, show=True)
     print(f"Report saved at {sheet_path}")
 
+
+# TODO: Adicionar tier no dataframe de resumo
+# TODO: Calculo de recursos para fabricação de recurso tier 5
+# TODO: calculo de lmd necessario na fabricação
+# TODO: Estimar quantidade de LMD e passes de XP para LVL Maximo E0 E1 E2
+# TODO: Coluna Total LMD Elites
+# TODO: Coluna Total Passes de XP amarelos LVL
+# TODO: Coluna total de LMD e recursos após fabricacao
+
+
