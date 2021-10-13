@@ -9,6 +9,7 @@ from functools import reduce
 from typing import *
 from datetime import datetime
 import pandas as pd
+import numpy as np
 from pathlib import Path
 
 resources_path = 'files/resource.json'
@@ -149,6 +150,18 @@ def calc_resources_needed(global_resources, user_resources) -> dict:
     return resources
 
 
+def calc_resume(df1, df2, df3) -> pd.DataFrame:
+    renamed_columns = {'Resource': 'Resource', 'Quantity_global': 'Total', 'Quantity_spent': 'Spent',
+                      'Quantity': 'Needed'}
+    columns_order = ['Total', 'Spent', 'Needed']
+    resume = df1 \
+        .join(df2, lsuffix='_global', rsuffix='_spent') \
+        .join(df3, lsuffix='_global', rsuffix='_needed') \
+        .rename(columns=renamed_columns)[columns_order]
+    resume['Percentage'] = np.round(resume['Spent'] / resume['Total'], decimals=4)
+    return resume
+
+
 def save_as_csv(resources, file_path, show: bool = False) -> pd.DataFrame:
     df = pd.DataFrame(data=resources.items(), columns=["Resource", "Quantity"])
     df = df.astype({'Resource': 'string', 'Quantity': 'int32'})
@@ -158,6 +171,37 @@ def save_as_csv(resources, file_path, show: bool = False) -> pd.DataFrame:
     with pd.option_context('display.max_rows', None, 'display.max_columns', None):
         print(df.head(500)) if show else None
     return df
+
+
+def save_as_xlsx(df, file_path, show: bool = False):
+    def get_col_widths(dataframe):
+        # First we find the maximum length of the index column
+        idx_max = max([len(str(s)) for s in dataframe.index.values] + [len(str(dataframe.index.name))])
+        # Then, we concatenate this to the max of the lengths of column
+        # name and its values for each column, left to right
+        return [idx_max] + [max([len(str(s)) for s in dataframe[col].values] + [len(col)]) for col in dataframe.columns]
+
+    col_widths = get_col_widths(df)
+    df = df.reset_index()
+
+    writer = pd.ExcelWriter(file_path, engine='xlsxwriter')
+    workbook = writer.book
+    worksheet = workbook.add_worksheet('Comparison')
+    writer.sheets['Comparison'] = worksheet
+    df.to_excel(writer, sheet_name='Comparison', startrow=0, startcol=0, index=False)
+
+    (max_row, max_col) = df.shape
+    column_settings = [{'header': column} for column in df.columns]
+    worksheet.add_table(0, 0, max_row, max_col - 1, {'columns': column_settings,
+                                                     'style': 'Table Style Light 15', 'first_column': True,
+                                                     'last_column': True})
+    for i, width in enumerate(col_widths):
+        worksheet.set_column(i, i, width)
+    percent_fmt = workbook.add_format({'num_format': '0.00%'})
+    worksheet.set_column('E:E', None, percent_fmt)
+
+    # Close the Pandas Excel writer and output the Excel file.
+    writer.save()
 
 
 if __name__ == "__main__":
@@ -186,22 +230,13 @@ if __name__ == "__main__":
         .set_index('Resource')
 
     print("Needed resources.")
-    needed_resources = save_as_csv(
-        calc_resources_needed(global_resources, user_resources), needed_filepath, show=False
-    ).set_index('Resource')
+    resources_needed = calc_resources_needed(global_resources, user_resources)
+    needed_resources = save_as_csv(resources_needed, needed_filepath, show=False).set_index('Resource')
 
-    writer = pd.ExcelWriter(sheet_path, engine='xlsxwriter')
-    workbook = writer.book
-    worksheet = workbook.add_worksheet('Comparison')
-    writer.sheets['Comparison'] = worksheet
+    print("Creating Resume.")
+    resume = calc_resume(global_resources, user_resources, needed_resources)
 
-    merge_format = workbook.add_format({'bold': 1, 'border': 1, 'align': 'center', 'valign': 'vcenter'})
-    worksheet.merge_range('A1:B1', 'Spent Resources', merge_format)
-    worksheet.merge_range('C1:D1', 'Needed Resources', merge_format)
-    worksheet.merge_range('E1:F1', 'Total Resources', merge_format)
-
-    user_resources.to_excel(writer, sheet_name='Comparison', startrow=1, startcol=0)
-    needed_resources.to_excel(writer, sheet_name='Comparison', startrow=1, startcol=2)
-    global_resources.to_excel(writer, sheet_name='Comparison', startrow=1, startcol=4)
-    writer.save()
+    print("Saving as xlsx.")
+    save_as_xlsx(resume, sheet_path, show=True)
     print(f"Report saved at {sheet_path}")
+
