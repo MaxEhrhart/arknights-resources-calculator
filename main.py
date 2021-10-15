@@ -152,7 +152,7 @@ def calc_resources_needed(global_resources, user_resources) -> dict:
 
 def calc_resume(df1, df2, df3) -> pd.DataFrame:
     renamed_columns = {'Resource': 'Resource', 'Quantity_global': 'Total', 'Quantity_spent': 'Spent',
-                      'Quantity': 'Needed'}
+                       'Quantity': 'Needed'}
     columns_order = ['Total', 'Spent', 'Needed']
     resume = df1 \
         .join(df2, lsuffix='_global', rsuffix='_spent') \
@@ -192,9 +192,18 @@ def save_as_xlsx(df, file_path, show: bool = False):
 
     (max_row, max_col) = df.shape
     column_settings = [{'header': column} for column in df.columns]
-    worksheet.add_table(0, 0, max_row, max_col - 1, {'columns': column_settings,
-                                                     'style': 'Table Style Light 15', 'first_column': True,
-                                                     'last_column': True})
+    column_settings = [
+        {'header': column, 'total_function': 'average'} if column != 'Resource' else
+        {'header': column, 'total_function': None}
+        for column in df.columns
+    ]
+    options = {'columns': column_settings,
+               'style': 'Table Style Light 15',
+               'first_column': True,
+               'last_column': True,
+               'total_row': True}
+    worksheet.add_table(0, 0, max_row + 1, max_col - 1, options)
+
     for i, width in enumerate(col_widths):
         worksheet.set_column(i, i, width)
     percent_fmt = workbook.add_format({'num_format': '0.00%'})
@@ -240,7 +249,6 @@ if __name__ == "__main__":
     save_as_xlsx(resume, sheet_path, show=True)
     print(f"Report saved at {sheet_path}")
 
-
 # TODO: Adicionar tier no dataframe de resumo
 # TODO: Calculo de recursos para fabricação de recurso tier 5
 # TODO: calculo de lmd necessario na fabricação
@@ -248,5 +256,3 @@ if __name__ == "__main__":
 # TODO: Coluna Total LMD Elites
 # TODO: Coluna Total Passes de XP amarelos LVL
 # TODO: Coluna total de LMD e recursos após fabricacao
-
-
