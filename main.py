@@ -192,10 +192,15 @@ def save_as_xlsx(df, file_path, show: bool = False):
 
     (max_row, max_col) = df.shape
     column_settings = [{'header': column} for column in df.columns]
+    totals_functions = {
+        'resource': None,
+        'percentage': 'average',
+        'total': None,
+        'spent': None,
+        'needed': None
+    }
     column_settings = [
-        {'header': column, 'total_function': 'average'} if column != 'Resource' else
-        {'header': column, 'total_function': None}
-        for column in df.columns
+        {'header': column, 'total_function': totals_functions[column.lower()]} for column in df.columns
     ]
     options = {'columns': column_settings,
                'style': 'Table Style Light 15',
