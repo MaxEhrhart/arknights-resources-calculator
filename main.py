@@ -254,6 +254,7 @@ if __name__ == "__main__":
     save_as_xlsx(resume, sheet_path, show=True)
     print(f"Report saved at {sheet_path}")
 
+# TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
 # TODO: Adicionar tier no dataframe de resumo
 # TODO: Calculo de recursos para fabricação de recurso tier 5
 # TODO: calculo de lmd necessario na fabricação
