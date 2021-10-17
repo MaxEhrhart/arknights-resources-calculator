@@ -19,13 +19,13 @@ user_operators_path = 'files/csv/user_operators.csv'
 
 def read_json(file_path: str, show: bool = False) -> dict:
     with open(file_path, mode='r', encoding='utf-8') as f:
-        print(f"Validating operators: {file_path}") if show else None
+        print(f"Reading: {file_path}") if show else None
         data = json.load(f)
         f.close()
     return data
 
 
-resources_data = read_json(resources_path)
+resources_data = [read_json(str(path), show=False) for path in Path(resources_path).rglob('*.json')]
 operators_data = [read_json(str(path), show=False) for path in Path(operators_path).rglob('*.json')]
 
 
@@ -259,6 +259,7 @@ if __name__ == "__main__":
 # TODO: Calculo de recursos para fabricação de recurso tier 5
 # TODO: calculo de lmd necessario na fabricação
 # TODO: Estimar quantidade de LMD e passes de XP para LVL Maximo E0 E1 E2
-# TODO: Coluna Total LMD Elites
+# TODO: Coluna Total LMD Elites1 e 2
+# TODO: Coluna Total Recursos Elites1 e 2
 # TODO: Coluna Total Passes de XP amarelos LVL
 # TODO: Coluna total de LMD e recursos após fabricacao
