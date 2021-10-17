@@ -8,6 +8,7 @@ import urllib.request
 json_path = '../files/resources'
 lmd_by_tier = {5: 400, 4: 300, 3: 200, 2: 100, 1: 0}
 
+
 def dict_to_recipe_list(recipe: dict, tier: int):
     return [{"name": name, "quantity": quantity} for name, quantity in recipe.items()]
 
