@@ -1,0 +1,12 @@
+{
+    "name": "Polyester",
+    "tier": 2,
+    "droppable": true,
+    "lmd": 100,
+    "recipe": [
+        {
+            "name": "Ester",
+            "quantity": 3
+        }
+    ]
+}

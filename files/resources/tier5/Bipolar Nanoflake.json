@@ -1,0 +1,16 @@
+{
+    "name": "Bipolar Nanoflake",
+    "tier": 5,
+    "droppable": false,
+    "lmd": 400,
+    "recipe": [
+        {
+            "name": "Optimized Device",
+            "quantity": 1
+        },
+        {
+            "name": "White Horse Kohl",
+            "quantity": 2
+        }
+    ]
+}

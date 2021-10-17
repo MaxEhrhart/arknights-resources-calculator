@@ -1,0 +1,20 @@
+{
+    "name": "Incandescent Alloy Block",
+    "tier": 4,
+    "droppable": true,
+    "lmd": 300,
+    "recipe": [
+        {
+            "name": "Incandescent Alloy",
+            "quantity": 1
+        },
+        {
+            "name": "Grindstone",
+            "quantity": 1
+        },
+        {
+            "name": "Integrated Device",
+            "quantity": 1
+        }
+    ]
+}

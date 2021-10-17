@@ -1,0 +1,12 @@
+{
+    "name": "Orirock Cluster",
+    "tier": 3,
+    "droppable": true,
+    "lmd": 200,
+    "recipe": [
+        {
+            "name": "Orirock Cube",
+            "quantity": 5
+        }
+    ]
+}

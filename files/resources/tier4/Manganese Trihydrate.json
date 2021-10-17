@@ -1,0 +1,20 @@
+{
+    "name": "Manganese Trihydrate",
+    "tier": 4,
+    "droppable": true,
+    "lmd": 300,
+    "recipe": [
+        {
+            "name": "Manganese Ore",
+            "quantity": 2
+        },
+        {
+            "name": "Polyester Pack",
+            "quantity": 1
+        },
+        {
+            "name": "Loxic Kohl",
+            "quantity": 1
+        }
+    ]
+}

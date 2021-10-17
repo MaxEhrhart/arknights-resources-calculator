@@ -1,0 +1,20 @@
+{
+    "name": "Sugar Lump",
+    "tier": 4,
+    "droppable": true,
+    "lmd": 300,
+    "recipe": [
+        {
+            "name": "Sugar Pack",
+            "quantity": 2
+        },
+        {
+            "name": "Oriron Cluster",
+            "quantity": 1
+        },
+        {
+            "name": "Manganese Ore",
+            "quantity": 1
+        }
+    ]
+}

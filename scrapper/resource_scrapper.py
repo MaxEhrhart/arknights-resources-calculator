@@ -1,140 +1,38 @@
 # encoding: utf-8
 from pathlib import Path
 
-from selenium.webdriver import Chrome
-from time import sleep
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-from bs4 import BeautifulSoup
+import pandas as pd
 import json
-import csv
+import urllib.request
+
+json_path = '../files/resources'
+lmd_by_tier = {5: 400, 4: 300, 3: 200, 2: 100, 1: 0}
+
+def dict_to_recipe_list(recipe: dict, tier: int):
+    return [{"name": name, "quantity": quantity} for name, quantity in recipe.items()]
 
 
-def get_materials(soup):
-    items = map(lambda x: x.contents[0], soup.findAll(class_="item-name", recursive=True))
-    quantity = map(lambda x: int(x.contents[0].replace("x", "").replace(".", "")),
-                   soup.findAll(class_="item-amount", recursive=True))
-    return dict(zip(items, quantity))
+with urllib.request.urlopen("https://raw.githubusercontent.com/Aceship/AN-EN-Tags/master/json/akmaterial.json") as url:
+    data = json.loads(url.read().decode())
 
 
-def get_elite_resources(stars):
-    def parse(element):
-        resources = []
-        soup = BeautifulSoup(element.get_attribute("innerHTML"), 'html.parser')
-        materials = get_materials(soup)
-        for name, quantity in materials.items():
-            resources.append({"name": name, "quantity": quantity})
-        return resources
+df = pd.DataFrame.from_dict(data)
+df = df[['name_cn', 'name_en', 'level', 'madeof', 'source']]
+translation_table = df.set_index('name_cn')['name_en'].to_dict()
+translation_table['晶体电子单元'] = 'Crystalline Electronic Unit'
+df['lmd'] = df.apply(lambda row: lmd_by_tier[row['level']], axis=1)
+df['droppable'] = df.apply(lambda row: True if len(row.source) > 0 else False, axis=1)
+df['name'] = df.apply(lambda row: translation_table[row.name_cn], axis=1)
+df.madeof = df.apply(lambda row: {translation_table[key]: value for key, value in row.madeof.items()}, axis=1)
+df.madeof = df.apply(lambda row: dict_to_recipe_list(row.madeof, row.level), axis=1)
+df = df[['name', 'level', 'droppable', 'lmd', 'madeof']]
+df.rename(columns={'madeof': 'recipe', 'level': 'tier'}, inplace=True)
 
-    elite1_resources = dict()
-    elite2_resources = dict()
-    if stars >= 3:
-        element = WebDriverWait(driver, delay).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="elite1Stats"]/div[2]/div[2]')))
-        elite1_resources = parse(element)
+for resource in df.to_dict('records'):
+    path = f"{json_path}/tier{resource['tier']}/{resource['name']}.json"
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    print(f"Writing Resources data: {resource['name']}.")
+    with open(path, 'w+', encoding='utf-8') as f:
+        json.dump(resource, f, indent=4)
 
-    if stars > 3:
-        element = WebDriverWait(driver, delay).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="elite2Stats"]/div[2]/div[2]')))
-        elite2_resources = parse(element)
-
-    return [{"level": 1, "resources": elite1_resources}, {"level": 2, "resources": elite2_resources}]
-
-
-def get_upgrade_json(iteration, materials):
-    resources = []
-    for name, quantity in materials.items():
-        resources.append({"name": name, "quantity": quantity})
-    return {"level": iteration, "resources": resources}
-
-
-def get_skills_resources(stars):
-    def parse_upgrade(element):
-        result = []
-        soup = BeautifulSoup(element.get_attribute("innerHTML"), 'html.parser')
-        for iteration, skill in enumerate(soup.findAll(class_="skillstats", recursive=True), start=1):
-            if iteration <= 7:
-                result.append(get_upgrade_json(iteration, get_materials(skill)))
-            else:
-                continue
-        return {"upgrade": result}
-
-    def parse_mastery(element, skill_no):
-        result = []
-        soup = BeautifulSoup(element.get_attribute("innerHTML"), 'html.parser')
-        for iteration, skill in enumerate(soup.findAll(class_="skillstats", recursive=True), start=1):
-            if iteration > 7:
-                result.append(get_upgrade_json((iteration % 7), get_materials(skill)))
-            else:
-                continue
-        return {"skill": skill_no, "upgrade": result}
-
-    mastery = []
-
-    # Get Upgrades
-    element = WebDriverWait(driver, delay).until(
-        EC.presence_of_element_located((By.XPATH, '//*[@id="skill0StatsCollapsible"]')))
-    upgrade = parse_upgrade(element)
-
-    # Get Mastery1
-    if stars >= 3:
-        element = WebDriverWait(driver, delay).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="skill0StatsCollapsible"]')))
-        mastery.append(parse_mastery(element, 1))
-
-    # Get Mastery2
-    if stars >= 4:
-        element = WebDriverWait(driver, delay).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="skill1StatsCollapsible"]')))
-        mastery.append(parse_mastery(element, 2))
-
-    # Get Mastery3
-    if stars == 6:
-        element = WebDriverWait(driver, delay).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="skill2StatsCollapsible"]')))
-        mastery.append(parse_mastery(element, 3))
-
-    return {**upgrade, "mastery": mastery}
-
-
-user_operators_path = '../files/csv/user_operators.csv'
-json_path = '../files/operators'
-
-with open(user_operators_path, mode="r", encoding="utf-8") as f:
-    operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
-    f.close()
-
-with Chrome(executable_path='chromedriver94.exe') as driver:
-    for iteration, operator in enumerate(operators, start=1):
-        print(f"Progress: {iteration}/{len(operators)}.")
-        stars = int(operator['stars'])
-        name = operator["name"]
-
-        driver.get(f"https://aceship.github.io/AN-EN-Tags/akhrchars.html?opname={name}")
-        sleep(5)
-        delay = 10
-        try:
-            print("Scraping elite resources.")
-            elite = get_elite_resources(stars=stars)
-            print("Elite resources ready.")
-
-            print("Scraping skills resources.")
-            skills = get_skills_resources(stars=stars)
-            print("Skills ready.")
-
-            operator_data = {
-                "name": name,
-                "stars": stars,
-                "skills": skills,
-                "elite": elite
-            }
-
-            op_path = f'{json_path}/{stars}stars/{name}.json'
-            Path(op_path).parent.mkdir(parents=True, exist_ok=True)
-            with open(op_path, 'w+', encoding='utf-8') as f:
-                json.dump(operator_data, f, indent=4)
-            print("Done.")
-        except TimeoutException:
-            print("Loading took too much time!")
+print("Done.")
