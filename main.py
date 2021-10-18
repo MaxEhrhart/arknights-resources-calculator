@@ -28,6 +28,7 @@ def read_json(file_path: str, show: bool = False) -> dict:
 resources_data = [read_json(str(path), show=False) for path in Path(resources_path).rglob('*.json')]
 operators_data = [read_json(str(path), show=False) for path in Path(operators_path).rglob('*.json')]
 df_operators = pd.DataFrame(operators_data)
+df_resources = pd.DataFrame(resources_data).set_index('name')
 with open(user_operators_path, mode="r", encoding="utf-8") as f:
     user_operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
 
@@ -154,11 +155,12 @@ def calc_resources_needed(global_resources, user_resources) -> dict:
 
 def calc_resume(df1, df2, df3) -> pd.DataFrame:
     renamed_columns = {'Resource': 'Resource', 'Quantity_global': 'Total', 'Quantity_spent': 'Spent',
-                       'Quantity': 'Needed'}
-    columns_order = ['Total', 'Spent', 'Needed']
+                       'Quantity': 'Needed', 'tier': 'Tier', 'droppable': 'Droppable', 'lmd': 'LMD'}
+    columns_order = ['Tier', 'LMD', 'Droppable', 'Total', 'Spent', 'Needed']
     resume = df1 \
         .join(df2, lsuffix='_global', rsuffix='_spent') \
         .join(df3, lsuffix='_global', rsuffix='_needed') \
+        .join(df_resources, lsuffix='_global', rsuffix='_resources') \
         .rename(columns=renamed_columns)[columns_order]
     resume['Percentage'] = np.round(resume['Spent'] / resume['Total'], decimals=4)
     return resume
@@ -199,7 +201,10 @@ def save_as_xlsx(df, file_path, show: bool = False):
         'percentage': 'average',
         'total': None,
         'spent': None,
-        'needed': None
+        'needed': None,
+        'tier': None,
+        'lmd': None,
+        'droppable': None
     }
     column_settings = [
         {'header': column, 'total_function': totals_functions[column.lower()]} for column in df.columns
@@ -214,7 +219,7 @@ def save_as_xlsx(df, file_path, show: bool = False):
     for i, width in enumerate(col_widths):
         worksheet.set_column(i, i, width)
     percent_fmt = workbook.add_format({'num_format': '0.00%'})
-    worksheet.set_column('E:E', None, percent_fmt)
+    worksheet.set_column('H:H', None, percent_fmt)
 
     # Close the Pandas Excel writer and output the Excel file.
     writer.save()
@@ -472,6 +477,5 @@ if __name__ == '__main__':
 # TODO: calculo de lmd necessario na fabricação
 # TODO: Estimar quantidade de LMD e passes de XP para LVL Maximo E0 E1 E2
 # TODO: Coluna Total LMD Elites1 e 2
-# TODO: Coluna Total Recursos Elites1 e 2
 # TODO: Coluna Total Passes de XP amarelos LVL
 # TODO: Coluna total de LMD e recursos após fabricacao
