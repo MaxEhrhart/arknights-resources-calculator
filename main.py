@@ -97,7 +97,6 @@ def calc_user_total_resources(operators):
     resources = dict()
     with Pool(12) as p:
         operator_resources_list = p.map(calc_operator_resources, operators)
-    # operator_resources_list = [calc_operator_resources(operator) for operator in operators]
     return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
 
 
