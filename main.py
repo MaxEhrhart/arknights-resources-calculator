@@ -31,6 +31,7 @@ df_operators = pd.DataFrame(operators_data)
 df_resources = pd.DataFrame(resources_data).set_index('name')
 with open(user_operators_path, mode="r", encoding="utf-8") as f:
     user_operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
+df_user_operators = pd.DataFrame(user_operators)
 
 
 @dataclass
@@ -411,10 +412,13 @@ def resources_by_operator_report():
     for resource_column in ['skill_upgrade_resources', 'elite1_resources', 'elite2_resources', 'elite_resources',
                             'mastery_resources', 'total_resources', 'spent_resources', 'needed_resources']:
         resume[resource_column] = resume.apply(lambda row: operatorformat_resources(row[resource_column]), axis=1)
+    columns = 'name;elite;skill_level;s1_mastery;s2_mastery;s3_mastery'.split(';')
+    resume = resume.join(df_user_operators[columns].set_index('name'))
     resume = resume.fillna('None')
-    column_order = ['percentage', 'stars', 'skill_upgrade_resources', 'elite1_resources',
-                    'elite2_resources', 'elite_resources', 'mastery_resources', 'total_resources', 'spent_resources',
-                    'needed_resources', 'needed_material_quantity', 'total_material_quantity']
+    column_order = ['percentage', 'stars', 'elite', 'skill_level', 's1_mastery', 's2_mastery', 's3_mastery',
+                    'skill_upgrade_resources', 'elite1_resources', 'elite2_resources', 'elite_resources',
+                    'mastery_resources', 'total_resources', 'spent_resources', 'needed_resources',
+                    'needed_material_quantity', 'total_material_quantity']
     resume = resume[column_order]
     # resume['needed_lmd'] = resume.apply(lambda row: row['needed_resources']['lmd'], axis=1)
     # resume['total_lmd'] = resume.apply(lambda row: row['total_resources']['lmd'], axis=1)
@@ -472,7 +476,6 @@ if __name__ == '__main__':
     print("Generating resources by operator report: done")
 
 # TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
-# TODO: Adicionar tier no dataframe de resumo
 # TODO: Calculo de recursos para fabricação de recurso tier 5
 # TODO: calculo de lmd necessario na fabricação
 # TODO: Estimar quantidade de LMD e passes de XP para LVL Maximo E0 E1 E2
