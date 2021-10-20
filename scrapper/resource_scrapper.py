@@ -20,7 +20,7 @@ with urllib.request.urlopen("https://raw.githubusercontent.com/Aceship/AN-EN-Tag
 df = pd.DataFrame.from_dict(data)
 df = df[['name_cn', 'name_en', 'level', 'madeof', 'source']]
 translation_table = df.set_index('name_cn')['name_en'].to_dict()
-translation_table['晶体电子单元'] = 'Crystalline Electronic Unit'
+# translation_table['晶体电子单元'] = 'Crystalline Electronic Unit'
 df['lmd'] = df.apply(lambda row: lmd_by_tier[row['level']], axis=1)
 df['droppable'] = df.apply(lambda row: True if len(row.source) > 0 else False, axis=1)
 df['name'] = df.apply(lambda row: translation_table[row.name_cn], axis=1)

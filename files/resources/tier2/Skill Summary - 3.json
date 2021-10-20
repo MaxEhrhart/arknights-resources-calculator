@@ -1,0 +1,12 @@
+{
+    "name": "Skill Summary - 3",
+    "tier": 4,
+    "droppable": true,
+    "lmd": 0,
+    "recipe": [
+        {
+            "name": "Skill Summary - 2",
+            "quantity": 3
+        }
+    ]
+}
