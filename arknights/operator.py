@@ -26,15 +26,19 @@ class Operator:
     s5_mastery: Optional[int] = 0
 
     @property
-    def spent_resources(self):
-        return {}
-
-    @property
     def total_resources(self):
         return {}
 
     @property
+    def spent_resources(self):
+        return {}
+
+    @property
     def needed_resources(self):
+        return {}
+
+    @property
+    def total_lmd(self):
         return {}
 
     @property
@@ -46,8 +50,17 @@ class Operator:
         return {}
 
     @property
-    def total_lmd(self):
-        return {}
+    def total_yellow_exp(self):
+        return 0
+
+    @property
+    def spent_yellow_exp(self):
+        return 0
+
+    @property
+    def needed_yellow_exp(self):
+        return 0
+
 
 
 if __name__ == "__main__":
