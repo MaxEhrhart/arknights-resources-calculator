@@ -8,9 +8,9 @@ from functools import reduce
 from multiprocessing.pool import ThreadPool as Pool
 from pathlib import Path
 from typing import *
-
 import numpy as np
 import pandas as pd
+from arknights import Operator, Resource
 
 resources_path = 'files/resources'
 operators_path = 'files/operators'
@@ -29,21 +29,22 @@ resources_data = [read_json(str(path), show=False) for path in Path(resources_pa
 operators_data = [read_json(str(path), show=False) for path in Path(operators_path).rglob('*.json')]
 df_operators = pd.DataFrame(operators_data)
 df_resources = pd.DataFrame(resources_data).set_index('name')
-with open(user_operators_path, mode="r", encoding="utf-8") as f:
-    user_operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
-df_user_operators = pd.DataFrame(user_operators)
+df_user_operators = pd.read_csv(user_operators_path, sep=';')
 
 
-@dataclass
-class Resource:
-    name: str = None
-    recipe: list = None
+resource = Resource(
+    name='Oi',
+    tier=1,
+    drop=True
+)
+print(resource)
 
-
-@dataclass
-class Operator:
-    name: str = None
-    stars: int = 0
+operator = Operator(
+    # General
+    name='SilverAsh', stars=6, level=45,
+    elite_level=2
+)
+print(operator)
 
 
 def sum_skill_upgrade_resources(upgrades, user_op):
@@ -265,7 +266,7 @@ def operatorcalc_operator_resources():
         return resources
 
     operator_spent_resources = list()
-    for user_operator in user_operators:
+    for user_operator in df_user_operators.to_dict('records'):
         operator_info = df_operators.loc[df_operators['name'] == user_operator['name']].to_dict('records')[0]
         skill_resources = sum_skill_upgrade_resources(operator_info['skills']['upgrade'], user_operator)
         elite_resources = sum_elite_upgrade_resources(operator_info['elite'], user_operator)
