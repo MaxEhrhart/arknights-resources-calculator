@@ -26,10 +26,12 @@ class Operator:
         self.json_data = utils.read_json(file_path=str(next(operator_path)), show=False)
         self.stars = self.json_data['stars']
 
+    # TODO
     @property  # Amiya Masteries
     def s4_mastery(self):
         return 0
 
+    # TODO
     @property  # Amiya Masteries
     def s5_mastery(self):
         return 0
@@ -88,9 +90,61 @@ class Operator:
         return dict(Counter(self.skill_resources) + Counter(self.elite_resources) + Counter(self.mastery_resources))
 
     @property
-    def spent_resources(self):
-        return {}
+    def spent_elite_resources(self):
+        resources = dict()
+        for elite in self.json_data['elite']:
+            if self.elite_level < elite['level']:
+                break
+            for resource in elite['resources']:
+                key = resource['name']
+                value = resource['quantity']
+                resources[key] = resources.get(key, 0) + value
+        return resources
 
+    @property
+    def spent_skill_resources(self):
+        resources = dict()
+        for skill in self.json_data['skills']['upgrade']:
+            if self.skill_level < skill['level']:
+                break
+            for resource in skill['resources']:
+                key = resource['name']
+                value = resource['quantity']
+                resources[key] = resources.get(key, 0) + value
+        return resources
+
+    @property
+    def spent_mastery_resources(self):
+        operator_masteries = {
+            's1_mastery': self.s1_mastery,
+            's2_mastery': self.s2_mastery,
+            's3_mastery': self.s3_mastery,
+            's4_mastery': self.s4_mastery,
+            's5_mastery': self.s5_mastery
+        }
+        resources = dict()
+        for mastery in self.json_data['skills']['mastery']:
+            skill_mastery = int(operator_masteries[f's{mastery["skill"]}_mastery'])
+            if skill_mastery <= 0:
+                break
+            for level in mastery['upgrade']:
+                if level['level'] > skill_mastery:
+                    break
+                for resource in level['resources']:
+                    key = resource['name']
+                    value = resource['quantity']
+                    resources[key] = resources.get(key, 0) + value
+        return resources
+
+    @property
+    def spent_resources(self):
+        total = dict()
+        total = Counter(total) + Counter(self.spent_skill_resources)
+        total = Counter(total) + Counter(self.spent_elite_resources)
+        total = Counter(total) + Counter(self.spent_mastery_resources)
+        return dict(total)
+
+    # TODO
     @property
     def needed_resources(self):
         return {}
@@ -121,8 +175,5 @@ class Operator:
 
 
 if __name__ == "__main__":
-    operator = Operator(name="Aak")
-    print(operator.mastery_resources)
-    print(operator.skill_resources)
-    print(operator.elite_resources)
-    print(operator.total_resources)
+    operator = Operator(name="Saria", elite_level=2, skill_level=7, s1_mastery=3, s2_mastery=3, s3_mastery=3)
+    print(operator.spent_resources)
