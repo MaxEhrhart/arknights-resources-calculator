@@ -130,3 +130,4 @@ dmypy.json
 
 # custom settings
 .idea
+files/reports
