@@ -24,7 +24,6 @@ class Operator:
     def __post_init__(self):
         """Load operator info"""
         path = Path(constants.Paths.OPERATORS_PATH.value)
-        print(path)
         operator_path = path.rglob(f'*/{self.name}.json')
         self.json_data = utils.read_json(file_path=str(next(operator_path)), show=False)
         self.stars = self.json_data['stars']
@@ -67,6 +66,8 @@ class Operator:
 
     @property
     def mastery_resources(self):
+        if self.stars <= 3:
+            return {}
         mastery_resources: List[Dict] = list()
         for mastery in self.json_data['skills']['mastery']:
             for level in mastery['upgrade']:
@@ -170,6 +171,21 @@ class Operator:
     @property
     def needed_yellow_exp(self):
         return 0
+
+    def to_dict(self):
+        attributes = {
+            'name': self.name,
+            'stars': self.stars,
+            'skill_upgrade_resources': self.skill_resources,
+            'elite1_resources': self.elite1_resources,
+            'elite2_resources': self.elite2_resources,
+            'elite_resources': self.elite_resources,
+            'mastery_resources': self.mastery_resources,
+            'total_resources': self.total_resources,
+            'spent_resources': self.spent_resources,
+            'needed_resources': self.needed_resources
+        }
+        return attributes
 
 
 if __name__ == "__main__":
