@@ -32,21 +32,6 @@ df_resources = pd.DataFrame(resources_data).set_index('name')
 df_user_operators = pd.read_csv(user_operators_path, sep=';')
 
 
-resource = Resource(
-    name='Oi',
-    tier=1,
-    drop=True
-)
-print(resource)
-
-operator = Operator(
-    # General
-    name='SilverAsh', stars=6, level=45,
-    elite_level=2
-)
-print(operator)
-
-
 def sum_skill_upgrade_resources(upgrades, user_op):
     resources = dict()
     for level in upgrades:
@@ -442,7 +427,15 @@ def resources_report():
 
     with open(user_operators_path, mode="r", encoding="utf-8") as f:
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
-
+    for operator in operators:
+        print(Operator(
+            name=operator['name'],
+            elite_level=int(operator['elite']),
+            skill_level=int(operator['skill_level']),
+            s1_mastery=int(operator['s1_mastery']),
+            s2_mastery=int(operator['s2_mastery']),
+            s3_mastery=int(operator['s3_mastery'])
+        ))
     print("Global resources.")
     global_resources = save_as_csv(calc_global_resources(), operators_filepath, show=False) \
         .set_index('Resource')

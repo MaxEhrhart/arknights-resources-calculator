@@ -23,7 +23,8 @@ class Operator:
 
     def __post_init__(self):
         """Load operator info"""
-        path = Path(constants.Paths.OPERATORS_PATH.value).resolve()
+        path = Path(constants.Paths.OPERATORS_PATH.value)
+        print(path)
         operator_path = path.rglob(f'*/{self.name}.json')
         self.json_data = utils.read_json(file_path=str(next(operator_path)), show=False)
         self.stars = self.json_data['stars']
