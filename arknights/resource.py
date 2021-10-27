@@ -1,6 +1,16 @@
 # encoding: utf-8
 from __future__ import annotations
 from dataclasses import dataclass, field
+from pathlib import Path
+
+from arknights import constants, utils
+
+
+def get_resources_data():
+    data = []
+    for path in Path(constants.Paths.RESOURCES_PATH.value).resolve().glob('*/*.json'):
+        data.append(utils.read_json(str(path)))
+    return data
 
 
 @dataclass

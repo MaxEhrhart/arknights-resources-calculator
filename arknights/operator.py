@@ -1,11 +1,40 @@
 # encoding: utf-8
+import csv
 from collections import Counter
 from dataclasses import dataclass
 from functools import reduce
 from pathlib import Path
 from typing import Optional, List, Dict
+
 from arknights import constants
 from arknights import utils
+
+
+def get_operators_data():
+    data = []
+    for path in Path(constants.Paths.OPERATORS_PATH.value).resolve().glob('*/*.json'):
+        data.append(utils.read_json(str(path)))
+    return data
+
+
+def instantiate_operator(operator_dict: dict):
+    return Operator(
+        name=operator_dict['name'],
+        elite_level=int(operator_dict['elite']),
+        skill_level=int(operator_dict['skill_level']),
+        s1_mastery=int(operator_dict['s1_mastery']),
+        s2_mastery=int(operator_dict['s2_mastery']),
+        s3_mastery=int(operator_dict['s3_mastery']),
+        s4_mastery=int(operator_dict.get('s4_mastery', 0)),
+        s5_mastery=int(operator_dict.get('s5_mastery', 0))
+    )
+
+
+def load_operators(csv_path: str):
+    with open(csv_path, mode="r", encoding="utf-8") as f:
+        operators_data = [dict(user_operator) for user_operator in csv.DictReader(f, delimiter=';')]
+    operators = [instantiate_operator(operator_data) for operator_data in operators_data]
+    return operators
 
 
 @dataclass
