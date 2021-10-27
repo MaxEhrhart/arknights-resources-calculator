@@ -18,6 +18,8 @@ class Operator:
     s1_mastery: Optional[int] = 0  # Masteries
     s2_mastery: Optional[int] = 0  # Masteries
     s3_mastery: Optional[int] = 0  # Masteries
+    s4_mastery: Optional[int] = 0  # Amiya Masteries
+    s5_mastery: Optional[int] = 0  # Amiya Masteries
 
     def __post_init__(self):
         """Load operator info"""
@@ -25,16 +27,6 @@ class Operator:
         operator_path = path.rglob(f'*/{self.name}.json')
         self.json_data = utils.read_json(file_path=str(next(operator_path)), show=False)
         self.stars = self.json_data['stars']
-
-    # TODO
-    @property  # Amiya Masteries
-    def s4_mastery(self):
-        return 0
-
-    # TODO
-    @property  # Amiya Masteries
-    def s5_mastery(self):
-        return 0
 
     @property
     def elite1_resources(self):
