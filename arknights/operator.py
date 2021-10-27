@@ -144,36 +144,43 @@ class Operator:
         total = Counter(total) + Counter(self.spent_mastery_resources)
         return dict(total)
 
-    # TODO
     @property
     def needed_resources(self):
-        return {}
+        return dict(Counter(self.total_resources) - Counter(self.spent_resources))
 
+    # TODO
     @property
     def total_lmd(self):
         return {}
 
+    # TODO
     @property
     def spent_lmd(self):
         return {}
 
+    # TODO
     @property
     def needed_lmd(self):
         return {}
 
+    # TODO
     @property
     def total_yellow_exp(self):
         return 0
 
+    # TODO
     @property
     def spent_yellow_exp(self):
         return 0
 
+    # TODO
     @property
     def needed_yellow_exp(self):
         return 0
 
 
 if __name__ == "__main__":
-    operator = Operator(name="Saria", elite_level=2, skill_level=7, s1_mastery=3, s2_mastery=3, s3_mastery=3)
+    operator = Operator(name="Aak", elite_level=0, skill_level=0, s1_mastery=0, s2_mastery=0, s3_mastery=0)
     print(operator.spent_resources)
+    print(operator.needed_resources)
+    print(operator.total_resources)
