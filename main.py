@@ -11,18 +11,11 @@ from typing import *
 import numpy as np
 import pandas as pd
 from arknights import Operator, Resource
+from arknights.utils import read_json
 
 resources_path = 'files/resources'
 operators_path = 'files/operators'
 user_operators_path = 'files/csv/user_operators.csv'
-
-
-def read_json(file_path: str, show: bool = False) -> dict:
-    with open(file_path, mode='r', encoding='utf-8') as f:
-        print(f"Reading: {file_path}") if show else None
-        data = json.load(f)
-        f.close()
-    return data
 
 
 resources_data = [read_json(str(path), show=False) for path in Path(resources_path).rglob('*.json')]
@@ -30,114 +23,6 @@ operators_data = [read_json(str(path), show=False) for path in Path(operators_pa
 df_operators = pd.DataFrame(operators_data)
 df_resources = pd.DataFrame(resources_data).set_index('name')
 df_user_operators = pd.read_csv(user_operators_path, sep=';')
-
-
-def sum_skill_upgrade_resources(upgrades, user_op):
-    resources = dict()
-    for level in upgrades:
-        if level['level'] > int(user_op['skill_level']):
-            break
-        for iteration, resource in enumerate(level['resources']):
-            key = resource['name']
-            value = resource['quantity']
-            resources[key] = resources.get(key, 0) + value
-    return resources
-
-
-def sum_mastery_upgrade_resources(upgrades, user_op):
-    resources = dict()
-    for skill_mastery in upgrades:
-        # sai do laco se a skill nao tem maestria
-        if int(user_op[f's{skill_mastery["skill"]}_mastery']) <= 0:
-            break
-        for level in skill_mastery['upgrade']:
-            if level['level'] > int(user_op[f's{skill_mastery["skill"]}_mastery']):
-                break
-            for resource in level['resources']:
-                key = resource['name']
-                value = resource['quantity']
-                resources[key] = resources.get(key, 0) + value
-    return resources
-
-
-def sum_elite_upgrade_resources(upgrades, user_op):
-    resources = dict()
-    for level in upgrades:
-        if level['level'] > int(user_op['elite']):
-            break
-        for iteration, resource in enumerate(level['resources']):
-            key = resource['name']
-            value = resource['quantity']
-            resources[key] = resources.get(key, 0) + value
-    return resources
-
-
-def calc_operator_resources(operator: dict):
-    resources = dict()
-    for op in operators_data:
-        if operator['name'].upper() == op['name'].upper():
-            skill_resources = sum_skill_upgrade_resources(op['skills']['upgrade'], operator)
-            elite_resources = sum_elite_upgrade_resources(op['elite'], operator)
-            mastery_resources = sum_mastery_upgrade_resources(op['skills']['mastery'], operator)
-            resources = Counter(skill_resources) + Counter(elite_resources) + Counter(mastery_resources)
-            # print(operator['name'], resources, sep=": ")
-    return resources
-
-
-def calc_user_total_resources(operators):
-    resources = dict()
-    with Pool(12) as p:
-        operator_resources_list = p.map(calc_operator_resources, operators)
-    return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
-
-
-def calc_global_resources():
-    def get_operator_resources(upgrades) -> dict:
-        upgrades_resources = dict()
-        for level in upgrades:
-            for iteration, resource in enumerate(level['resources']):
-                key = resource['name']
-                value = resource['quantity']
-                upgrades_resources[key] = upgrades_resources.get(key, 0) + value
-        return upgrades_resources
-
-    def get_mastery_resources(masteries) -> dict:
-        masteries_resources = dict()
-        for skill_mastery in masteries:
-            for level in skill_mastery['upgrade']:
-                for resource in level['resources']:
-                    key = resource['name']
-                    value = resource['quantity']
-                    masteries_resources[key] = masteries_resources.get(key, 0) + value
-        return masteries_resources
-
-    def get_elite_resources(elites) -> dict:
-        elites_resources = dict()
-        for level in elites:
-            for iteration, resource in enumerate(level['resources']):
-                key = resource['name']
-                value = resource['quantity']
-                elites_resources[key] = elites_resources.get(key, 0) + value
-        return elites_resources
-
-    operator_resources_list = list()
-    for operator in operators_data:
-        skill_resources = get_operator_resources(operator['skills']['upgrade'])
-        elite_resources = get_elite_resources(operator['elite'])
-        mastery_resources = get_mastery_resources(operator['skills']['mastery'])
-        operator_resources = Counter(skill_resources) + Counter(elite_resources) + Counter(mastery_resources)
-        operator_resources_list.append(operator_resources)
-    return dict(reduce(lambda x, y: Counter(x) + Counter(y), operator_resources_list))
-
-
-def calc_resources_needed(global_resources, user_resources) -> dict:
-    needed_resources = global_resources.subtract(user_resources, fill_value=0).reset_index().to_dict('records')
-    resources = dict()
-    for resource in needed_resources:
-        resource = list(resource.items())
-        resource_name, resource_quantity = resource[0][1], resource[1][1]
-        resources[resource_name] = int(resource_quantity)
-    return resources
 
 
 def calc_resume(df1, df2, df3) -> pd.DataFrame:
@@ -212,8 +97,19 @@ def save_as_xlsx(df, file_path, show: bool = False):
     writer.save()
 
 
-def operatorformat_resources(row):
+def operator_format_resources(row):
     return None if row is None else '\n'.join([f'{value}x {key}' for key, value in row.items()])
+
+
+def instantiate_operator(operator: dict):
+    return Operator(
+        name=operator['name'],
+        elite_level=int(operator['elite']),
+        skill_level=int(operator['skill_level']),
+        s1_mastery=int(operator['s1_mastery']),
+        s2_mastery=int(operator['s2_mastery']),
+        s3_mastery=int(operator['s3_mastery'])
+    )
 
 
 def resources_by_operator_report():
@@ -225,23 +121,14 @@ def resources_by_operator_report():
     sheet_path = f'{reports_path}/report.xlsx'
     Path(reports_path).mkdir(parents=True, exist_ok=True)
 
-    # TODO
     with open(user_operators_path, mode="r", encoding="utf-8") as f:
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
 
-    # with Pool(12) as p:
-    op_list = []
-    for operator in operators:
-        op_list.append(Operator(
-            name=operator['name'],
-            elite_level=int(operator['elite']),
-            skill_level=int(operator['skill_level']),
-            s1_mastery=int(operator['s1_mastery']),
-            s2_mastery=int(operator['s2_mastery']),
-            s3_mastery=int(operator['s3_mastery'])
-        ))
+    with Pool(16) as p:
+        operators = p.map(instantiate_operator, operators)
+
     print("Global resources.")
-    global_resources = pd.DataFrame(list(map(lambda op: op.to_dict(), op_list)))
+    global_resources = pd.DataFrame(list(map(lambda op: op.to_dict(), operators)))
     global_resources.rename(columns={"name": "operator"}, inplace=True)
     global_resources.set_index('operator', inplace=True)
 
@@ -250,8 +137,7 @@ def resources_by_operator_report():
     resume.sort_values(by=['stars', 'operator', 'material_percentage'], inplace=True, ascending=False)
     for resource_column in ['skill_upgrade_resources', 'elite1_resources', 'elite2_resources', 'elite_resources',
                             'mastery_resources', 'total_resources', 'spent_resources', 'needed_resources']:
-        resume[resource_column] = resume.apply(lambda row: operatorformat_resources(row[resource_column]), axis=1)
-    resume = resume.fillna('None')
+        resume[resource_column] = resume.apply(lambda row: operator_format_resources(row[resource_column]), axis=1)
     column_order = ['material_percentage', 'stars', 'elite', 'skill_level', 's1_mastery', 's2_mastery', 's3_mastery',
                     'skill_upgrade_resources', 'elite1_resources', 'elite2_resources', 'elite_resources',
                     'mastery_resources', 'total_resources', 'spent_resources', 'needed_resources',
@@ -279,25 +165,36 @@ def resources_report():
     with open(user_operators_path, mode="r", encoding="utf-8") as f:
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
 
+    with Pool(16) as p:
+        operators_objects = p.map(instantiate_operator, operators)
+
     print("Global resources.")
-    global_resources = save_as_csv(calc_global_resources(), operators_filepath, show=False) \
+    resources = [operator.total_resources for operator in operators_objects]
+    resources = dict(reduce(lambda x, y: Counter(x) + Counter(y), resources))
+    total_resources = pd.DataFrame(data=resources.items(), columns=["Resource", "Quantity"]) \
+        .astype({'Resource': 'string', 'Quantity': 'int32'})\
         .set_index('Resource')
 
-    print("User total resources.")
-    user_resources = save_as_csv(calc_user_total_resources(operators), spent_filepath, show=False) \
-        .set_index('Resource') \
-        .reindex_like(global_resources) \
-        .fillna(0) \
-        .reset_index() \
-        .astype({'Resource': 'string', 'Quantity': 'int32'}) \
-        .set_index('Resource')
+    print("Spent resources.")
+    resources = [operator.spent_resources for operator in operators_objects]
+    resources = dict(reduce(lambda x, y: Counter(x) + Counter(y), resources))
+    spent_resources = pd.DataFrame(data=resources.items(), columns=["Resource", "Quantity"]) \
+        .astype({'Resource': 'string', 'Quantity': 'int32'})\
+        .set_index('Resource')\
+        .reindex_like(total_resources) \
+        .fillna(0)
 
     print("Needed resources.")
-    resources_needed = calc_resources_needed(global_resources, user_resources)
-    needed_resources = save_as_csv(resources_needed, needed_filepath, show=False).set_index('Resource')
+    resources = [operator.needed_resources for operator in operators_objects]
+    resources = dict(reduce(lambda x, y: Counter(x) + Counter(y), resources))
+    needed_resources = pd.DataFrame(data=resources.items(), columns=["Resource", "Quantity"]) \
+        .astype({'Resource': 'string', 'Quantity': 'int32'})\
+        .set_index('Resource')\
+        .reindex_like(total_resources) \
+        .fillna(0)
 
     print("Creating Resume.")
-    resume = calc_resume(global_resources, user_resources, needed_resources)
+    resume = calc_resume(total_resources, spent_resources, needed_resources)
 
     print("Saving as xlsx.")
     save_as_xlsx(resume, sheet_path, show=True)
