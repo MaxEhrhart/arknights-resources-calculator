@@ -125,7 +125,7 @@ class Operator:
         for mastery in self.json_data['skills']['mastery']:
             skill_mastery = int(operator_masteries[f's{mastery["skill"]}_mastery'])
             if skill_mastery <= 0:
-                break
+                continue
             for level in mastery['upgrade']:
                 if level['level'] > skill_mastery:
                     break
@@ -171,6 +171,7 @@ class Operator:
     def material_percentage(self):
         return round((self.spent_material_quantity / self.total_material_quantity) * 100, 2)
 
+    # LMD
     # TODO
     @property
     def total_lmd(self):
@@ -186,6 +187,7 @@ class Operator:
     def needed_lmd(self):
         return {}
 
+    # EXP
     # TODO
     @property
     def total_yellow_exp(self):
