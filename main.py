@@ -212,13 +212,6 @@ def save_as_xlsx(df, file_path, show: bool = False):
     writer.save()
 
 
-def operatorsum_material(resources):
-    if resources is None:
-        return 0
-    resources.pop('LMD', None)
-    return sum(resources.values())
-
-
 def operatorformat_resources(row):
     return None if row is None else '\n'.join([f'{value}x {key}' for key, value in row.items()])
 
@@ -236,6 +229,7 @@ def resources_by_operator_report():
     with open(user_operators_path, mode="r", encoding="utf-8") as f:
         operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
 
+    # with Pool(12) as p:
     op_list = []
     for operator in operators:
         op_list.append(Operator(
@@ -253,23 +247,12 @@ def resources_by_operator_report():
 
     print("User total resources.")
     resume = global_resources
-    resume['needed_material_quantity'] = resume.apply(lambda row: operatorsum_material(row['needed_resources']), axis=1)
-    resume['total_material_quantity'] = resume.apply(lambda row: operatorsum_material(row['total_resources']), axis=1)
-    resume['percentage'] = (resume['total_material_quantity'] - resume['needed_material_quantity']) / resume[
-        'total_material_quantity']
-    resume = resume.round(4)
-    resume['percentage'] = (resume['percentage'] * 100).astype('string') \
-        .str.pad(width=4, fillchar='0', side='left') \
-        .str.pad(width=10, fillchar='0', side='right') \
-        .str.slice(start=0, stop=5).astype('float64')
-    resume.sort_values(by=['stars', 'operator', 'percentage'], inplace=True, ascending=False)
+    resume.sort_values(by=['stars', 'operator', 'material_percentage'], inplace=True, ascending=False)
     for resource_column in ['skill_upgrade_resources', 'elite1_resources', 'elite2_resources', 'elite_resources',
                             'mastery_resources', 'total_resources', 'spent_resources', 'needed_resources']:
         resume[resource_column] = resume.apply(lambda row: operatorformat_resources(row[resource_column]), axis=1)
-    columns = 'name;elite;skill_level;s1_mastery;s2_mastery;s3_mastery'.split(';')
-    resume = resume.join(df_user_operators[columns].set_index('name'))
     resume = resume.fillna('None')
-    column_order = ['percentage', 'stars', 'elite', 'skill_level', 's1_mastery', 's2_mastery', 's3_mastery',
+    column_order = ['material_percentage', 'stars', 'elite', 'skill_level', 's1_mastery', 's2_mastery', 's3_mastery',
                     'skill_upgrade_resources', 'elite1_resources', 'elite2_resources', 'elite_resources',
                     'mastery_resources', 'total_resources', 'spent_resources', 'needed_resources',
                     'needed_material_quantity', 'total_material_quantity']

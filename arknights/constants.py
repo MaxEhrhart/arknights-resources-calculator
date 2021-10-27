@@ -6,4 +6,4 @@ import pkg_resources
 class Paths(Enum):
     RESOURCES_PATH: str = pkg_resources.resource_filename(__name__, "resources/resource/")
     OPERATORS_PATH: str = pkg_resources.resource_filename(__name__, "resources/operator/")
-    LMD_EXP_PATH: str = 3
+    LMD_EXP_PATH: str = pkg_resources.resource_filename(__name__, "resources/explmd.csv")

@@ -1,4 +1,4 @@
-operator;percentage;stars;elite;skill_level;s1_mastery;s2_mastery;s3_mastery;skill_upgrade_resources;elite1_resources;elite2_resources;elite_resources;mastery_resources;total_resources;spent_resources;needed_resources;needed_material_quantity;total_material_quantity
+operator;material_percentage;stars;elite;skill_level;s1_mastery;s2_mastery;s3_mastery;skill_upgrade_resources;elite1_resources;elite2_resources;elite_resources;mastery_resources;total_resources;spent_resources;needed_resources;needed_material_quantity;total_material_quantity
 Weedy;35.14;6;2;7;0;0;0;"10x Skill Summary - 1
 4x Damaged Device
 4x Ester
@@ -47,6 +47,7 @@ Weedy;35.14;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 5x Orirock Cluster
 8x Integrated Device
+210000x LMD
 5x Specialist Chip
 6x Device
 4x Specialist Dualchip
@@ -139,6 +140,7 @@ W;35.24;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Manganese Ore
 9x RMA70-12
+210000x LMD
 5x Sniper Chip
 5x Sugar
 4x Sniper Dualchip
@@ -229,6 +231,7 @@ Thorns;34.73;6;2;7;0;0;2;"10x Skill Summary - 1
 113x Skill Summary - 3
 11x Aketon
 13x Loxic Kohl
+210000x LMD
 5x Guard Chip
 8x Oriron
 4x Guard Dualchip
@@ -318,6 +321,7 @@ Suzuran;35.37;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Oriron Cluster
 5x Grindstone
+210000x LMD
 5x Supporter Chip
 8x Polyester
 4x Supporter Dualchip
@@ -408,6 +412,7 @@ Surtr;35.85;6;2;7;0;3;3;"10x Skill Summary - 1
 113x Skill Summary - 3
 5x Loxic Kohl
 4x Aketon
+210000x LMD
 5x Guard Chip
 4x Polyketon
 4x Guard Dualchip
@@ -500,6 +505,7 @@ Skadi the Corrupting Heart;29.26;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Incandescent Alloy
 10x Manganese Ore
+210000x LMD
 5x Supporter Chip
 4x Supporter Dualchip
 16x Polymerization Preparation
@@ -527,6 +533,7 @@ Skadi the Corrupting Heart;29.26;6;1;7;0;0;0;"10x Skill Summary - 1
 30000x LMD
 5x Supporter Chip";"105x Skill Summary - 3
 5x Manganese Ore
+180000x LMD
 4x Supporter Dualchip
 16x Polymerization Preparation
 9x Grindstone Pentahydrate
@@ -585,6 +592,7 @@ Skadi;35.26;6;2;7;0;0;0;"9x Skill Summary - 1
 107x Skill Summary - 3
 7x Integrated Device
 5x Sugar Pack
+210000x LMD
 5x Guard Chip
 5x Device
 5x Polyester
@@ -673,6 +681,7 @@ SilverAsh;36.39;6;2;7;0;0;3;"10x Skill Summary - 1
 107x Skill Summary - 3
 10x Polyester Pack
 5x Manganese Ore
+210000x LMD
 5x Guard Chip
 8x Polyester
 3x Device
@@ -762,6 +771,7 @@ Siege;30.62;6;1;7;0;0;0;"10x Skill Summary - 1
 107x Skill Summary - 3
 7x Integrated Device
 5x Sugar Pack
+210000x LMD
 5x Vanguard Chip
 3x Device
 4x Vanguard Dualchip
@@ -791,6 +801,7 @@ Siege;30.62;6;1;7;0;0;0;"10x Skill Summary - 1
 3x Device";"8x Aketon
 99x Skill Summary - 3
 4x Integrated Device
+180000x LMD
 4x Vanguard Dualchip
 16x Bipolar Nanoflake
 16x Orirock Concentration
@@ -803,7 +814,7 @@ Siege;30.62;6;1;7;0;0;0;"10x Skill Summary - 1
 4x Sugar Lump
 6x Polymerization Preparation
 4x Optimized Device";213;307
-Shining;35.19;6;2;7;0;1;0;"10x Skill Summary - 1
+Shining;35.2;6;2;7;0;1;0;"10x Skill Summary - 1
 6x Orirock
 4x Damaged Device
 24x Skill Summary - 2
@@ -846,6 +857,7 @@ Shining;35.19;6;2;7;0;1;0;"10x Skill Summary - 1
 107x Skill Summary - 3
 11x Grindstone
 5x Orirock Cluster
+210000x LMD
 5x Medic Chip
 6x Polyketon
 5x Polyester
@@ -888,7 +900,7 @@ Shining;35.19;6;2;7;0;1;0;"10x Skill Summary - 1
 5x RMA70-12
 4x Keton Colloid
 6x Polymerization Preparation";197;304
-Schwarz;34.59;6;2;7;0;0;0;"10x Skill Summary - 1
+Schwarz;34.6;6;2;7;0;0;0;"10x Skill Summary - 1
 5x Sugar Substitute
 4x Diketon
 24x Skill Summary - 2
@@ -934,6 +946,7 @@ Schwarz;34.59;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 8x Manganese Ore
 4x RMA70-12
+210000x LMD
 5x Sniper Chip
 4x Sniper Dualchip
 4x D32 Steel
@@ -1021,6 +1034,7 @@ Saria;100.0;6;2;7;3;3;3;"10x Skill Summary - 1
 107x Skill Summary - 3
 8x Sugar Pack
 5x Oriron Cluster
+210000x LMD
 5x Defender Chip
 5x Polyketon
 4x Defender Dualchip
@@ -1104,6 +1118,7 @@ Saileach;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Manganese Ore
 5x Semi-natural Solvent
+210000x LMD
 5x Vanguard Chip
 7x Oriron
 4x Polyester
@@ -1132,6 +1147,7 @@ Saileach;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Manganese Ore
 5x Semi-natural Solvent
+210000x LMD
 5x Vanguard Chip
 7x Oriron
 4x Polyester
@@ -1197,6 +1213,7 @@ Saga;34.19;6;2;7;0;3;3;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Crystalline Component
 7x Coagulating Gel
+210000x LMD
 5x Vanguard Chip
 6x Polyketon
 4x Vanguard Dualchip
@@ -1286,6 +1303,7 @@ Rosmontis;34.5;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 12x Loxic Kohl
 4x Aketon
+210000x LMD
 5x Sniper Chip
 9x Sugar
 3x Device
@@ -1377,6 +1395,7 @@ Phantom;36.39;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 8x Coagulating Gel
 8x Oriron Cluster
+210000x LMD
 5x Specialist Chip
 7x Polyketon
 7x Orirock Cube
@@ -1469,6 +1488,7 @@ Passenger;31.33;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 7x Coagulating Gel
 4x Oriron Cluster
+210000x LMD
 5x Caster Chip
 4x Caster Dualchip
 4x Bipolar Nanoflake
@@ -1499,6 +1519,7 @@ Passenger;31.33;6;1;7;0;0;0;"10x Skill Summary - 1
 30000x LMD
 5x Caster Chip";"105x Skill Summary - 3
 3x Coagulating Gel
+180000x LMD
 4x Caster Dualchip
 4x Bipolar Nanoflake
 5x Oriron Block
@@ -1562,6 +1583,7 @@ Pallas;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 12x Loxic Kohl
 4x Aketon
+210000x LMD
 5x Guard Chip
 12x Orirock Cube
 3x Device
@@ -1590,6 +1612,7 @@ Pallas;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 12x Loxic Kohl
 4x Aketon
+210000x LMD
 5x Guard Chip
 12x Orirock Cube
 3x Device
@@ -1653,6 +1676,7 @@ Nightingale;35.55;6;2;7;0;1;0;"10x Skill Summary - 1
 107x Skill Summary - 3
 8x RMA70-12
 5x Polyester Pack
+210000x LMD
 5x Medic Chip
 6x Device
 3x Oriron
@@ -1742,6 +1766,7 @@ Nian;35.49;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Oriron Cluster
 5x Grindstone
+210000x LMD
 5x Defender Chip
 12x Orirock Cube
 4x Defender Dualchip
@@ -1834,6 +1859,7 @@ Mudrock;35.37;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 7x Integrated Device
 7x Coagulating Gel
+210000x LMD
 5x Defender Chip
 12x Orirock Cube
 4x Polyketon
@@ -1928,6 +1954,7 @@ Mountain;36.36;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Manganese Ore
 9x RMA70-12
+210000x LMD
 5x Guard Chip
 8x Orirock Cube
 4x Guard Dualchip
@@ -2016,6 +2043,7 @@ Mostima;29.68;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 13x Orirock Cluster
 4x Integrated Device
+210000x LMD
 5x Caster Chip
 7x Polyketon
 4x Oriron
@@ -2045,6 +2073,7 @@ Mostima;29.68;6;1;7;0;0;0;"10x Skill Summary - 1
 4x Oriron";"5x RMA70-12
 105x Skill Summary - 3
 8x Orirock Cluster
+180000x LMD
 4x Caster Dualchip
 10x Bipolar Nanoflake
 18x Grindstone Pentahydrate
@@ -2103,6 +2132,7 @@ Mizuki;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Manganese Ore
 9x RMA70-12
+210000x LMD
 5x Specialist Chip
 10x Sugar
 4x Specialist Dualchip
@@ -2131,6 +2161,7 @@ Mizuki;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Manganese Ore
 9x RMA70-12
+210000x LMD
 5x Specialist Chip
 10x Sugar
 4x Specialist Dualchip
@@ -2195,6 +2226,7 @@ Magallan;29.32;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 8x RMA70-12
 5x Polyester Pack
+210000x LMD
 5x Supporter Chip
 7x Oriron
 4x Supporter Dualchip
@@ -2224,6 +2256,7 @@ Magallan;29.32;6;1;7;0;0;0;"10x Skill Summary - 1
 7x Oriron";"7x Grindstone
 105x Skill Summary - 3
 5x RMA70-12
+180000x LMD
 4x Supporter Dualchip
 10x Polymerization Preparation
 12x Manganese Trihydrate
@@ -2284,6 +2317,7 @@ Kal'tsit;31.61;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 11x Aketon
 6x Loxic Kohl
+210000x LMD
 5x Medic Chip
 4x Medic Dualchip
 10x Crystalline Electroassembly
@@ -2313,6 +2347,7 @@ Kal'tsit;31.61;6;1;7;0;0;0;"10x Skill Summary - 1
 5x Medic Chip";"4x Oriron Cluster
 105x Skill Summary - 3
 8x Aketon
+180000x LMD
 4x Medic Dualchip
 10x Crystalline Electroassembly
 7x Optimized Device
@@ -2372,6 +2407,7 @@ Ifrit;36.42;6;2;7;0;3;0;"10x Skill Summary - 1
 107x Skill Summary - 3
 12x Loxic Kohl
 4x Aketon
+210000x LMD
 5x Caster Chip
 8x Polyester
 4x Caster Dualchip
@@ -2458,6 +2494,7 @@ Hoshiguma;36.66;6;2;7;0;3;0;"10x Skill Summary - 1
 107x Skill Summary - 3
 13x Orirock Cluster
 4x Integrated Device
+210000x LMD
 5x Defender Chip
 11x Orirock Cube
 4x Defender Dualchip
@@ -2544,6 +2581,7 @@ Hellagur;32.17;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Grindstone
 13x Orirock Cluster
+210000x LMD
 5x Guard Chip
 10x Sugar
 4x Guard Dualchip
@@ -2572,6 +2610,7 @@ Hellagur;32.17;6;1;7;0;0;0;"10x Skill Summary - 1
 5x Guard Chip
 10x Sugar";"105x Skill Summary - 3
 8x Orirock Cluster
+180000x LMD
 4x Guard Dualchip
 16x Bipolar Nanoflake
 18x Polyester Lump
@@ -2629,6 +2668,7 @@ Gladiia;30.39;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Oriron Cluster
 5x Grindstone
+210000x LMD
 5x Specialist Chip
 7x Polyketon
 4x Sugar
@@ -2660,6 +2700,7 @@ Gladiia;30.39;6;1;7;0;0;0;"10x Skill Summary - 1
 7x Polyketon
 4x Sugar";"4x Incandescent Alloy
 105x Skill Summary - 3
+180000x LMD
 4x Specialist Dualchip
 10x Crystalline Electroassembly
 16x Polymerized Gel
@@ -2721,6 +2762,7 @@ Fartooth;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Grindstone
 5x Orirock Cluster
+210000x LMD
 5x Sniper Chip
 4x Oriron
 4x Sniper Dualchip
@@ -2748,6 +2790,7 @@ Fartooth;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Grindstone
 5x Orirock Cluster
+210000x LMD
 5x Sniper Chip
 4x Oriron
 4x Sniper Dualchip
@@ -2812,6 +2855,7 @@ Eyjafjalla;34.43;6;2;7;0;3;3;"10x Skill Summary - 1
 107x Skill Summary - 3
 8x Manganese Ore
 4x RMA70-12
+210000x LMD
 5x Caster Chip
 7x Oriron
 5x Sugar
@@ -2859,7 +2903,7 @@ Eyjafjalla;34.43;6;2;7;0;3;3;"10x Skill Summary - 1
 4x Oriron Block
 6x D32 Steel
 5x Keton Colloid";200;305
-Exusiai;36.3;6;2;7;0;0;3;"10x Skill Summary - 1
+Exusiai;36.31;6;2;7;0;0;3;"10x Skill Summary - 1
 6x Orirock
 4x Damaged Device
 24x Skill Summary - 2
@@ -2905,6 +2949,7 @@ Exusiai;36.3;6;2;7;0;0;3;"10x Skill Summary - 1
 107x Skill Summary - 3
 11x Aketon
 6x Loxic Kohl
+210000x LMD
 5x Sniper Chip
 12x Orirock Cube
 4x Polyketon
@@ -2996,6 +3041,7 @@ Eunectes;29.74;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Integrated Device
 4x Coagulating Gel
+210000x LMD
 5x Defender Chip
 4x Defender Dualchip
 16x Bipolar Nanoflake
@@ -3024,6 +3070,7 @@ Eunectes;29.74;6;1;7;0;0;0;"10x Skill Summary - 1
 4x Coagulating Gel
 30000x LMD
 5x Defender Chip";"105x Skill Summary - 3
+180000x LMD
 4x Defender Dualchip
 16x Bipolar Nanoflake
 7x Polymerized Gel
@@ -3086,6 +3133,7 @@ Dusk;34.08;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 8x RMA70-12
 5x Incandescent Alloy
+210000x LMD
 5x Caster Chip
 6x Device
 3x Oriron
@@ -3180,6 +3228,7 @@ Ch'en the Holungday;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Grindstone
 5x Orirock Cluster
+210000x LMD
 5x Sniper Chip
 6x Sugar
 4x Sniper Dualchip
@@ -3209,6 +3258,7 @@ Ch'en the Holungday;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Grindstone
 5x Orirock Cluster
+210000x LMD
 5x Sniper Chip
 6x Sugar
 4x Sniper Dualchip
@@ -3228,7 +3278,7 @@ Ch'en the Holungday;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 4x Integrated Device
 4x Orirock Concentration
 6x Crystalline Electroassembly";312;312
-Ch'en;30.81;6;1;7;0;0;0;"10x Skill Summary - 1
+Ch'en;30.82;6;1;7;0;0;0;"10x Skill Summary - 1
 6x Orirock
 4x Damaged Device
 24x Skill Summary - 2
@@ -3274,6 +3324,7 @@ Ch'en;30.81;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 12x Loxic Kohl
 4x Aketon
+210000x LMD
 5x Guard Chip
 12x Orirock Cube
 3x Device
@@ -3305,6 +3356,7 @@ Ch'en;30.81;6;1;7;0;0;0;"10x Skill Summary - 1
 3x Device";"4x Integrated Device
 105x Skill Summary - 3
 7x Loxic Kohl
+180000x LMD
 4x Guard Dualchip
 10x Polymerization Preparation
 13x White Horse Kohl
@@ -3363,6 +3415,7 @@ Ceobe;33.55;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Grindstone
 16x Orirock Cluster
+210000x LMD
 5x Caster Chip
 8x Oriron
 4x Caster Dualchip
@@ -3455,6 +3508,7 @@ Carnelian;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 7x Integrated Device
 7x Coagulating Gel
+210000x LMD
 5x Caster Chip
 5x Device
 4x Caster Dualchip
@@ -3481,6 +3535,7 @@ Carnelian;0.0;6;0;0;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 7x Integrated Device
 7x Coagulating Gel
+210000x LMD
 5x Caster Chip
 5x Device
 4x Caster Dualchip
@@ -3542,6 +3597,7 @@ Blemishine;34.71;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Manganese Ore
 4x RMA70-12
+210000x LMD
 5x Defender Chip
 5x Device
 7x Orirock Cube
@@ -3635,6 +3691,7 @@ Blaze;36.09;6;2;7;0;3;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Coagulating Gel
 8x Oriron Cluster
+210000x LMD
 5x Guard Chip
 5x Device
 4x Guard Dualchip
@@ -3675,7 +3732,7 @@ Blaze;36.09;6;2;7;0;3;0;"10x Skill Summary - 1
 13x Manganese Trihydrate
 4x Integrated Device
 6x Polymerization Preparation";193;302
-Bagpipe;35.7;6;2;7;0;0;3;"10x Skill Summary - 1
+Bagpipe;35.71;6;2;7;0;0;3;"10x Skill Summary - 1
 6x Ester
 4x Oriron Shard
 24x Skill Summary - 2
@@ -3722,6 +3779,7 @@ Bagpipe;35.7;6;2;7;0;0;3;"10x Skill Summary - 1
 113x Skill Summary - 3
 12x Loxic Kohl
 12x Aketon
+210000x LMD
 5x Vanguard Chip
 10x Polyester
 4x Vanguard Dualchip
@@ -3814,6 +3872,7 @@ Ash;32.25;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 5x Orirock Cluster
 4x Integrated Device
+210000x LMD
 5x Sniper Chip
 11x Orirock Cube
 4x Sniper Dualchip
@@ -3844,6 +3903,7 @@ Ash;32.25;6;1;7;0;0;0;"10x Skill Summary - 1
 30000x LMD
 5x Sniper Chip
 11x Orirock Cube";"105x Skill Summary - 3
+180000x LMD
 4x Sniper Dualchip
 10x D32 Steel
 6x Polymerized Gel
@@ -3904,6 +3964,7 @@ Archetto;35.46;6;2;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 4x Grindstone
 5x Orirock Cluster
+210000x LMD
 5x Sniper Chip
 7x Oriron
 5x Sugar
@@ -3995,6 +4056,7 @@ Angelina;47.39;6;2;7;2;0;0;"10x Skill Summary - 1
 107x Skill Summary - 3
 11x Aketon
 6x Loxic Kohl
+210000x LMD
 5x Supporter Chip
 7x Polyketon
 4x Sugar
@@ -4085,6 +4147,7 @@ Aak;30.19;6;1;7;0;0;0;"10x Skill Summary - 1
 113x Skill Summary - 3
 3x Aketon
 6x Loxic Kohl
+210000x LMD
 5x Specialist Chip
 4x Specialist Dualchip
 10x D32 Steel
@@ -4113,6 +4176,7 @@ Aak;30.19;6;1;7;0;0;0;"10x Skill Summary - 1
 30000x LMD
 5x Specialist Chip";"4x Incandescent Alloy
 105x Skill Summary - 3
+180000x LMD
 4x Specialist Dualchip
 10x D32 Steel
 17x Polymerized Gel
@@ -4166,6 +4230,7 @@ Zima;37.71;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Integrated Device
 3x Sugar Pack
+140000x LMD
 4x Vanguard Chip
 4x Sugar
 3x Vanguard Dualchip
@@ -4192,6 +4257,7 @@ Zima;37.71;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Sugar";"5x Aketon
 42x Skill Summary - 3
 2x Integrated Device
+120000x LMD
 3x Vanguard Dualchip
 7x Sugar Lump
 11x RMA70-12
@@ -4242,6 +4308,7 @@ Whisperain;37.91;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Integrated Device
 3x Coagulating Gel
+140000x LMD
 4x Medic Chip
 8x Orirock Cube
 2x Sugar
@@ -4269,6 +4336,7 @@ Whisperain;37.91;5;1;7;0;0;0;"8x Skill Summary - 1
 8x Orirock Cube
 2x Sugar";"42x Skill Summary - 3
 2x Integrated Device
+120000x LMD
 3x Medic Dualchip
 19x Orirock Concentration
 13x Crystalline Component
@@ -4319,6 +4387,7 @@ Whislash;37.57;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Oriron Cluster
 3x Grindstone
+140000x LMD
 4x Guard Chip
 6x Orirock Cube
 3x Polyketon
@@ -4347,6 +4416,7 @@ Whislash;37.57;5;1;7;0;0;0;"8x Skill Summary - 1
 6x Orirock Cube
 3x Polyketon";"2x Manganese Ore
 42x Skill Summary - 3
+120000x LMD
 3x Guard Dualchip
 7x Keton Colloid
 12x Coagulating Gel
@@ -4398,6 +4468,7 @@ Warfarin;37.29;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 8x Orirock Cluster
 2x Integrated Device
+140000x LMD
 4x Medic Chip
 4x Polyketon
 2x Sugar
@@ -4425,6 +4496,7 @@ Warfarin;37.29;5;1;7;0;0;0;"8x Skill Summary - 1
 2x Sugar";"3x RMA70-12
 42x Skill Summary - 3
 4x Orirock Cluster
+120000x LMD
 3x Medic Dualchip
 8x Optimized Device
 17x Sugar Pack
@@ -4473,6 +4545,7 @@ Waai Fu;13.87;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Oriron Cluster
 3x Grindstone
+140000x LMD
 4x Specialist Chip
 4x Oriron
 3x Sugar
@@ -4497,6 +4570,7 @@ Waai Fu;13.87;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Oriron Cluster
 3x Grindstone
+120000x LMD
 3x Specialist Dualchip
 7x RMA70-24
 16x Orirock Cluster
@@ -4507,7 +4581,7 @@ Waai Fu;13.87;5;1;3;0;0;0;"8x Skill Summary - 1
 3x Manganese Trihydrate
 4x Polymerization Preparation
 4x Polyester Lump";149;173
-Vulcan;13.63;5;1;3;0;0;0;"8x Skill Summary - 1
+Vulcan;13.64;5;1;3;0;0;0;"8x Skill Summary - 1
 5x Oriron Shard
 18x Skill Summary - 2
 3x Polyketon
@@ -4545,6 +4619,7 @@ Vulcan;13.63;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Integrated Device
 3x Sugar Pack
+140000x LMD
 4x Defender Chip
 4x Oriron
 3x Polyester
@@ -4568,6 +4643,7 @@ Vulcan;13.63;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Integrated Device
 3x Sugar Pack
+120000x LMD
 3x Defender Dualchip
 8x Orirock Concentration
 9x White Horse Kohl
@@ -4616,6 +4692,7 @@ Tuye;36.42;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x RMA70-12
 2x Incandescent Alloy
+140000x LMD
 4x Medic Chip
 4x Polyketon
 2x Device
@@ -4643,6 +4720,7 @@ Tuye;36.42;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Medic Chip
 4x Polyketon
 2x Device";"42x Skill Summary - 3
+120000x LMD
 3x Medic Dualchip
 10x Keton Colloid
 15x Loxic Kohl
@@ -4693,6 +4771,7 @@ Tsukinogi;12.07;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Coagulating Gel
 2x Oriron Cluster
+140000x LMD
 4x Supporter Chip
 3x Device
 2x Polyketon
@@ -4716,6 +4795,7 @@ Tsukinogi;12.07;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Coagulating Gel
 2x Oriron Cluster
+120000x LMD
 3x Supporter Dualchip
 16x White Horse Kohl
 3x Keton Colloid
@@ -4763,6 +4843,7 @@ Tomimi;13.53;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Integrated Device
 3x Coagulating Gel
+140000x LMD
 4x Caster Chip
 4x Sugar
 3x Polyester
@@ -4787,6 +4868,7 @@ Tomimi;13.53;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Integrated Device
 3x Coagulating Gel
+120000x LMD
 3x Caster Dualchip
 11x RMA70-24
 20x Orirock Cluster
@@ -4837,6 +4919,7 @@ Toddifons;37.71;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Aketon
 4x Loxic Kohl
+140000x LMD
 4x Sniper Chip
 4x Polyketon
 3x Polyester
@@ -4865,6 +4948,7 @@ Toddifons;37.71;5;1;7;0;0;0;"8x Skill Summary - 1
 3x Polyester";"3x Oriron Cluster
 42x Skill Summary - 3
 5x Aketon
+120000x LMD
 3x Sniper Dualchip
 13x Crystalline Circuit
 10x Incandescent Alloy
@@ -4915,6 +4999,7 @@ Texas;52.22;5;2;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Loxic Kohl
 3x Aketon
+140000x LMD
 4x Vanguard Chip
 5x Polyester
 3x Vanguard Dualchip
@@ -4990,6 +5075,7 @@ Tequila;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Crystalline Component
 3x Coagulating Gel
+140000x LMD
 4x Guard Chip
 4x Polyketon
 3x Guard Dualchip
@@ -5013,6 +5099,7 @@ Tequila;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Crystalline Component
 3x Coagulating Gel
+140000x LMD
 4x Guard Chip
 4x Polyketon
 3x Guard Dualchip
@@ -5068,6 +5155,7 @@ Tachanka;36.78;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Incandescent Alloy
 3x Manganese Ore
+140000x LMD
 4x Guard Chip
 4x Oriron
 3x Sugar
@@ -5096,6 +5184,7 @@ Tachanka;36.78;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Oriron
 3x Sugar";"13x Coagulating Gel
 42x Skill Summary - 3
+120000x LMD
 3x Guard Dualchip
 7x RMA70-24
 9x Polymerized Gel
@@ -5146,6 +5235,7 @@ Swire;36.46;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Loxic Kohl
 3x Aketon
+140000x LMD
 4x Guard Chip
 5x Sugar
 2x Device
@@ -5172,6 +5262,7 @@ Swire;36.46;5;1;7;0;0;0;"8x Skill Summary - 1
 2x Device";"2x Integrated Device
 42x Skill Summary - 3
 4x Loxic Kohl
+120000x LMD
 3x Guard Dualchip
 11x Sugar Lump
 17x Polyester Pack
@@ -5181,7 +5272,7 @@ Swire;36.46;5;1;7;0;0;0;"8x Skill Summary - 1
 9x Grindstone Pentahydrate
 8x Orirock Concentration
 4x D32 Steel";115;181
-Specter;39.12;5;1;7;0;0;0;"8x Skill Summary - 1
+Specter;39.13;5;1;7;0;0;0;"8x Skill Summary - 1
 10x Orirock
 18x Skill Summary - 2
 3x Sugar
@@ -5220,6 +5311,7 @@ Specter;39.12;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 8x Orirock Cluster
 2x Integrated Device
+140000x LMD
 4x Guard Chip
 6x Orirock Cube
 3x Polyketon
@@ -5248,6 +5340,7 @@ Specter;39.12;5;1;7;0;0;0;"8x Skill Summary - 1
 3x Polyketon";"3x RMA70-12
 42x Skill Summary - 3
 4x Orirock Cluster
+120000x LMD
 3x Guard Dualchip
 8x White Horse Kohl
 15x Aketon
@@ -5297,6 +5390,7 @@ Sora;18.08;5;1;4;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Sugar Pack
 3x Oriron Cluster
+140000x LMD
 4x Supporter Chip
 4x Oriron
 3x Supporter Dualchip
@@ -5320,6 +5414,7 @@ Sora;18.08;5;1;4;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Sugar Pack
 3x Oriron Cluster
+120000x LMD
 3x Supporter Dualchip
 9x White Horse Kohl
 8x Polyester Lump
@@ -5368,6 +5463,7 @@ Snowsant;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Coagulating Gel
 17x Oriron Cluster
+140000x LMD
 4x Specialist Chip
 4x Sugar
 3x Polyketon
@@ -5389,6 +5485,7 @@ Snowsant;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Coagulating Gel
 17x Oriron Cluster
+140000x LMD
 4x Specialist Chip
 4x Sugar
 3x Polyketon
@@ -5441,6 +5538,7 @@ Skyfire;14.86;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Caster Chip
 4x Sugar
 3x Polyketon
@@ -5465,6 +5563,7 @@ Skyfire;14.86;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+120000x LMD
 3x Caster Dualchip
 11x Polyester Lump
 13x Grindstone
@@ -5514,6 +5613,7 @@ Silence;50.56;5;2;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x RMA70-12
 3x Polyester Pack
+140000x LMD
 4x Medic Chip
 4x Oriron
 3x Orirock Cube
@@ -5592,6 +5692,7 @@ Sideroca;39.46;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Loxic Kohl
 3x Aketon
+140000x LMD
 4x Guard Chip
 7x Orirock Cube
 2x Device
@@ -5619,6 +5720,7 @@ Sideroca;39.46;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Guard Chip
 7x Orirock Cube
 2x Device";"42x Skill Summary - 3
+120000x LMD
 3x Guard Dualchip
 14x Polymerized Gel
 13x Oriron Cluster
@@ -5672,6 +5774,7 @@ Shamare;37.22;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Supporter Chip
 5x Sugar
 3x Orirock Cube
@@ -5701,6 +5804,7 @@ Shamare;37.22;5;1;7;0;0;0;"8x Skill Summary - 1
 5x Sugar
 3x Orirock Cube";"42x Skill Summary - 3
 2x Manganese Ore
+120000x LMD
 3x Supporter Dualchip
 11x Orirock Concentration
 17x Incandescent Alloy
@@ -5714,7 +5818,7 @@ Shamare;37.22;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Optimized Device
 4x D32 Steel
 4x Polymerized Gel";113;180
-Sesa;12.7;5;1;3;0;0;0;"8x Skill Summary - 1
+Sesa;12.71;5;1;3;0;0;0;"8x Skill Summary - 1
 5x Diketon
 18x Skill Summary - 2
 2x Device
@@ -5754,6 +5858,7 @@ Sesa;12.7;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 22x Orirock Cluster
+140000x LMD
 4x Sniper Chip
 4x Polyketon
 2x Sugar
@@ -5779,6 +5884,7 @@ Sesa;12.7;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 22x Orirock Cluster
+120000x LMD
 3x Sniper Dualchip
 11x Grindstone Pentahydrate
 3x Keton Colloid
@@ -5828,6 +5934,7 @@ Scene;13.81;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Loxic Kohl
 3x Aketon
+140000x LMD
 4x Supporter Chip
 4x Polyketon
 3x Supporter Dualchip
@@ -5852,6 +5959,7 @@ Scene;13.81;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Loxic Kohl
 3x Aketon
+120000x LMD
 3x Supporter Dualchip
 15x White Horse Kohl
 12x Manganese Ore
@@ -5899,6 +6007,7 @@ Savage;36.22;5;1;7;0;0;0;"8x Skill Summary - 1
 11x Aketon
 48x Skill Summary - 3
 4x Loxic Kohl
+140000x LMD
 4x Guard Chip
 4x Sugar
 3x Guard Dualchip
@@ -5923,6 +6032,7 @@ Savage;36.22;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Guard Chip
 4x Sugar";"5x Aketon
 42x Skill Summary - 3
+120000x LMD
 3x Guard Dualchip
 9x Orirock Concentration
 18x Sugar Pack
@@ -5973,6 +6083,7 @@ Robin;38.1;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Specialist Chip
 5x Polyester
 3x Oriron
@@ -6001,6 +6112,7 @@ Robin;38.1;5;1;7;0;0;0;"8x Skill Summary - 1
 5x Polyester
 3x Oriron";"42x Skill Summary - 3
 2x Manganese Ore
+120000x LMD
 3x Specialist Dualchip
 8x Incandescent Alloy Block
 11x Aketon
@@ -6052,6 +6164,7 @@ Reed;37.99;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Aketon
 4x Loxic Kohl
+140000x LMD
 4x Vanguard Chip
 4x Polyketon
 3x Polyester
@@ -6080,6 +6193,7 @@ Reed;37.99;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Polyketon
 3x Polyester";"42x Skill Summary - 3
 5x Aketon
+120000x LMD
 3x Vanguard Dualchip
 9x Orirock Concentration
 12x Manganese Ore
@@ -6092,7 +6206,7 @@ Reed;37.99;5;1;7;0;0;0;"8x Skill Summary - 1
 3x RMA70-24
 4x D32 Steel
 4x Sugar Lump";111;179
-Ptilopsis;52.45;5;2;7;0;0;0;"8x Skill Summary - 1
+Ptilopsis;52.46;5;2;7;0;0;0;"8x Skill Summary - 1
 10x Orirock
 18x Skill Summary - 2
 3x Sugar
@@ -6131,6 +6245,7 @@ Ptilopsis;52.45;5;2;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Aketon
 4x Loxic Kohl
+140000x LMD
 4x Medic Chip
 8x Orirock Cube
 3x Medic Dualchip
@@ -6205,6 +6320,7 @@ Provence;38.73;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Loxic Kohl
 3x Aketon
+140000x LMD
 4x Sniper Chip
 4x Polyketon
 3x Oriron
@@ -6230,6 +6346,7 @@ Provence;38.73;5;1;7;0;0;0;"8x Skill Summary - 1
 3x Oriron";"9x Integrated Device
 42x Skill Summary - 3
 4x Loxic Kohl
+120000x LMD
 3x Sniper Dualchip
 13x Sugar Lump
 8x Manganese Trihydrate
@@ -6276,6 +6393,7 @@ Projekt Red;41.11;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Polyester Pack
 3x Manganese Ore
+140000x LMD
 4x Specialist Chip
 7x Orirock Cube
 2x Device
@@ -6303,6 +6421,7 @@ Projekt Red;41.11;5;1;7;0;0;0;"8x Skill Summary - 1
 2x Device";"1x Sugar Pack
 42x Skill Summary - 3
 3x Polyester Pack
+120000x LMD
 3x Specialist Dualchip
 7x Manganese Trihydrate
 14x Oriron Cluster
@@ -6351,6 +6470,7 @@ Pramanix;37.79;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x RMA70-12
 3x Polyester Pack
+140000x LMD
 4x Supporter Chip
 4x Sugar
 3x Supporter Dualchip
@@ -6375,6 +6495,7 @@ Pramanix;37.79;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Sugar";"15x Grindstone
 42x Skill Summary - 3
 3x RMA70-12
+120000x LMD
 3x Supporter Dualchip
 7x Keton Colloid
 9x Orirock Concentration
@@ -6423,6 +6544,7 @@ Platinum;36.78;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Oriron Cluster
 3x Grindstone
+140000x LMD
 4x Sniper Chip
 4x Oriron
 3x Sugar
@@ -6451,6 +6573,7 @@ Platinum;36.78;5;1;7;0;0;0;"8x Skill Summary - 1
 3x Sugar";"3x Polyester Pack
 42x Skill Summary - 3
 3x Oriron Cluster
+120000x LMD
 3x Sniper Dualchip
 8x Grindstone Pentahydrate
 15x Loxic Kohl
@@ -6462,7 +6585,7 @@ Platinum;36.78;5;1;7;0;0;0;"8x Skill Summary - 1
 3x Manganese Trihydrate
 4x Bipolar Nanoflake
 4x Sugar Lump";110;174
-Nightmare;17.29;5;1;3;0;0;0;"8x Skill Summary - 1
+Nightmare;17.3;5;1;3;0;0;0;"8x Skill Summary - 1
 10x Orirock
 18x Skill Summary - 2
 3x Sugar
@@ -6501,6 +6624,7 @@ Nightmare;17.29;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Loxic Kohl
 3x Aketon
+140000x LMD
 4x Caster Chip
 7x Orirock Cube
 3x Oriron
@@ -6526,6 +6650,7 @@ Nightmare;17.29;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Loxic Kohl
 3x Aketon
+120000x LMD
 3x Caster Dualchip
 7x Sugar Lump
 14x Manganese Ore
@@ -6574,6 +6699,7 @@ Nearl;37.29;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Sugar Pack
 3x Oriron Cluster
+140000x LMD
 4x Defender Chip
 3x Device
 3x Polyester
@@ -6600,6 +6726,7 @@ Nearl;37.29;5;1;7;0;0;0;"8x Skill Summary - 1
 3x Polyester";"4x Orirock Cluster
 42x Skill Summary - 3
 1x Sugar Pack
+120000x LMD
 3x Defender Dualchip
 9x White Horse Kohl
 16x Polyester Pack
@@ -6649,6 +6776,7 @@ Mulberry;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x RMA70-12
 2x Incandescent Alloy
+140000x LMD
 4x Medic Chip
 3x Device
 3x Medic Dualchip
@@ -6673,6 +6801,7 @@ Mulberry;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x RMA70-12
 2x Incandescent Alloy
+140000x LMD
 4x Medic Chip
 3x Device
 3x Medic Dualchip
@@ -6727,6 +6856,7 @@ Mr.Nothing;38.89;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Crystalline Component
 3x Coagulating Gel
+140000x LMD
 4x Specialist Chip
 3x Device
 4x Orirock Cube
@@ -6754,6 +6884,7 @@ Mr.Nothing;38.89;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Specialist Chip
 3x Device
 4x Orirock Cube";"42x Skill Summary - 3
+120000x LMD
 3x Specialist Dualchip
 6x Optimized Device
 10x Manganese Ore
@@ -6766,7 +6897,7 @@ Mr.Nothing;38.89;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Grindstone
 5x RMA70-24
 4x Polymerization Preparation";110;180
-Mint;13.96;5;1;3;0;0;0;"8x Skill Summary - 1
+Mint;13.97;5;1;3;0;0;0;"8x Skill Summary - 1
 7x Sugar Substitute
 18x Skill Summary - 2
 4x Orirock Cube
@@ -6805,6 +6936,7 @@ Mint;13.96;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Coagulating Gel
 2x Oriron Cluster
+140000x LMD
 4x Caster Chip
 4x Polyketon
 2x Device
@@ -6830,6 +6962,7 @@ Mint;13.96;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Coagulating Gel
 2x Oriron Cluster
+120000x LMD
 3x Caster Dualchip
 14x Incandescent Alloy Block
 14x Orirock Cluster
@@ -6880,6 +7013,7 @@ Meteorite;37.78;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Aketon
 4x Loxic Kohl
+140000x LMD
 4x Sniper Chip
 4x Polyketon
 3x Polyester
@@ -6908,6 +7042,7 @@ Meteorite;37.78;5;1;7;0;0;0;"8x Skill Summary - 1
 3x Polyester";"3x Oriron Cluster
 42x Skill Summary - 3
 5x Aketon
+120000x LMD
 3x Sniper Dualchip
 7x RMA70-24
 14x Manganese Ore
@@ -6958,6 +7093,7 @@ Mayer;15.03;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 4x Orirock Cluster
+140000x LMD
 4x Supporter Chip
 5x Polyester
 2x Device
@@ -6982,6 +7118,7 @@ Mayer;15.03;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 4x Orirock Cluster
+120000x LMD
 3x Supporter Dualchip
 9x Oriron Block
 11x RMA70-12
@@ -7031,6 +7168,7 @@ Manticore;40.0;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Polyester Pack
 3x Manganese Ore
+140000x LMD
 4x Specialist Chip
 4x Polyketon
 3x Specialist Dualchip
@@ -7055,6 +7193,7 @@ Manticore;40.0;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Polyketon";"13x Sugar Pack
 42x Skill Summary - 3
 3x Polyester Pack
+120000x LMD
 3x Specialist Dualchip
 11x Manganese Trihydrate
 8x Oriron Block
@@ -7102,6 +7241,7 @@ Liskarm;15.34;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Oriron Cluster
 3x Grindstone
+140000x LMD
 4x Defender Chip
 5x Sugar
 3x Orirock Cube
@@ -7126,6 +7266,7 @@ Liskarm;15.34;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Oriron Cluster
 3x Grindstone
+120000x LMD
 3x Defender Dualchip
 7x Grindstone Pentahydrate
 15x Aketon
@@ -7175,6 +7316,7 @@ Leonhardt;13.48;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x RMA70-12
 2x Incandescent Alloy
+140000x LMD
 4x Caster Chip
 4x Oriron
 3x Polyester
@@ -7200,6 +7342,7 @@ Leonhardt;13.48;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x RMA70-12
 2x Incandescent Alloy
+120000x LMD
 3x Caster Dualchip
 7x Keton Colloid
 8x White Horse Kohl
@@ -7247,6 +7390,7 @@ Leizi;50.58;5;2;7;0;1;0;"8x Skill Summary - 1
 20x Coagulating Gel
 48x Skill Summary - 3
 2x Integrated Device
+140000x LMD
 4x Caster Chip
 3x Device
 3x Polyester
@@ -7323,6 +7467,7 @@ Lava the Purgatory;38.33;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Orirock Cluster
 4x Integrated Device
+140000x LMD
 4x Caster Chip
 6x Orirock Cube
 3x Polyketon
@@ -7352,6 +7497,7 @@ Lava the Purgatory;38.33;5;1;7;0;0;0;"8x Skill Summary - 1
 6x Orirock Cube
 3x Polyketon";"42x Skill Summary - 3
 2x Integrated Device
+120000x LMD
 3x Caster Dualchip
 11x White Horse Kohl
 13x Grindstone
@@ -7404,6 +7550,7 @@ Lappland;48.54;5;2;7;0;3;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x RMA70-12
 3x Polyester Pack
+140000x LMD
 4x Guard Chip
 3x Device
 3x Guard Dualchip
@@ -7481,6 +7628,7 @@ La Pluma;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x RMA70-12
 2x Incandescent Alloy
+140000x LMD
 4x Guard Chip
 4x Oriron
 3x Guard Dualchip
@@ -7504,6 +7652,7 @@ La Pluma;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x RMA70-12
 2x Incandescent Alloy
+140000x LMD
 4x Guard Chip
 4x Oriron
 3x Guard Dualchip
@@ -7559,6 +7708,7 @@ Kirara;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Specialist Chip
 4x Sugar
 3x Specialist Dualchip
@@ -7581,6 +7731,7 @@ Kirara;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Specialist Chip
 4x Sugar
 3x Specialist Dualchip
@@ -7633,6 +7784,7 @@ Kafka;36.46;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Loxic Kohl
 3x Aketon
+140000x LMD
 4x Specialist Chip
 4x Sugar
 3x Polyester
@@ -7659,6 +7811,7 @@ Kafka;36.46;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Specialist Chip
 4x Sugar
 3x Polyester";"42x Skill Summary - 3
+120000x LMD
 3x Specialist Dualchip
 15x Polymerized Gel
 15x Oriron Cluster
@@ -7670,7 +7823,7 @@ Kafka;36.46;5;1;7;0;0;0;"8x Skill Summary - 1
 6x Orirock Cluster
 3x Oriron Block
 4x Crystalline Electroassembly";115;181
-Istina;15.37;5;1;3;0;0;0;"8x Skill Summary - 1
+Istina;15.38;5;1;3;0;0;0;"8x Skill Summary - 1
 7x Ester
 18x Skill Summary - 2
 3x Oriron
@@ -7707,6 +7860,7 @@ Istina;15.37;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 8x Orirock Cluster
 2x Integrated Device
+140000x LMD
 4x Supporter Chip
 5x Polyester
 3x Supporter Dualchip
@@ -7728,6 +7882,7 @@ Istina;15.37;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 8x Orirock Cluster
 2x Integrated Device
+120000x LMD
 3x Supporter Dualchip
 5x Optimized Device
 8x Sugar Lump
@@ -7776,6 +7931,7 @@ Iris;39.41;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Grindstone
 4x Orirock Cluster
+140000x LMD
 4x Caster Chip
 4x Oriron
 2x Polyketon
@@ -7804,6 +7960,7 @@ Iris;39.41;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Caster Chip
 4x Oriron
 2x Polyketon";"42x Skill Summary - 3
+120000x LMD
 3x Caster Dualchip
 9x Oriron Block
 11x Integrated Device
@@ -7856,6 +8013,7 @@ Indra;30.73;5;1;6;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 4x Orirock Cluster
+140000x LMD
 4x Guard Chip
 4x Polyketon
 3x Guard Dualchip
@@ -7879,6 +8037,7 @@ Indra;30.73;5;1;6;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 4x Orirock Cluster
+120000x LMD
 3x Guard Dualchip
 11x Keton Colloid
 16x Polyester Pack
@@ -7928,6 +8087,7 @@ Hung;14.69;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Incandescent Alloy
 5x Manganese Ore
+140000x LMD
 4x Defender Chip
 5x Polyester
 2x Device
@@ -7953,6 +8113,7 @@ Hung;14.69;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Incandescent Alloy
 5x Manganese Ore
+120000x LMD
 3x Defender Dualchip
 19x Incandescent Alloy Block
 15x Aketon
@@ -8003,6 +8164,7 @@ Heavyrain;38.59;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Integrated Device
 3x Coagulating Gel
+140000x LMD
 4x Defender Chip
 4x Device
 4x Oriron
@@ -8030,6 +8192,7 @@ Heavyrain;38.59;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Device
 4x Oriron";"42x Skill Summary - 3
 2x Integrated Device
+120000x LMD
 3x Defender Dualchip
 19x Orirock Concentration
 14x Oriron Cluster
@@ -8079,6 +8242,7 @@ GreyThroat;40.68;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Sniper Chip
 7x Orirock Cube
 3x Oriron
@@ -8106,6 +8270,7 @@ GreyThroat;40.68;5;1;7;0;0;0;"8x Skill Summary - 1
 7x Orirock Cube
 3x Oriron";"9x Integrated Device
 42x Skill Summary - 3
+120000x LMD
 3x Sniper Dualchip
 7x Oriron Block
 9x Optimized Device
@@ -8155,6 +8320,7 @@ Grani;41.88;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Aketon
 4x Loxic Kohl
+140000x LMD
 4x Vanguard Chip
 8x Orirock Cube
 3x Vanguard Dualchip
@@ -8178,6 +8344,7 @@ Grani;41.88;5;1;7;0;0;0;"8x Skill Summary - 1
 8x Orirock Cube";"16x Oriron Cluster
 42x Skill Summary - 3
 5x Aketon
+120000x LMD
 3x Vanguard Dualchip
 11x RMA70-24
 6x Optimized Device
@@ -8223,6 +8390,7 @@ Glaucus;13.22;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 4x Orirock Cluster
+140000x LMD
 4x Supporter Chip
 4x Polyketon
 3x Supporter Dualchip
@@ -8246,6 +8414,7 @@ Glaucus;13.22;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 4x Orirock Cluster
+120000x LMD
 3x Supporter Dualchip
 7x Keton Colloid
 10x Integrated Device
@@ -8295,6 +8464,7 @@ Frost;38.55;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Coagulating Gel
 2x Oriron Cluster
+140000x LMD
 4x Specialist Chip
 5x Polyester
 4x Orirock Cube
@@ -8322,6 +8492,7 @@ Frost;38.55;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Orirock Cube";"17x Orirock Cluster
 42x Skill Summary - 3
 2x Coagulating Gel
+120000x LMD
 3x Specialist Dualchip
 15x Grindstone Pentahydrate
 3x Oriron Block
@@ -8371,6 +8542,7 @@ Franka;18.39;5;1;4;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Guard Chip
 4x Oriron
 3x Guard Dualchip
@@ -8394,6 +8566,7 @@ Franka;18.39;5;1;4;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+120000x LMD
 3x Guard Dualchip
 9x Oriron Block
 18x Sugar Pack
@@ -8442,6 +8615,7 @@ Folinic;15.2;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Aketon
 8x Loxic Kohl
+140000x LMD
 4x Medic Chip
 5x Polyester
 3x Medic Dualchip
@@ -8465,6 +8639,7 @@ Folinic;15.2;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Aketon
 8x Loxic Kohl
+120000x LMD
 3x Medic Dualchip
 11x Keton Colloid
 8x Integrated Device
@@ -8513,6 +8688,7 @@ Flint;36.52;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Aketon
 4x Loxic Kohl
+140000x LMD
 4x Guard Chip
 5x Polyester
 3x Guard Dualchip
@@ -8536,6 +8712,7 @@ Flint;36.52;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Guard Chip
 5x Polyester";"19x Grindstone
 42x Skill Summary - 3
+120000x LMD
 3x Guard Dualchip
 11x Orirock Concentration
 11x Keton Colloid
@@ -8583,6 +8760,7 @@ Flamebringer;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 8x Orirock Cluster
 2x Integrated Device
+140000x LMD
 4x Guard Chip
 6x Orirock Cube
 3x Polyketon
@@ -8604,6 +8782,7 @@ Flamebringer;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 8x Orirock Cluster
 2x Integrated Device
+140000x LMD
 4x Guard Chip
 6x Orirock Cube
 3x Polyketon
@@ -8655,6 +8834,7 @@ Firewatch;36.0;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Sniper Chip
 3x Device
 2x Polyketon
@@ -8680,6 +8860,7 @@ Firewatch;36.0;5;1;7;0;0;0;"8x Skill Summary - 1
 2x Polyketon";"19x Loxic Kohl
 42x Skill Summary - 3
 2x Manganese Ore
+120000x LMD
 3x Sniper Dualchip
 11x Polyester Lump
 9x Grindstone Pentahydrate
@@ -8725,6 +8906,7 @@ FEater;12.57;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Oriron Cluster
 3x Grindstone
+140000x LMD
 4x Specialist Chip
 3x Device
 3x Specialist Dualchip
@@ -8746,6 +8928,7 @@ FEater;12.57;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 5x Oriron Cluster
 3x Grindstone
+120000x LMD
 3x Specialist Dualchip
 8x Grindstone Pentahydrate
 8x Keton Colloid
@@ -8792,6 +8975,7 @@ Executor;26.47;5;1;5;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Sugar Pack
 3x Oriron Cluster
+140000x LMD
 4x Sniper Chip
 5x Sugar
 2x Device
@@ -8818,6 +9002,7 @@ Executor;26.47;5;1;5;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Sugar Pack
 3x Oriron Cluster
+120000x LMD
 3x Sniper Dualchip
 8x Manganese Trihydrate
 9x Grindstone
@@ -8868,6 +9053,7 @@ Elysium;44.2;5;1;7;1;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Grindstone
 10x Orirock Cluster
+140000x LMD
 4x Vanguard Chip
 4x Polyester
 3x Sugar
@@ -8895,6 +9081,7 @@ Elysium;44.2;5;1;7;1;0;0;"8x Skill Summary - 1
 4x Polyester
 3x Sugar
 3x Polymerized Gel";"37x Skill Summary - 3
+120000x LMD
 3x Vanguard Dualchip
 10x Incandescent Alloy Block
 16x Aketon
@@ -8945,6 +9132,7 @@ Croissant;15.12;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Aketon
 4x Loxic Kohl
+140000x LMD
 4x Defender Chip
 4x Polyester
 3x Sugar
@@ -8969,6 +9157,7 @@ Croissant;15.12;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 7x Aketon
 4x Loxic Kohl
+120000x LMD
 3x Defender Dualchip
 11x RMA70-24
 8x Integrated Device
@@ -9017,6 +9206,7 @@ Cliffheart;40.33;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Grindstone
 4x Orirock Cluster
+140000x LMD
 4x Specialist Chip
 6x Orirock Cube
 3x Specialist Dualchip
@@ -9041,6 +9231,7 @@ Cliffheart;40.33;5;1;7;0;0;0;"8x Skill Summary - 1
 6x Orirock Cube";"15x Manganese Ore
 42x Skill Summary - 3
 4x Grindstone
+120000x LMD
 3x Specialist Dualchip
 6x Oriron Block
 8x RMA70-24
@@ -9089,6 +9280,7 @@ Chiave;18.6;5;1;4;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Vanguard Chip
 3x Device
 3x Vanguard Dualchip
@@ -9115,6 +9307,7 @@ Chiave;18.6;5;1;4;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Manganese Ore
 3x RMA70-12
+120000x LMD
 3x Vanguard Dualchip
 15x Manganese Trihydrate
 13x Grindstone
@@ -9166,6 +9359,7 @@ Ceylon;13.53;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+140000x LMD
 4x Medic Chip
 4x Oriron
 3x Medic Dualchip
@@ -9190,6 +9384,7 @@ Ceylon;13.53;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Manganese Ore
 3x RMA70-12
+120000x LMD
 3x Medic Dualchip
 7x Oriron Block
 10x Aketon
@@ -9238,6 +9433,7 @@ Broca;37.71;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Integrated Device
 3x Sugar Pack
+140000x LMD
 4x Guard Chip
 4x Device
 4x Oriron
@@ -9263,6 +9459,7 @@ Broca;37.71;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Guard Chip
 4x Device
 4x Oriron";"42x Skill Summary - 3
+120000x LMD
 3x Guard Dualchip
 14x Sugar Lump
 13x Grindstone
@@ -9311,6 +9508,7 @@ Breeze;35.96;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x RMA70-12
 3x Polyester Pack
+140000x LMD
 4x Medic Chip
 3x Device
 3x Medic Dualchip
@@ -9336,6 +9534,7 @@ Breeze;35.96;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Medic Chip
 3x Device";"4x Grindstone
 42x Skill Summary - 3
+120000x LMD
 3x Medic Dualchip
 5x Optimized Device
 18x Loxic Kohl
@@ -9385,6 +9584,7 @@ Blue Poison;40.46;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 6x Polyester Pack
 3x Manganese Ore
+140000x LMD
 4x Sniper Chip
 5x Polyester
 4x Orirock Cube
@@ -9412,6 +9612,7 @@ Blue Poison;40.46;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Orirock Cube";"1x Sugar Pack
 42x Skill Summary - 3
 3x Polyester Pack
+120000x LMD
 3x Sniper Dualchip
 8x Manganese Trihydrate
 8x Integrated Device
@@ -9463,6 +9664,7 @@ Blitz;39.64;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Oriron Cluster
 3x Grindstone
+140000x LMD
 4x Defender Chip
 5x Sugar
 3x Defender Dualchip
@@ -9489,6 +9691,7 @@ Blitz;39.64;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Defender Chip
 5x Sugar";"3x Incandescent Alloy
 42x Skill Summary - 3
+120000x LMD
 3x Defender Dualchip
 12x Manganese Trihydrate
 11x RMA70-12
@@ -9540,6 +9743,7 @@ Bison;40.0;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Polyester Pack
 3x Manganese Ore
+140000x LMD
 4x Defender Chip
 5x Polyester
 4x Orirock Cube
@@ -9567,6 +9771,7 @@ Bison;40.0;5;1;7;0;0;0;"8x Skill Summary - 1
 5x Polyester
 4x Orirock Cube";"1x Sugar Pack
 42x Skill Summary - 3
+120000x LMD
 3x Defender Dualchip
 11x Grindstone Pentahydrate
 11x RMA70-12
@@ -9618,6 +9823,7 @@ Bibeak;37.65;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Loxic Kohl
 3x Aketon
+140000x LMD
 4x Guard Chip
 4x Oriron
 3x Orirock Cube
@@ -9646,6 +9852,7 @@ Bibeak;37.65;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Guard Chip
 4x Oriron
 3x Orirock Cube";"42x Skill Summary - 3
+120000x LMD
 3x Guard Dualchip
 11x Manganese Trihydrate
 8x RMA70-12
@@ -9699,6 +9906,7 @@ Bena;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Grindstone
 4x Orirock Cluster
+140000x LMD
 4x Specialist Chip
 5x Polyester
 3x Specialist Dualchip
@@ -9722,6 +9930,7 @@ Bena;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Grindstone
 4x Orirock Cluster
+140000x LMD
 4x Specialist Chip
 5x Polyester
 3x Specialist Dualchip
@@ -9777,6 +9986,7 @@ Beeswax;13.07;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Integrated Device
 3x Coagulating Gel
+140000x LMD
 4x Caster Chip
 4x Oriron
 3x Caster Dualchip
@@ -9803,6 +10013,7 @@ Beeswax;13.07;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Integrated Device
 3x Coagulating Gel
+120000x LMD
 3x Caster Dualchip
 8x Optimized Device
 18x Loxic Kohl
@@ -9853,6 +10064,7 @@ Ayerscarpe;38.51;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Oriron Cluster
 3x Grindstone
+140000x LMD
 4x Guard Chip
 4x Sugar
 3x Guard Dualchip
@@ -9877,6 +10089,7 @@ Ayerscarpe;38.51;5;1;7;0;0;0;"8x Skill Summary - 1
 20000x LMD
 4x Guard Chip
 4x Sugar";"42x Skill Summary - 3
+120000x LMD
 3x Guard Dualchip
 6x Oriron Block
 12x Coagulating Gel
@@ -9927,6 +10140,7 @@ Astesia;38.98;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Sugar Pack
 17x Oriron Cluster
+140000x LMD
 4x Guard Chip
 3x Guard Dualchip
 15x Polyester Lump
@@ -9950,6 +10164,7 @@ Astesia;38.98;5;1;7;0;0;0;"8x Skill Summary - 1
 42x Skill Summary - 3
 1x Sugar Pack
 14x Oriron Cluster
+120000x LMD
 3x Guard Dualchip
 15x Polyester Lump
 3x Keton Colloid
@@ -9999,6 +10214,7 @@ Ashlock;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Crystalline Component
 3x Semi-natural Solvent
+140000x LMD
 4x Defender Chip
 7x Orirock Cube
 2x Device
@@ -10024,6 +10240,7 @@ Ashlock;0.0;5;0;0;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Crystalline Component
 3x Semi-natural Solvent
+140000x LMD
 4x Defender Chip
 7x Orirock Cube
 2x Device
@@ -10081,6 +10298,7 @@ Asbestos;13.87;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Orirock Cluster
 4x Integrated Device
+140000x LMD
 4x Defender Chip
 4x Polyketon
 3x Oriron
@@ -10106,6 +10324,7 @@ Asbestos;13.87;5;1;3;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Orirock Cluster
 4x Integrated Device
+120000x LMD
 3x Defender Dualchip
 8x Optimized Device
 3x Oriron Cluster
@@ -10155,6 +10374,7 @@ April;38.33;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Orirock Cluster
 2x Integrated Device
+140000x LMD
 4x Sniper Chip
 4x Oriron
 2x Polyketon
@@ -10182,6 +10402,7 @@ April;38.33;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Oriron
 2x Polyketon";"5x Aketon
 42x Skill Summary - 3
+120000x LMD
 3x Sniper Dualchip
 9x Polymerized Gel
 9x RMA70-12
@@ -10233,6 +10454,7 @@ Aosta;19.55;5;1;4;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 13x Incandescent Alloy
 3x Manganese Ore
+140000x LMD
 4x Sniper Chip
 3x Device
 3x Sniper Dualchip
@@ -10258,6 +10480,7 @@ Aosta;19.55;5;1;4;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 13x Incandescent Alloy
 3x Manganese Ore
+120000x LMD
 3x Sniper Dualchip
 10x Oriron Block
 7x Grindstone Pentahydrate
@@ -10307,6 +10530,7 @@ Andreana;41.01;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 2x Grindstone
 4x Orirock Cluster
+140000x LMD
 4x Sniper Chip
 8x Orirock Cube
 3x Sniper Dualchip
@@ -10330,6 +10554,7 @@ Andreana;41.01;5;1;7;0;0;0;"8x Skill Summary - 1
 20000x LMD
 4x Sniper Chip
 8x Orirock Cube";"42x Skill Summary - 3
+120000x LMD
 3x Sniper Dualchip
 17x Grindstone Pentahydrate
 11x RMA70-12
@@ -10340,7 +10565,7 @@ Andreana;41.01;5;1;7;0;0;0;"8x Skill Summary - 1
 2x Coagulating Gel
 3x Orirock Concentration
 4x Polymerization Preparation";105;178
-Amiya;65.16;5;2;7;2;0;0;"8x Skill Summary - 1
+Amiya;65.17;5;2;7;2;0;0;"8x Skill Summary - 1
 4x Damaged Device
 18x Skill Summary - 2
 4x Orirock Cube
@@ -10378,6 +10603,7 @@ Amiya;65.16;5;2;7;2;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 4x Integrated Device
 3x Sugar Pack
+140000x LMD
 3x Caster Chip
 4x Device
 4x Oriron
@@ -10453,6 +10679,7 @@ Akafuyu;37.3;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 3x Loxic Kohl
 18x Aketon
+140000x LMD
 4x Guard Chip
 7x Orirock Cube
 3x Guard Dualchip
@@ -10478,6 +10705,7 @@ Akafuyu;37.3;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Guard Chip
 7x Orirock Cube";"42x Skill Summary - 3
 15x Aketon
+120000x LMD
 3x Guard Dualchip
 16x Polymerized Gel
 3x Orirock Concentration
@@ -10530,6 +10758,7 @@ Absinthe;40.45;5;1;7;0;0;0;"8x Skill Summary - 1
 48x Skill Summary - 3
 14x Incandescent Alloy
 3x Manganese Ore
+140000x LMD
 4x Caster Chip
 6x Orirock Cube
 3x Caster Dualchip
@@ -10556,6 +10785,7 @@ Absinthe;40.45;5;1;7;0;0;0;"8x Skill Summary - 1
 4x Caster Chip
 6x Orirock Cube";"42x Skill Summary - 3
 11x Incandescent Alloy
+120000x LMD
 3x Caster Dualchip
 13x Orirock Concentration
 3x Oriron Block
@@ -10568,7 +10798,7 @@ Absinthe;40.45;5;1;7;0;0;0;"8x Skill Summary - 1
 5x Keton Colloid
 4x Polymerization Preparation
 4x RMA70-24";106;178
-Vigna;56.89;4;2;7;0;0;0;"4x Skill Summary - 1
+Vigna;56.9;4;2;7;0;0;0;"4x Skill Summary - 1
 2x Damaged Device
 9x Skill Summary - 2
 2x Orirock Cube
@@ -10604,6 +10834,7 @@ Vigna;56.89;4;2;7;0;0;0;"4x Skill Summary - 1
 6x Loxic Kohl
 28x Skill Summary - 3
 6x Manganese Ore
+75000x LMD
 3x Vanguard Chip
 1x Device
 1x Polyester
@@ -10640,7 +10871,7 @@ Vigna;56.89;4;2;7;0;0;0;"4x Skill Summary - 1
 2x Sugar Lump
 2x D32 Steel
 2x Polyester Lump";50;116
-Vermeil;19.0;4;1;5;0;0;0;"4x Skill Summary - 1
+Vermeil;19.01;4;1;5;0;0;0;"4x Skill Summary - 1
 4x Ester
 9x Skill Summary - 2
 2x Oriron
@@ -10676,6 +10907,7 @@ Vermeil;19.0;4;1;5;0;0;0;"4x Skill Summary - 1
 2x Integrated Device
 28x Skill Summary - 3
 7x Loxic Kohl
+75000x LMD
 3x Sniper Chip
 1x Polyester
 5x Sniper Chip Pack
@@ -10699,6 +10931,7 @@ Vermeil;19.0;4;1;5;0;0;0;"4x Skill Summary - 1
 2x Integrated Device
 28x Skill Summary - 3
 7x Loxic Kohl
+60000x LMD
 5x Sniper Chip Pack
 18x Polyester Pack
 12x Sugar Pack
@@ -10748,6 +10981,7 @@ Utage;58.26;4;2;7;0;3;0;"4x Skill Summary - 1
 2x Loxic Kohl
 28x Skill Summary - 3
 6x Manganese Ore
+75000x LMD
 3x Guard Chip
 1x Device
 5x Guard Chip Pack
@@ -10823,6 +11057,7 @@ Sussurro;31.25;4;1;7;0;0;0;"4x Skill Summary - 1
 3x Polyester Pack
 28x Skill Summary - 3
 5x Oriron Cluster
+75000x LMD
 3x Medic Chip
 1x Device
 1x Polyketon
@@ -10849,6 +11084,7 @@ Sussurro;31.25;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Device
 1x Polyketon";"24x Skill Summary - 3
 2x Oriron Cluster
+60000x LMD
 5x Medic Chip Pack
 10x RMA70-12
 13x Loxic Kohl
@@ -10897,6 +11133,7 @@ ShiraYuki;55.75;4;2;7;0;0;0;"4x Skill Summary - 1
 5x Manganese Ore
 28x Skill Summary - 3
 6x Grindstone
+75000x LMD
 3x Sniper Chip
 1x Polyketon
 5x Sniper Chip Pack
@@ -10969,6 +11206,7 @@ Shaw;30.36;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Grindstone
 28x Skill Summary - 3
 5x RMA70-12
+75000x LMD
 3x Specialist Chip
 1x Sugar
 1x Orirock Cube
@@ -10995,6 +11233,7 @@ Shaw;30.36;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Orirock Cube";"4x Grindstone
 24x Skill Summary - 3
 3x RMA70-12
+60000x LMD
 5x Specialist Chip Pack
 12x Integrated Device
 11x Polyester Pack
@@ -11042,6 +11281,7 @@ Scavenger;31.36;4;1;7;0;0;0;"4x Skill Summary - 1
 5x RMA70-12
 28x Skill Summary - 3
 8x Orirock Cluster
+75000x LMD
 3x Vanguard Chip
 1x Orirock Cube
 5x Vanguard Chip Pack
@@ -11067,6 +11307,7 @@ Scavenger;31.36;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Orirock Cube";"3x RMA70-12
 24x Skill Summary - 3
 5x Orirock Cluster
+60000x LMD
 5x Vanguard Chip Pack
 20x Loxic Kohl
 6x Integrated Device
@@ -11115,6 +11356,7 @@ Rope;30.17;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Loxic Kohl
 28x Skill Summary - 3
 6x Manganese Ore
+75000x LMD
 3x Specialist Chip
 1x Sugar
 1x Device
@@ -11142,6 +11384,7 @@ Rope;30.17;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Device";"4x Loxic Kohl
 24x Skill Summary - 3
 3x Manganese Ore
+60000x LMD
 5x Specialist Chip Pack
 15x Oriron Cluster
 11x Sugar Pack
@@ -11192,6 +11435,7 @@ Roberta;0.0;4;0;0;0;0;0;"4x Skill Summary - 1
 2x Grindstone
 28x Skill Summary - 3
 2x RMA70-12
+75000x LMD
 3x Supporter Chip
 1x Oriron
 5x Supporter Chip Pack
@@ -11216,6 +11460,7 @@ Roberta;0.0;4;0;0;0;0;0;"4x Skill Summary - 1
 2x Grindstone
 28x Skill Summary - 3
 2x RMA70-12
+75000x LMD
 3x Supporter Chip
 1x Oriron
 5x Supporter Chip Pack
@@ -11272,6 +11517,7 @@ Purestream;31.86;4;1;7;0;0;0;"4x Skill Summary - 1
 2x Manganese Ore
 28x Skill Summary - 3
 2x Grindstone
+75000x LMD
 3x Medic Chip
 1x Orirock Cube
 5x Medic Chip Pack
@@ -11299,6 +11545,7 @@ Purestream;31.86;4;1;7;0;0;0;"4x Skill Summary - 1
 15000x LMD
 3x Medic Chip
 1x Orirock Cube";"24x Skill Summary - 3
+60000x LMD
 5x Medic Chip Pack
 11x Integrated Device
 9x Coagulating Gel
@@ -11351,6 +11598,7 @@ Podenco;30.63;4;1;7;0;0;0;"4x Skill Summary - 1
 4x Oriron Cluster
 28x Skill Summary - 3
 3x Orirock Cluster
+75000x LMD
 3x Supporter Chip
 1x Polyester
 1x Oriron
@@ -11377,6 +11625,7 @@ Podenco;30.63;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Polyester
 1x Oriron";"2x Oriron Cluster
 24x Skill Summary - 3
+60000x LMD
 5x Supporter Chip Pack
 22x Incandescent Alloy
 5x Grindstone
@@ -11424,6 +11673,7 @@ Pinecone;31.19;4;1;7;0;0;0;"4x Skill Summary - 1
 2x Loxic Kohl
 28x Skill Summary - 3
 3x Manganese Ore
+75000x LMD
 3x Sniper Chip
 1x Polyester
 5x Sniper Chip Pack
@@ -11447,6 +11697,7 @@ Pinecone;31.19;4;1;7;0;0;0;"4x Skill Summary - 1
 15000x LMD
 3x Sniper Chip
 1x Polyester";"24x Skill Summary - 3
+60000x LMD
 5x Sniper Chip Pack
 19x Incandescent Alloy
 8x Grindstone
@@ -11495,6 +11746,7 @@ Perfumer;57.26;4;2;7;0;0;0;"4x Skill Summary - 1
 5x RMA70-12
 28x Skill Summary - 3
 8x Orirock Cluster
+75000x LMD
 3x Medic Chip
 1x Polyketon
 1x Polyester
@@ -11570,6 +11822,7 @@ Myrtle;77.27;4;2;7;3;0;0;"4x Skill Summary - 1
 7x Sugar Pack
 28x Skill Summary - 3
 7x Polyester Pack
+75000x LMD
 3x Vanguard Chip
 1x Polyketon
 1x Oriron
@@ -11644,6 +11897,7 @@ Myrrh;29.57;4;1;7;0;0;0;"4x Skill Summary - 1
 5x Manganese Ore
 28x Skill Summary - 3
 6x Grindstone
+75000x LMD
 3x Medic Chip
 1x Polyester
 1x Orirock Cube
@@ -11671,6 +11925,7 @@ Myrrh;29.57;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Orirock Cube";"3x Manganese Ore
 24x Skill Summary - 3
 4x Grindstone
+60000x LMD
 5x Medic Chip Pack
 14x Aketon
 12x Polyester Pack
@@ -11682,7 +11937,7 @@ Myrrh;29.57;4;1;7;0;0;0;"4x Skill Summary - 1
 2x Polyester Lump
 2x Polymerization Preparation
 2x Manganese Trihydrate";81;115
-Mousse;29.9;4;1;7;0;0;0;"4x Skill Summary - 1
+Mousse;29.91;4;1;7;0;0;0;"4x Skill Summary - 1
 3x Diketon
 9x Skill Summary - 2
 1x Device
@@ -11719,6 +11974,7 @@ Mousse;29.9;4;1;7;0;0;0;"4x Skill Summary - 1
 4x Oriron Cluster
 28x Skill Summary - 3
 7x Aketon
+75000x LMD
 3x Guard Chip
 1x Polyketon
 5x Guard Chip Pack
@@ -11744,6 +12000,7 @@ Mousse;29.9;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Polyketon";"2x Oriron Cluster
 24x Skill Summary - 3
 4x Aketon
+60000x LMD
 5x Guard Chip Pack
 20x Orirock Cluster
 8x Grindstone
@@ -11792,6 +12049,7 @@ Meteor;29.57;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Loxic Kohl
 28x Skill Summary - 3
 6x Manganese Ore
+75000x LMD
 3x Sniper Chip
 1x Oriron
 5x Sniper Chip Pack
@@ -11817,6 +12075,7 @@ Meteor;29.57;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Oriron";"4x Loxic Kohl
 24x Skill Summary - 3
 3x Manganese Ore
+60000x LMD
 5x Sniper Chip Pack
 14x Oriron Cluster
 12x Polyester Pack
@@ -11865,6 +12124,7 @@ May;30.17;4;1;7;0;0;0;"4x Skill Summary - 1
 5x Integrated Device
 28x Skill Summary - 3
 7x Loxic Kohl
+75000x LMD
 3x Sniper Chip
 1x Device
 5x Sniper Chip Pack
@@ -11890,6 +12150,7 @@ May;30.17;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Device";"3x Integrated Device
 24x Skill Summary - 3
 4x Loxic Kohl
+60000x LMD
 5x Sniper Chip Pack
 14x Oriron Cluster
 12x Polyester Pack
@@ -11936,6 +12197,7 @@ Matterhorn;19.82;4;1;5;0;0;0;"4x Skill Summary - 1
 8x Orirock Cluster
 28x Skill Summary - 3
 7x Sugar Pack
+75000x LMD
 3x Defender Chip
 1x Device
 1x Oriron
@@ -11959,6 +12221,7 @@ Matterhorn;19.82;4;1;5;0;0;0;"4x Skill Summary - 1
 8x Orirock Cluster
 28x Skill Summary - 3
 7x Sugar Pack
+60000x LMD
 5x Defender Chip Pack
 14x Manganese Ore
 7x Integrated Device
@@ -11968,7 +12231,7 @@ Matterhorn;19.82;4;1;5;0;0;0;"4x Skill Summary - 1
 3x Optimized Device
 3x Oriron Block
 2x Polymerization Preparation";89;111
-Matoimaru;30.76;4;1;7;0;0;0;"4x Skill Summary - 1
+Matoimaru;30.77;4;1;7;0;0;0;"4x Skill Summary - 1
 5x Orirock
 9x Skill Summary - 2
 2x Sugar
@@ -12004,6 +12267,7 @@ Matoimaru;30.76;4;1;7;0;0;0;"4x Skill Summary - 1
 5x Manganese Ore
 28x Skill Summary - 3
 6x Grindstone
+75000x LMD
 3x Guard Chip
 1x Orirock Cube
 1x Device
@@ -12030,6 +12294,7 @@ Matoimaru;30.76;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Device";"3x Manganese Ore
 24x Skill Summary - 3
 4x Grindstone
+60000x LMD
 5x Guard Chip Pack
 16x Aketon
 10x Sugar Pack
@@ -12075,6 +12340,7 @@ Jessica;57.26;4;2;7;0;0;0;"4x Skill Summary - 1
 5x RMA70-12
 28x Skill Summary - 3
 8x Orirock Cluster
+75000x LMD
 3x Sniper Chip
 1x Polyester
 1x Sugar
@@ -12145,6 +12411,7 @@ Jaye;32.11;4;1;7;0;0;0;"4x Skill Summary - 1
 5x Integrated Device
 28x Skill Summary - 3
 3x Incandescent Alloy
+75000x LMD
 3x Specialist Chip
 1x Polyketon
 1x Device
@@ -12171,6 +12438,7 @@ Jaye;32.11;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Polyketon
 1x Device";"3x Integrated Device
 24x Skill Summary - 3
+60000x LMD
 5x Specialist Chip Pack
 14x Grindstone
 8x Aketon
@@ -12218,6 +12486,7 @@ Jackie;27.87;4;1;7;0;0;0;"4x Skill Summary - 1
 2x Aketon
 28x Skill Summary - 3
 2x Integrated Device
+75000x LMD
 3x Guard Chip
 1x Orirock Cube
 5x Guard Chip Pack
@@ -12241,6 +12510,7 @@ Jackie;27.87;4;1;7;0;0;0;"4x Skill Summary - 1
 15000x LMD
 3x Guard Chip
 1x Orirock Cube";"24x Skill Summary - 3
+60000x LMD
 5x Guard Chip Pack
 25x Orirock Cluster
 12x Loxic Kohl
@@ -12289,6 +12559,7 @@ Indigo;0.0;4;0;0;0;0;0;"4x Skill Summary - 1
 2x Manganese Ore
 28x Skill Summary - 3
 2x Grindstone
+75000x LMD
 3x Caster Chip
 1x Oriron
 5x Caster Chip Pack
@@ -12311,6 +12582,7 @@ Indigo;0.0;4;0;0;0;0;0;"4x Skill Summary - 1
 2x Manganese Ore
 28x Skill Summary - 3
 2x Grindstone
+75000x LMD
 3x Caster Chip
 1x Oriron
 5x Caster Chip Pack
@@ -12363,6 +12635,7 @@ Haze;31.36;4;1;7;0;0;0;"4x Skill Summary - 1
 4x Oriron Cluster
 28x Skill Summary - 3
 7x Aketon
+75000x LMD
 3x Caster Chip
 1x Orirock Cube
 5x Caster Chip Pack
@@ -12388,6 +12661,7 @@ Haze;31.36;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Orirock Cube";"2x Oriron Cluster
 24x Skill Summary - 3
 4x Aketon
+60000x LMD
 5x Caster Chip Pack
 19x Orirock Cluster
 8x RMA70-12
@@ -12435,6 +12709,7 @@ Gum;33.03;4;1;7;0;0;0;"4x Skill Summary - 1
 7x Polyester Pack
 28x Skill Summary - 3
 5x Oriron Cluster
+75000x LMD
 3x Defender Chip
 1x Sugar
 1x Polyketon
@@ -12461,6 +12736,7 @@ Gum;33.03;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Polyketon";"4x Polyester Pack
 24x Skill Summary - 3
 2x Oriron Cluster
+60000x LMD
 5x Defender Chip Pack
 13x RMA70-12
 7x Manganese Ore
@@ -12507,6 +12783,7 @@ Greyy;30.7;4;1;7;0;0;0;"4x Skill Summary - 1
 8x Orirock Cluster
 28x Skill Summary - 3
 7x Sugar Pack
+75000x LMD
 3x Caster Chip
 1x Oriron
 1x Polyester
@@ -12533,6 +12810,7 @@ Greyy;30.7;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Polyester";"5x Orirock Cluster
 24x Skill Summary - 3
 4x Sugar Pack
+60000x LMD
 5x Caster Chip Pack
 15x Manganese Ore
 9x Aketon
@@ -12580,6 +12858,7 @@ Gravel;59.35;4;2;7;0;1;0;"4x Skill Summary - 1
 5x Integrated Device
 28x Skill Summary - 3
 7x Loxic Kohl
+75000x LMD
 3x Specialist Chip
 1x Orirock Cube
 1x Polyketon
@@ -12655,6 +12934,7 @@ Gitano;28.33;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Aketon
 28x Skill Summary - 3
 5x Integrated Device
+75000x LMD
 3x Caster Chip
 1x Sugar
 5x Caster Chip Pack
@@ -12680,6 +12960,7 @@ Gitano;28.33;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Sugar";"4x Aketon
 24x Skill Summary - 3
 3x Integrated Device
+60000x LMD
 5x Caster Chip Pack
 17x Sugar Pack
 14x Orirock Cluster
@@ -12728,6 +13009,7 @@ Gavial;30.84;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Grindstone
 28x Skill Summary - 3
 5x RMA70-12
+75000x LMD
 3x Medic Chip
 1x Oriron
 1x Sugar
@@ -12755,6 +13037,7 @@ Gavial;30.84;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Sugar";"4x Grindstone
 24x Skill Summary - 3
 3x RMA70-12
+60000x LMD
 5x Medic Chip Pack
 13x Integrated Device
 6x Oriron Cluster
@@ -12802,6 +13085,7 @@ Frostleaf;32.14;4;1;7;0;0;0;"4x Skill Summary - 1
 7x Sugar Pack
 28x Skill Summary - 3
 7x Polyester Pack
+75000x LMD
 3x Guard Chip
 1x Polyester
 5x Guard Chip Pack
@@ -12826,6 +13110,7 @@ Frostleaf;32.14;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Polyester";"4x Sugar Pack
 24x Skill Summary - 3
 4x Polyester Pack
+60000x LMD
 5x Guard Chip Pack
 15x Grindstone
 7x Manganese Ore
@@ -12872,6 +13157,7 @@ Ethan;28.33;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Aketon
 28x Skill Summary - 3
 5x Integrated Device
+75000x LMD
 3x Specialist Chip
 1x Sugar
 5x Specialist Chip Pack
@@ -12896,6 +13182,7 @@ Ethan;28.33;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Sugar";"4x Aketon
 24x Skill Summary - 3
 3x Integrated Device
+60000x LMD
 5x Specialist Chip Pack
 17x Sugar Pack
 14x Orirock Cluster
@@ -12943,6 +13230,7 @@ Estelle;32.41;4;1;7;0;0;0;"4x Skill Summary - 1
 7x Polyester Pack
 28x Skill Summary - 3
 5x Oriron Cluster
+75000x LMD
 3x Guard Chip
 1x Oriron
 5x Guard Chip Pack
@@ -12968,6 +13256,7 @@ Estelle;32.41;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Oriron";"4x Polyester Pack
 24x Skill Summary - 3
 2x Oriron Cluster
+60000x LMD
 5x Guard Chip Pack
 12x RMA70-12
 8x Grindstone
@@ -13015,6 +13304,7 @@ Earthspirit;28.7;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Aketon
 28x Skill Summary - 3
 5x Integrated Device
+75000x LMD
 3x Supporter Chip
 1x Oriron
 1x Orirock Cube
@@ -13041,6 +13331,7 @@ Earthspirit;28.7;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Orirock Cube";"4x Aketon
 24x Skill Summary - 3
 3x Integrated Device
+60000x LMD
 5x Supporter Chip Pack
 20x Sugar Pack
 7x Grindstone
@@ -13051,7 +13342,7 @@ Earthspirit;28.7;4;1;7;0;0;0;"4x Skill Summary - 1
 3x Manganese Trihydrate
 2x Polymerization Preparation
 2x Sugar Lump";82;115
-Dur-nar;31.61;4;1;7;0;0;0;"4x Skill Summary - 1
+Dur-nar;31.62;4;1;7;0;0;0;"4x Skill Summary - 1
 5x Orirock
 9x Skill Summary - 2
 2x Sugar
@@ -13086,6 +13377,7 @@ Dur-nar;31.61;4;1;7;0;0;0;"4x Skill Summary - 1
 4x Oriron Cluster
 28x Skill Summary - 3
 3x Aketon
+75000x LMD
 3x Defender Chip
 1x Orirock Cube
 5x Defender Chip Pack
@@ -13109,6 +13401,7 @@ Dur-nar;31.61;4;1;7;0;0;0;"4x Skill Summary - 1
 3x Defender Chip
 1x Orirock Cube";"2x Oriron Cluster
 24x Skill Summary - 3
+60000x LMD
 5x Defender Chip Pack
 19x Orirock Cluster
 8x RMA70-12
@@ -13156,6 +13449,7 @@ Dobermann;19.66;4;1;5;0;0;0;"4x Skill Summary - 1
 8x Orirock Cluster
 28x Skill Summary - 3
 7x Sugar Pack
+75000x LMD
 3x Guard Chip
 1x Sugar
 5x Guard Chip Pack
@@ -13179,6 +13473,7 @@ Dobermann;19.66;4;1;5;0;0;0;"4x Skill Summary - 1
 8x Orirock Cluster
 28x Skill Summary - 3
 7x Sugar Pack
+60000x LMD
 5x Guard Chip Pack
 15x Manganese Ore
 11x Loxic Kohl
@@ -13190,7 +13485,7 @@ Dobermann;19.66;4;1;5;0;0;0;"4x Skill Summary - 1
 1x Optimized Device
 2x D32 Steel
 2x White Horse Kohl";94;117
-Deepcolor;29.65;4;1;7;0;0;0;"4x Skill Summary - 1
+Deepcolor;29.66;4;1;7;0;0;0;"4x Skill Summary - 1
 4x Ester
 9x Skill Summary - 2
 2x Oriron
@@ -13227,6 +13522,7 @@ Deepcolor;29.65;4;1;7;0;0;0;"4x Skill Summary - 1
 4x Oriron Cluster
 28x Skill Summary - 3
 7x Aketon
+75000x LMD
 3x Supporter Chip
 1x Polyester
 1x Device
@@ -13254,6 +13550,7 @@ Deepcolor;29.65;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Device";"2x Oriron Cluster
 24x Skill Summary - 3
 4x Aketon
+60000x LMD
 5x Supporter Chip Pack
 20x Orirock Cluster
 9x Manganese Ore
@@ -13303,6 +13600,7 @@ Cutter;30.63;4;1;7;0;0;0;"4x Skill Summary - 1
 2x Incandescent Alloy
 28x Skill Summary - 3
 5x RMA70-12
+75000x LMD
 3x Guard Chip
 1x Polyester
 1x Polyketon
@@ -13330,6 +13628,7 @@ Cutter;30.63;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Polyester
 1x Polyketon";"24x Skill Summary - 3
 3x RMA70-12
+60000x LMD
 5x Guard Chip Pack
 15x Coagulating Gel
 11x Manganese Ore
@@ -13378,6 +13677,7 @@ Cuora;32.76;4;1;7;0;0;0;"4x Skill Summary - 1
 7x Sugar Pack
 28x Skill Summary - 3
 7x Polyester Pack
+75000x LMD
 3x Defender Chip
 1x Orirock Cube
 1x Oriron
@@ -13404,6 +13704,7 @@ Cuora;32.76;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Oriron";"4x Sugar Pack
 24x Skill Summary - 3
 4x Polyester Pack
+60000x LMD
 5x Defender Chip Pack
 14x Grindstone
 10x Loxic Kohl
@@ -13451,6 +13752,7 @@ Courier;30.28;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Grindstone
 28x Skill Summary - 3
 5x RMA70-12
+75000x LMD
 3x Vanguard Chip
 1x Device
 5x Vanguard Chip Pack
@@ -13476,6 +13778,7 @@ Courier;30.28;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Device";"4x Grindstone
 24x Skill Summary - 3
 3x RMA70-12
+60000x LMD
 5x Vanguard Chip Pack
 11x Integrated Device
 10x Aketon
@@ -13524,6 +13827,7 @@ Conviction;14.68;4;1;4;0;0;0;"4x Skill Summary - 1
 16x Integrated Device
 28x Skill Summary - 3
 7x Loxic Kohl
+75000x LMD
 3x Guard Chip
 1x Sugar
 1x Polyester
@@ -13548,6 +13852,7 @@ Conviction;14.68;4;1;4;0;0;0;"4x Skill Summary - 1
 16x Integrated Device
 28x Skill Summary - 3
 7x Loxic Kohl
+60000x LMD
 5x Guard Chip Pack
 9x Coagulating Gel
 1x Manganese Trihydrate
@@ -13596,6 +13901,7 @@ Click;31.86;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Aketon
 28x Skill Summary - 3
 5x Coagulating Gel
+75000x LMD
 3x Caster Chip
 1x Oriron
 1x Polyketon
@@ -13624,6 +13930,7 @@ Click;31.86;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Polyketon";"4x Aketon
 24x Skill Summary - 3
 3x Coagulating Gel
+60000x LMD
 5x Caster Chip Pack
 15x Manganese Ore
 9x Oriron Cluster
@@ -13674,6 +13981,7 @@ Bubble;30.63;4;1;7;0;0;0;"4x Skill Summary - 1
 4x Oriron Cluster
 28x Skill Summary - 3
 3x Orirock Cluster
+75000x LMD
 3x Defender Chip
 1x Device
 5x Defender Chip Pack
@@ -13700,6 +14008,7 @@ Bubble;30.63;4;1;7;0;0;0;"4x Skill Summary - 1
 3x Defender Chip
 1x Device";"2x Oriron Cluster
 24x Skill Summary - 3
+60000x LMD
 5x Defender Chip Pack
 16x Coagulating Gel
 8x Loxic Kohl
@@ -13749,6 +14058,7 @@ Beehunter;28.95;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Aketon
 28x Skill Summary - 3
 5x Integrated Device
+75000x LMD
 3x Guard Chip
 1x Device
 5x Guard Chip Pack
@@ -13773,6 +14083,7 @@ Beehunter;28.95;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Device";"4x Aketon
 24x Skill Summary - 3
 3x Integrated Device
+60000x LMD
 5x Guard Chip Pack
 19x Sugar Pack
 7x RMA70-12
@@ -13819,6 +14130,7 @@ Beanstalk;30.7;4;1;7;0;0;0;"4x Skill Summary - 1
 2x Integrated Device
 28x Skill Summary - 3
 7x Loxic Kohl
+75000x LMD
 3x Vanguard Chip
 1x Sugar
 5x Vanguard Chip Pack
@@ -13843,6 +14155,7 @@ Beanstalk;30.7;4;1;7;0;0;0;"4x Skill Summary - 1
 3x Vanguard Chip
 1x Sugar";"24x Skill Summary - 3
 4x Loxic Kohl
+60000x LMD
 5x Vanguard Chip Pack
 13x Coagulating Gel
 10x Manganese Ore
@@ -13892,6 +14205,7 @@ Arene;29.06;4;1;7;0;0;0;"4x Skill Summary - 1
 2x Incandescent Alloy
 28x Skill Summary - 3
 2x RMA70-12
+75000x LMD
 3x Guard Chip
 1x Polyketon
 5x Guard Chip Pack
@@ -13918,6 +14232,7 @@ Arene;29.06;4;1;7;0;0;0;"4x Skill Summary - 1
 15000x LMD
 3x Guard Chip
 1x Polyketon";"24x Skill Summary - 3
+60000x LMD
 5x Guard Chip Pack
 21x Orirock Cluster
 7x Integrated Device
@@ -13971,6 +14286,7 @@ Ambriel;30.63;4;1;7;0;0;0;"4x Skill Summary - 1
 2x Coagulating Gel
 28x Skill Summary - 3
 3x Incandescent Alloy
+75000x LMD
 3x Sniper Chip
 1x Orirock Cube
 5x Sniper Chip Pack
@@ -13998,6 +14314,7 @@ Ambriel;30.63;4;1;7;0;0;0;"4x Skill Summary - 1
 15000x LMD
 3x Sniper Chip
 1x Orirock Cube";"24x Skill Summary - 3
+60000x LMD
 5x Sniper Chip Pack
 16x Oriron Cluster
 6x RMA70-12
@@ -14050,6 +14367,7 @@ Aciddrop;33.03;4;1;7;0;0;0;"4x Skill Summary - 1
 6x Aketon
 28x Skill Summary - 3
 2x Coagulating Gel
+75000x LMD
 3x Sniper Chip
 1x Device
 1x Orirock Cube
@@ -14077,6 +14395,7 @@ Aciddrop;33.03;4;1;7;0;0;0;"4x Skill Summary - 1
 1x Device
 1x Orirock Cube";"4x Aketon
 24x Skill Summary - 3
+60000x LMD
 5x Sniper Chip Pack
 10x RMA70-12
 8x Integrated Device
@@ -14103,7 +14422,8 @@ Vanilla;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Oriron
 1x Aketon
 2x Skill Summary - 3
-1x Integrated Device";"3x Skill Summary - 1
+1x Integrated Device
+10000x LMD";"3x Skill Summary - 1
 1x Sugar Substitute
 3x Skill Summary - 2
 1x Polyester
@@ -14126,7 +14446,8 @@ Steward;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 3x Orirock Cube
 1x Oriron Cluster
 2x Skill Summary - 3
-2x Aketon";"3x Skill Summary - 1
+2x Aketon
+10000x LMD";"3x Skill Summary - 1
 1x Diketon
 3x Skill Summary - 2
 1x Device
@@ -14149,7 +14470,8 @@ Spot;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 3x Orirock Cube
 1x RMA70-12
 2x Skill Summary - 3
-2x Orirock Cluster";"3x Skill Summary - 1
+2x Orirock Cluster
+10000x LMD";"3x Skill Summary - 1
 1x Diketon
 3x Skill Summary - 2
 1x Device
@@ -14172,7 +14494,8 @@ Popukar;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Oriron
 2x Loxic Kohl
 2x Skill Summary - 3
-2x Manganese Ore";"3x Skill Summary - 1
+2x Manganese Ore
+10000x LMD";"3x Skill Summary - 1
 1x Sugar Substitute
 3x Skill Summary - 2
 1x Polyester
@@ -14195,7 +14518,8 @@ Plume;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Sugar
 1x Aketon
 2x Skill Summary - 3
-1x Integrated Device";"3x Skill Summary - 1
+1x Integrated Device
+10000x LMD";"3x Skill Summary - 1
 1x Damaged Device
 3x Skill Summary - 2
 2x Orirock Cube
@@ -14218,7 +14542,8 @@ Orchid;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Polyester
 1x Integrated Device
 2x Skill Summary - 3
-2x Loxic Kohl";"3x Skill Summary - 1
+2x Loxic Kohl
+10000x LMD";"3x Skill Summary - 1
 2x Orirock
 3x Skill Summary - 2
 1x Sugar
@@ -14241,7 +14566,8 @@ Midnight;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 1x Device
 1x Grindstone
 2x Skill Summary - 3
-1x RMA70-12";"3x Skill Summary - 1
+1x RMA70-12
+10000x LMD";"3x Skill Summary - 1
 1x Oriron Shard
 3x Skill Summary - 2
 1x Polyketon
@@ -14264,7 +14590,8 @@ Melantha;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Polyketon
 1x Integrated Device
 2x Skill Summary - 3
-2x Loxic Kohl";"3x Skill Summary - 1
+2x Loxic Kohl
+10000x LMD";"3x Skill Summary - 1
 1x Ester
 3x Skill Summary - 2
 1x Oriron
@@ -14287,7 +14614,8 @@ Lava;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Oriron
 2x Orirock Cluster
 2x Skill Summary - 3
-2x Sugar Pack";"3x Skill Summary - 1
+2x Sugar Pack
+10000x LMD";"3x Skill Summary - 1
 1x Sugar Substitute
 3x Skill Summary - 2
 1x Polyester
@@ -14310,7 +14638,8 @@ Kroos;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Sugar
 1x Grindstone
 2x Skill Summary - 3
-1x RMA70-12";"3x Skill Summary - 1
+1x RMA70-12
+10000x LMD";"3x Skill Summary - 1
 1x Damaged Device
 3x Skill Summary - 2
 2x Orirock Cube
@@ -14333,7 +14662,8 @@ Hibiscus;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Polyketon
 2x Sugar Pack
 2x Skill Summary - 3
-2x Polyester Pack";"3x Skill Summary - 1
+2x Polyester Pack
+10000x LMD";"3x Skill Summary - 1
 1x Ester
 3x Skill Summary - 2
 1x Oriron
@@ -14356,7 +14686,8 @@ Fang;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Polyester
 1x Oriron Cluster
 2x Skill Summary - 3
-2x Aketon";"3x Skill Summary - 1
+2x Aketon
+10000x LMD";"3x Skill Summary - 1
 2x Orirock
 3x Skill Summary - 2
 1x Sugar
@@ -14379,7 +14710,8 @@ Catapult;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Polyketon
 1x Manganese Ore
 2x Skill Summary - 3
-1x Grindstone";"3x Skill Summary - 1
+1x Grindstone
+10000x LMD";"3x Skill Summary - 1
 1x Ester
 3x Skill Summary - 2
 1x Oriron
@@ -14402,7 +14734,8 @@ Cardigan;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 1x Device
 2x Loxic Kohl
 2x Skill Summary - 3
-2x Manganese Ore";"3x Skill Summary - 1
+2x Manganese Ore
+10000x LMD";"3x Skill Summary - 1
 1x Oriron Shard
 3x Skill Summary - 2
 1x Polyketon
@@ -14425,7 +14758,8 @@ Beagle;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 3x Orirock Cube
 1x Manganese Ore
 2x Skill Summary - 3
-1x Grindstone";"3x Skill Summary - 1
+1x Grindstone
+10000x LMD";"3x Skill Summary - 1
 1x Diketon
 3x Skill Summary - 2
 1x Device
@@ -14448,7 +14782,8 @@ Ansel;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 1x Device
 2x Polyester Pack
 2x Skill Summary - 3
-2x Oriron Cluster";"3x Skill Summary - 1
+2x Oriron Cluster
+10000x LMD";"3x Skill Summary - 1
 1x Oriron Shard
 3x Skill Summary - 2
 1x Polyketon
@@ -14471,7 +14806,8 @@ Adnachiel;100.0;3;1;7;0;0;0;"3x Skill Summary - 1
 2x Polyester
 1x RMA70-12
 2x Skill Summary - 3
-2x Orirock Cluster";"3x Skill Summary - 1
+2x Orirock Cluster
+10000x LMD";"3x Skill Summary - 1
 2x Orirock
 3x Skill Summary - 2
 1x Sugar

@@ -28,6 +28,7 @@ class Operator:
         self.json_data = utils.read_json(file_path=str(next(operator_path)), show=False)
         self.stars = self.json_data['stars']
 
+    # Elite
     @property
     def elite1_resources(self):
         resources = dict()
@@ -52,6 +53,7 @@ class Operator:
     def elite_resources(self):
         return dict(Counter(self.elite1_resources) + Counter(self.elite2_resources))
 
+    # Skill
     @property
     def skill_resources(self):
         upgrades_resources: List[Dict] = list()
@@ -64,6 +66,7 @@ class Operator:
         resources = reduce(lambda x, y: dict(Counter(x) + Counter(y)), upgrades_resources)
         return resources
 
+    # Mastery
     @property
     def mastery_resources(self):
         if self.stars <= 3:
@@ -79,10 +82,12 @@ class Operator:
         resources = reduce(lambda x, y: dict(Counter(x) + Counter(y)), mastery_resources)
         return resources
 
+    # Total
     @property
     def total_resources(self):
         return dict(Counter(self.skill_resources) + Counter(self.elite_resources) + Counter(self.mastery_resources))
 
+    # Spent
     @property
     def spent_elite_resources(self):
         resources = dict()
@@ -138,9 +143,33 @@ class Operator:
         total = Counter(total) + Counter(self.spent_mastery_resources)
         return dict(total)
 
+    # Needed
     @property
     def needed_resources(self):
         return dict(Counter(self.total_resources) - Counter(self.spent_resources))
+
+    # Quantities
+    @property
+    def total_material_quantity(self):
+        total_resources = self.total_resources
+        total_resources.pop('LMD', None)
+        return sum(total_resources.values())
+
+    @property
+    def spent_material_quantity(self):
+        spent_resources = self.spent_resources
+        spent_resources.pop('LMD', None)
+        return sum(spent_resources.values())
+
+    @property
+    def needed_material_quantity(self):
+        needed_resources = self.needed_resources
+        needed_resources.pop('LMD', None)
+        return sum(needed_resources.values())
+
+    @property
+    def material_percentage(self):
+        return round((self.spent_material_quantity / self.total_material_quantity) * 100, 2)
 
     # TODO
     @property
@@ -174,8 +203,17 @@ class Operator:
 
     def to_dict(self):
         attributes = {
+            # General
             'name': self.name,
             'stars': self.stars,
+            'elite': self.elite_level,
+            # Skills
+            'skill_level': self.skill_level,
+            # Masteries
+            's1_mastery': self.s1_mastery,
+            's2_mastery': self.s2_mastery,
+            's3_mastery': self.s3_mastery,
+            # Resources
             'skill_upgrade_resources': self.skill_resources,
             'elite1_resources': self.elite1_resources,
             'elite2_resources': self.elite2_resources,
@@ -183,13 +221,22 @@ class Operator:
             'mastery_resources': self.mastery_resources,
             'total_resources': self.total_resources,
             'spent_resources': self.spent_resources,
-            'needed_resources': self.needed_resources
+            'needed_resources': self.needed_resources,
+            # Quantities
+            'total_material_quantity': self.total_material_quantity,
+            'spent_material_quantity': self.spent_material_quantity,
+            'needed_material_quantity': self.needed_material_quantity,
+            # Percentage
+            'material_percentage': self.material_percentage
         }
         return attributes
 
 
 if __name__ == "__main__":
-    operator = Operator(name="Aak", elite_level=0, skill_level=0, s1_mastery=0, s2_mastery=0, s3_mastery=0)
+    operator = Operator(name="Aak", elite_level=1, skill_level=7, s1_mastery=0, s2_mastery=0, s3_mastery=0)
     print(operator.spent_resources)
     print(operator.needed_resources)
     print(operator.total_resources)
+    print(operator.total_material_quantity)
+    print(operator.spent_material_quantity)
+    print(operator.needed_material_quantity)
