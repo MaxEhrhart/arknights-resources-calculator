@@ -1,0 +1,12 @@
+{
+    "name": "Orirock Concentration",
+    "tier": 4,
+    "droppable": true,
+    "lmd": 300,
+    "recipe": [
+        {
+            "name": "Orirock Cluster",
+            "quantity": 4
+        }
+    ]
+}

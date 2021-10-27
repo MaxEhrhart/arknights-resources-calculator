@@ -1,0 +1,12 @@
+{
+    "name": "Sugar Pack",
+    "tier": 3,
+    "droppable": true,
+    "lmd": 200,
+    "recipe": [
+        {
+            "name": "Sugar",
+            "quantity": 4
+        }
+    ]
+}

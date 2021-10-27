@@ -1,0 +1,20 @@
+{
+    "name": "Polymerized Gel",
+    "tier": 4,
+    "droppable": true,
+    "lmd": 300,
+    "recipe": [
+        {
+            "name": "Incandescent Alloy",
+            "quantity": 1
+        },
+        {
+            "name": "Coagulating Gel",
+            "quantity": 1
+        },
+        {
+            "name": "Oriron Cluster",
+            "quantity": 1
+        }
+    ]
+}

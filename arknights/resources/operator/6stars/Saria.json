@@ -1,0 +1,312 @@
+{
+    "name": "Saria",
+    "stars": 6,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            },
+            {
+                "level": 2,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 5
+                    },
+                    {
+                        "name": "Oriron Shard",
+                        "quantity": 5
+                    },
+                    {
+                        "name": "Sugar Substitute",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Polyester",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Oriron",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": 3
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Orirock Cluster",
+                        "quantity": 8
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 3",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Sugar Pack",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Oriron Cluster",
+                        "quantity": 5
+                    }
+                ]
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Polyester Lump",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Orirock Cluster",
+                                "quantity": 8
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "Optimized Device",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 6
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "Bipolar Nanoflake",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Manganese Trihydrate",
+                                "quantity": 5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 2,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Sugar Pack",
+                                "quantity": 4
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "White Horse Kohl",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 8
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "Bipolar Nanoflake",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 3,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Polyester Pack",
+                                "quantity": 6
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "Manganese Trihydrate",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Optimized Device",
+                                "quantity": 5
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "Polymerization Preparation",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "RMA70-24",
+                                "quantity": 6
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 30000
+                },
+                {
+                    "name": "Defender Chip",
+                    "quantity": 5
+                },
+                {
+                    "name": "Sugar",
+                    "quantity": 8
+                },
+                {
+                    "name": "Polyketon",
+                    "quantity": 5
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 180000
+                },
+                {
+                    "name": "Defender Dualchip",
+                    "quantity": 4
+                },
+                {
+                    "name": "Bipolar Nanoflake",
+                    "quantity": 4
+                },
+                {
+                    "name": "Manganese Trihydrate",
+                    "quantity": 5
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Aketon",
+    "tier": 3,
+    "droppable": true,
+    "lmd": 200,
+    "recipe": [
+        {
+            "name": "Polyketon",
+            "quantity": 4
+        }
+    ]
+}

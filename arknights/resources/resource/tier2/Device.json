@@ -1,0 +1,12 @@
+{
+    "name": "Device",
+    "tier": 2,
+    "droppable": true,
+    "lmd": 100,
+    "recipe": [
+        {
+            "name": "Damaged Device",
+            "quantity": 3
+        }
+    ]
+}

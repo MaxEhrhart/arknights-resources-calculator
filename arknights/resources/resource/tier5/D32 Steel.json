@@ -1,0 +1,20 @@
+{
+    "name": "D32 Steel",
+    "tier": 5,
+    "droppable": false,
+    "lmd": 400,
+    "recipe": [
+        {
+            "name": "Manganese Trihydrate",
+            "quantity": 1
+        },
+        {
+            "name": "Grindstone Pentahydrate",
+            "quantity": 1
+        },
+        {
+            "name": "RMA70-24",
+            "quantity": 1
+        }
+    ]
+}

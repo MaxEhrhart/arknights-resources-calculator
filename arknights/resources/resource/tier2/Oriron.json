@@ -1,0 +1,12 @@
+{
+    "name": "Oriron",
+    "tier": 2,
+    "droppable": true,
+    "lmd": 100,
+    "recipe": [
+        {
+            "name": "Oriron Shard",
+            "quantity": 3
+        }
+    ]
+}

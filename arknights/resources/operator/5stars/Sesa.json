@@ -1,0 +1,248 @@
+{
+    "name": "Sesa",
+    "stars": 5,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            },
+            {
+                "level": 2,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Diketon",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Device",
+                        "quantity": 2
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Orirock Cube",
+                        "quantity": 8
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "RMA70-12",
+                        "quantity": 3
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 3",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Grindstone",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Orirock Cluster",
+                        "quantity": 4
+                    }
+                ]
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 5
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Coagulating Gel",
+                                "quantity": 2
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "RMA70-24",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Manganese Trihydrate",
+                                "quantity": 5
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 10
+                            },
+                            {
+                                "name": "D32 Steel",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Incandescent Alloy Block",
+                                "quantity": 4
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 2,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 5
+                            },
+                            {
+                                "name": "Orirock Concentration",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Grindstone",
+                                "quantity": 4
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Grindstone Pentahydrate",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "White Horse Kohl",
+                                "quantity": 6
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 10
+                            },
+                            {
+                                "name": "Bipolar Nanoflake",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Manganese Trihydrate",
+                                "quantity": 3
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 20000
+                },
+                {
+                    "name": "Sniper Chip",
+                    "quantity": 4
+                },
+                {
+                    "name": "Polyketon",
+                    "quantity": 4
+                },
+                {
+                    "name": "Sugar",
+                    "quantity": 2
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 120000
+                },
+                {
+                    "name": "Sniper Dualchip",
+                    "quantity": 3
+                },
+                {
+                    "name": "Grindstone Pentahydrate",
+                    "quantity": 8
+                },
+                {
+                    "name": "Orirock Cluster",
+                    "quantity": 18
+                }
+            ]
+        }
+    ]
+}

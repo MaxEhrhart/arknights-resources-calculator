@@ -1,0 +1,12 @@
+{
+    "name": "Polyester Pack",
+    "tier": 3,
+    "droppable": true,
+    "lmd": 200,
+    "recipe": [
+        {
+            "name": "Polyester",
+            "quantity": 4
+        }
+    ]
+}

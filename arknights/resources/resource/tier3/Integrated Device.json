@@ -1,0 +1,12 @@
+{
+    "name": "Integrated Device",
+    "tier": 3,
+    "droppable": true,
+    "lmd": 200,
+    "recipe": [
+        {
+            "name": "Device",
+            "quantity": 4
+        }
+    ]
+}
