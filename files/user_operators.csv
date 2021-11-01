@@ -28,7 +28,7 @@ Courier;4;1;7;0;0;0
 Cuora;4;1;7;0;0;0
 Cutter;4;1;7;0;0;0
 Deepcolor;4;1;7;0;0;0
-Dobermann;4;1;5;0;0;0
+Dobermann;4;1;7;0;0;0
 Dur-nar;4;1;7;0;0;0
 Earthspirit;4;1;7;0;0;0
 Estelle;4;1;7;0;0;0
@@ -40,7 +40,6 @@ Gravel;4;2;7;0;1;0
 Greyy;4;1;7;0;0;0
 Gum;4;1;7;0;0;0
 Haze;4;1;7;0;0;0
-Indigo;4;0;0;0;0;0
 Jackie;4;1;7;0;0;0
 Jaye;4;1;7;0;0;0
 Jessica;4;2;7;0;0;0
@@ -55,7 +54,6 @@ Perfumer;4;2;7;0;0;0
 Pinecone;4;1;7;0;0;0
 Podenco;4;1;7;0;0;0
 Purestream;4;1;7;0;0;0
-Roberta;4;0;0;0;0;0
 Rope;4;1;7;0;0;0
 Scavenger;4;1;7;0;0;0
 Shaw;4;1;7;0;0;0
@@ -74,14 +72,13 @@ Asbestos;5;1;3;0;0;0
 Astesia;5;1;7;0;0;0
 Ayerscarpe;5;1;7;0;0;0
 Beeswax;5;1;3;0;0;0
-Bena;5;0;0;0;0;0
 Bibeak;5;1;7;0;0;0
 Bison;5;1;7;0;0;0
 Blitz;5;1;7;0;0;0
 Blue Poison;5;1;7;0;0;0
 Breeze;5;1;7;0;0;0
 Broca;5;1;7;0;0;0
-Ceylon;5;1;3;0;0;0
+Ceylon;5;1;7;0;0;0
 Chiave;5;1;4;0;0;0
 Cliffheart;5;1;7;0;0;0
 Croissant;5;1;3;0;0;0
@@ -103,8 +100,6 @@ Indra;5;1;6;0;0;0
 Iris;5;1;7;0;0;0
 Istina;5;1;3;0;0;0
 Kafka;5;1;7;0;0;0
-Kirara;5;0;0;0;0;0
-La Pluma;5;0;0;0;0;0
 Lappland;5;2;7;0;3;0
 Lava the Purgatory;5;1;7;0;0;0
 Leizi;5;2;7;0;1;0
@@ -113,9 +108,8 @@ Liskarm;5;1;3;0;0;0
 Manticore;5;1;7;0;0;0
 Mayer;5;1;3;0;0;0
 Meteorite;5;1;7;0;0;0
-Mint;5;1;3;0;0;0
+Mint;5;1;5;0;0;0
 Mr.Nothing;5;1;7;0;0;0
-Mulberry;5;0;0;0;0;0
 Nearl;5;1;7;0;0;0
 Nightmare;5;1;3;0;0;0
 Platinum;5;1;7;0;0;0
@@ -137,7 +131,6 @@ Sora;5;1;4;0;0;0
 Specter;5;1;7;0;0;0
 Swire;5;1;7;0;0;0
 Tachanka;5;1;7;0;0;0
-Tequila;5;0;0;0;0;0
 Texas;5;2;7;0;0;0
 Toddifons;5;1;7;0;0;0
 Tomimi;5;1;3;0;0;0
@@ -156,10 +149,8 @@ Ash;6;1;7;0;0;0
 Bagpipe;6;2;7;0;0;3
 Blaze;6;2;7;0;3;0
 Blemishine;6;2;7;0;0;0
-Carnelian;6;0;0;0;0;0
 Ceobe;6;2;7;0;0;0
 Ch'en;6;1;7;0;0;0
-Ch'en the Holungday;6;0;0;0;0;0
 Dusk;6;2;7;0;0;0
 Eunectes;6;1;7;0;0;0
 Exusiai;6;2;7;0;0;3
@@ -170,18 +161,15 @@ Hoshiguma;6;2;7;0;3;0
 Ifrit;6;2;7;0;3;0
 Kal'tsit;6;1;7;0;0;0
 Magallan;6;1;7;0;0;0
-Mizuki;6;0;0;0;0;0
 Mostima;6;1;7;0;0;0
 Mountain;6;2;7;0;0;0
 Mudrock;6;2;7;0;0;0
 Nian;6;2;7;0;0;0
 Nightingale;6;2;7;0;1;0
-Pallas;6;0;0;0;0;0
 Passenger;6;1;7;0;0;0
 Phantom;6;2;7;0;0;0
 Rosmontis;6;2;7;0;0;0
 Saga;6;2;7;0;3;3
-Saileach;6;0;0;0;0;0
 Saria;6;2;7;3;3;3
 Schwarz;6;2;7;0;0;0
 Shining;6;2;7;0;1;0
@@ -194,5 +182,3 @@ Suzuran;6;2;7;0;0;0
 Thorns;6;2;7;0;0;3
 W;6;2;7;0;0;0
 Weedy;6;2;7;0;0;0
-Ashlock;5;0;0;0;0;0
-Fartooth;6;0;0;0;0;0

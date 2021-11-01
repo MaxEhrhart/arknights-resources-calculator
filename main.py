@@ -88,7 +88,7 @@ def operator_format_resources(row):
 
 def resources_by_operator_report():
     today = str(datetime.today()).split()[0]
-    reports_path = f'files/reports/{today}'
+    reports_path = f'files/reports'
     Path(reports_path).mkdir(parents=True, exist_ok=True)
 
     print("Global resources.")
@@ -123,9 +123,7 @@ def resources_by_operator_report():
     # resume['needed_lmd'] = resume.apply(lambda row: row['needed_resources']['lmd'], axis=1)
     # resume['total_lmd'] = resume.apply(lambda row: row['total_resources']['lmd'], axis=1)
     today = str(datetime.today()).split()[0]
-    reports_path = f'files/reports/{today}'
-    Path(reports_path).mkdir(parents=True, exist_ok=True)
-    report_path = f'{reports_path}/resources-by-operator-report.csv'
+    report_path = f'{reports_path}/{today}-resources-by-operator-report.csv'
     resume.to_csv(report_path, sep=';')
     print(f"Report saved at {report_path}")
 
@@ -141,9 +139,8 @@ def get_operator_attribute_resource(attribute):
 
 def resources_report():
     today = str(datetime.today()).split()[0]
-    reports_path = f'files/reports/{today}'
-    sheet_path = f'{reports_path}/resources-report.xlsx'
-    Path(reports_path).mkdir(parents=True, exist_ok=True)
+    report_path = f'files/reports'
+    Path(report_path).mkdir(parents=True, exist_ok=True)
 
     print("Global resources.")
     total_resources = get_operator_attribute_resource('total_resources')
@@ -161,8 +158,8 @@ def resources_report():
     resume = calc_resume(total_resources, spent_resources, needed_resources)
 
     print("Saving as xlsx.")
-    save_as_xlsx(resume, sheet_path, show=True)
-    print(f"Report saved at {sheet_path}")
+    save_as_xlsx(resume, f'{report_path}/{today}-resources-report.xlsx', show=True)
+    print(f"Report saved at {report_path}")
 
 
 if __name__ == '__main__':
