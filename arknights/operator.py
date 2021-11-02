@@ -79,12 +79,15 @@ class Operator:
         return resources
 
     @property
-    def elite_resources(self):
-        return dict(Counter(self.elite1_resources) + Counter(self.elite2_resources))
+    def total_elite_resources(self):
+        total = dict()
+        total = Counter(total) + Counter(self.elite1_resources)
+        total = Counter(total) + Counter(self.elite2_resources)
+        return dict(total)
 
     # Skill
     @property
-    def skill_resources(self):
+    def total_skill_resources(self):
         upgrades_resources: List[Dict] = list()
         for level in self.json_data['skills']['upgrade']:
             level_resources = dict()
@@ -97,7 +100,7 @@ class Operator:
 
     # Mastery
     @property
-    def mastery_resources(self):
+    def total_mastery_resources(self):
         if self.stars <= 3:
             return {}
         mastery_resources: List[Dict] = list()
@@ -114,7 +117,11 @@ class Operator:
     # Total
     @property
     def total_resources(self):
-        return dict(Counter(self.skill_resources) + Counter(self.elite_resources) + Counter(self.mastery_resources))
+        total = dict()
+        total = Counter(total) + Counter(self.total_skill_resources)
+        total = Counter(total) + Counter(self.total_elite_resources)
+        total = Counter(total) + Counter(self.total_mastery_resources)
+        return dict(total)
 
     # Spent
     @property
@@ -173,6 +180,21 @@ class Operator:
         return dict(total)
 
     # Needed
+    @property
+    def needed_elite_resources(self):
+        resources = Counter(self.total_elite_resources) - Counter(self.spent_elite_resources)
+        return dict(resources)
+
+    @property
+    def needed_skill_resources(self):
+        resources = Counter(self.total_skill_resources) - Counter(self.spent_skill_resources)
+        return dict(resources)
+
+    @property
+    def needed_mastery_resources(self):
+        resources = Counter(self.total_mastery_resources) - Counter(self.spent_mastery_resources)
+        return dict(resources)
+
     @property
     def needed_resources(self):
         return dict(Counter(self.total_resources) - Counter(self.spent_resources))
@@ -245,11 +267,11 @@ class Operator:
             's2_mastery': self.s2_mastery,
             's3_mastery': self.s3_mastery,
             # Resources
-            'skill_upgrade_resources': self.skill_resources,
+            'skill_upgrade_resources': self.total_skill_resources,
             'elite1_resources': self.elite1_resources,
             'elite2_resources': self.elite2_resources,
-            'elite_resources': self.elite_resources,
-            'mastery_resources': self.mastery_resources,
+            'elite_resources': self.total_elite_resources,
+            'mastery_resources': self.total_mastery_resources,
             'total_resources': self.total_resources,
             'spent_resources': self.spent_resources,
             'needed_resources': self.needed_resources,
@@ -257,6 +279,10 @@ class Operator:
             'total_material_quantity': self.total_material_quantity,
             'spent_material_quantity': self.spent_material_quantity,
             'needed_material_quantity': self.needed_material_quantity,
+            # Needed
+            'needed_elite_resources': self.needed_elite_resources,
+            'needed_mastery_resources': self.needed_mastery_resources,
+            'needed_skill_resources': self.needed_skill_resources,
             # Percentage
             'material_percentage': self.material_percentage
         }
