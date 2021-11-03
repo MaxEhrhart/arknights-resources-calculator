@@ -1,0 +1,244 @@
+{
+    "name": "Roberta",
+    "stars": 4,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            },
+            {
+                "level": 2,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 2
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Damaged Device",
+                        "quantity": 2
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Orirock Cube",
+                        "quantity": 2
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": 3
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Grindstone",
+                        "quantity": 2
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 3",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "RMA70-12",
+                        "quantity": 2
+                    }
+                ]
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 2
+                            },
+                            {
+                                "name": "Grindstone Pentahydrate",
+                                "quantity": 1
+                            },
+                            {
+                                "name": "Loxic Kohl",
+                                "quantity": 4
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 2
+                            },
+                            {
+                                "name": "Incandescent Alloy Block",
+                                "quantity": 2
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Bipolar Nanoflake",
+                                "quantity": 2
+                            },
+                            {
+                                "name": "Manganese Trihydrate",
+                                "quantity": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 2,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 2
+                            },
+                            {
+                                "name": "RMA70-24",
+                                "quantity": 1
+                            },
+                            {
+                                "name": "Manganese Ore",
+                                "quantity": 3
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 2
+                            },
+                            {
+                                "name": "Refined Solvent",
+                                "quantity": 2
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Polymerization Preparation",
+                                "quantity": 2
+                            },
+                            {
+                                "name": "White Horse Kohl",
+                                "quantity": 2
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 15000
+                },
+                {
+                    "name": "Supporter Chip",
+                    "quantity": 3
+                },
+                {
+                    "name": "Orirock Cube",
+                    "quantity": 1
+                },
+                {
+                    "name": "Oriron",
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 60000
+                },
+                {
+                    "name": "Supporter Chip Pack",
+                    "quantity": 5
+                },
+                {
+                    "name": "Semi-natural Solvent",
+                    "quantity": 14
+                },
+                {
+                    "name": "Integrated Device",
+                    "quantity": 7
+                }
+            ]
+        }
+    ]
+}

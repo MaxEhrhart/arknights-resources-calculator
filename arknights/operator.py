@@ -19,12 +19,12 @@ def get_operators_data():
 
 def instantiate_operator(operator_dict: dict):
     return Operator(
-        name=operator_dict['name'],
-        elite_level=int(operator_dict['elite']),
-        skill_level=int(operator_dict['skill_level']),
-        s1_mastery=int(operator_dict['s1_mastery']),
-        s2_mastery=int(operator_dict['s2_mastery']),
-        s3_mastery=int(operator_dict['s3_mastery']),
+        name=operator_dict.get('name', None),
+        elite_level=int(operator_dict.get('elite', 0)),
+        skill_level=int(operator_dict.get('skill_level', 0)),
+        s1_mastery=int(operator_dict.get('s1_mastery', 0)),
+        s2_mastery=int(operator_dict.get('s2_mastery', 0)),
+        s3_mastery=int(operator_dict.get('s3_mastery', 0)),
         s4_mastery=int(operator_dict.get('s4_mastery', 0)),
         s5_mastery=int(operator_dict.get('s5_mastery', 0))
     )
@@ -59,31 +59,13 @@ class Operator:
 
     # Elite
     @property
-    def elite1_resources(self):
-        resources = dict()
-        for elite in self.json_data['elite']:
-            if elite['level'] == 1:
-                for resource in elite['resources']:
-                    key, value = resource['name'], resource['quantity']
-                    resources[key] = resources.get(key, 0) + value
-        return resources
-
-    @property
-    def elite2_resources(self):
-        resources = dict()
-        for elite in self.json_data['elite']:
-            if elite['level'] == 2:
-                for resource in elite['resources']:
-                    key, value = resource['name'], resource['quantity']
-                    resources[key] = resources.get(key, 0) + value
-        return resources
-
-    @property
     def total_elite_resources(self):
-        total = dict()
-        total = Counter(total) + Counter(self.elite1_resources)
-        total = Counter(total) + Counter(self.elite2_resources)
-        return dict(total)
+        resources = dict()
+        for elite in self.json_data['elite']:
+            for resource in elite['resources']:
+                key, value = resource['name'], resource['quantity']
+                resources[key] = resources.get(key, 0) + value
+        return resources
 
     # Skill
     @property
@@ -123,7 +105,7 @@ class Operator:
         total = Counter(total) + Counter(self.total_mastery_resources)
         return dict(total)
 
-    # Spent
+    # region Spent
     @property
     def spent_elite_resources(self):
         resources = dict()
@@ -179,7 +161,9 @@ class Operator:
         total = Counter(total) + Counter(self.spent_mastery_resources)
         return dict(total)
 
-    # Needed
+    # endregion
+
+    # region Needed
     @property
     def needed_elite_resources(self):
         resources = Counter(self.total_elite_resources) - Counter(self.spent_elite_resources)
@@ -198,6 +182,8 @@ class Operator:
     @property
     def needed_resources(self):
         return dict(Counter(self.total_resources) - Counter(self.spent_resources))
+
+    # endregion
 
     # Quantities
     @property
@@ -268,8 +254,6 @@ class Operator:
             's3_mastery': self.s3_mastery,
             # Resources
             'skill_upgrade_resources': self.total_skill_resources,
-            'elite1_resources': self.elite1_resources,
-            'elite2_resources': self.elite2_resources,
             'elite_resources': self.total_elite_resources,
             'mastery_resources': self.total_mastery_resources,
             'total_resources': self.total_resources,
