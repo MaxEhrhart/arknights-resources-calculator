@@ -11,7 +11,7 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import json
 import csv
-
+from selenium.webdriver.chrome.service import Service
 
 def get_materials(soup):
     items = map(lambda x: x.contents[0], soup.findAll(class_="item-name", recursive=True))
@@ -100,47 +100,49 @@ def get_skills_resources(stars):
     return {**upgrade, "mastery": mastery}
 
 
-user_operators_path = '../files/csv/user_operators.csv'
-json_path = '../files/operators'
+if __name__ == "__main__":
+    user_operators_path = '../files/user_operators.csv'
+    json_path = '../arknights/resources/operator'
 
-with open(user_operators_path, mode="r", encoding="utf-8") as f:
-    operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
-    f.close()
+    with open(user_operators_path, mode="r", encoding="utf-8") as f:
+        operators = [dict(operator) for operator in csv.DictReader(f, delimiter=';')]
+        f.close()
 
-options = Options()
-options.add_argument('--headless')
-options.add_argument('--disable-gpu')  # Last I checked this was necessary.
-with Chrome(executable_path='chromedriver94.exe', options=options) as driver:
-    for iteration, operator in enumerate(operators[195:], start=1):
-        print(f"Progress: {iteration}/{len(operators)}.")
-        print(f"Scraping operator {operator['name']}")
-        stars = int(operator['stars'])
-        name = operator["name"]
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')  # Last I checked this was necessary.
+    with Chrome(service=Service("chromedriver95.exe"), options=options) as driver:
+        for iteration, operator in enumerate(operators[202:], start=1):
+            print(f"Progress: {iteration}/{len(operators)}.")
+            name = 'Роса' if operator["name"].strip().lower() == 'rosa' else operator["name"]
+            print(f"Scraping operator {name}")
+            stars = int(operator['stars'])
 
-        driver.get(f"https://aceship.github.io/AN-EN-Tags/akhrchars.html?opname={name}")
-        sleep(5)
-        delay = 10
-        try:
-            print("Scraping elite resources.")
-            elite = get_elite_resources(stars=stars)
-            print("Elite resources ready.")
+            driver.get(f"https://aceship.github.io/AN-EN-Tags/akhrchars.html?opname={name}")
+            sleep(5)
+            delay = 10
+            try:
+                print("Scraping elite resources.")
+                elite = get_elite_resources(stars=stars)
+                print("Elite resources ready.")
 
-            print("Scraping skills resources.")
-            skills = get_skills_resources(stars=stars)
-            print("Skills ready.")
+                print("Scraping skills resources.")
+                skills = get_skills_resources(stars=stars)
+                print("Skills ready.")
 
-            operator_data = {
-                "name": name,
-                "stars": stars,
-                "skills": skills,
-                "elite": elite
-            }
+                name = 'Rosa' if name.strip().lower() == 'pоса' else name
+                operator_data = {
+                    "name": name,
+                    "stars": stars,
+                    "skills": skills,
+                    "elite": elite
+                }
 
-            op_path = f'{json_path}/{stars}stars/{name}.json'
-            Path(op_path).parent.mkdir(parents=True, exist_ok=True)
-            with open(op_path, 'w+', encoding='utf-8') as f:
-                json.dump(operator_data, f, indent=4)
-            print("Done.")
-            print("============================\n")
-        except TimeoutException:
-            print("Loading took too much time!")
+                op_path = f'{json_path}/{stars}stars/{name}.json'
+                Path(op_path).parent.mkdir(parents=True, exist_ok=True)
+                with open(op_path, 'w+', encoding='utf-8') as f:
+                    json.dump(operator_data, f, indent=4)
+                print("Done.")
+                print("============================\n")
+            except TimeoutException:
+                print("Loading took too much time!")

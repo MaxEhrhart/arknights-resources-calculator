@@ -57,6 +57,7 @@ class Operator:
         self.json_data = utils.read_json(file_path=str(operator_json_path[0]), show=False)
         self.stars = self.json_data['stars']
 
+    # region Totals
     # Elite
     @property
     def total_elite_resources(self):
@@ -104,6 +105,7 @@ class Operator:
         total = Counter(total) + Counter(self.total_elite_resources)
         total = Counter(total) + Counter(self.total_mastery_resources)
         return dict(total)
+    # endregion
 
     # region Spent
     @property
@@ -185,7 +187,7 @@ class Operator:
 
     # endregion
 
-    # Quantities
+    # region Quantities
     @property
     def total_material_quantity(self):
         total_resources = self.total_resources
@@ -207,11 +209,14 @@ class Operator:
     @property
     def material_percentage(self):
         return round((self.spent_material_quantity / self.total_material_quantity) * 100, 2)
+    # endregion
 
     # LMD
     # TODO
     @property
     def total_lmd(self):
+        for data in constants.Paths.LMD_EXP_DATA.value:
+            print(data)
         return {}
 
     # TODO
