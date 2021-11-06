@@ -1,0 +1,312 @@
+{
+    "name": "Nearl the Radiant Knight",
+    "stars": 6,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            },
+            {
+                "level": 2,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 5
+                    },
+                    {
+                        "name": "Orirock",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Damaged Device",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Polyester",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Oriron",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Grindstone",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 3",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "RMA70-12",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Incandescent Alloy",
+                        "quantity": 5
+                    }
+                ]
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 8
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Semi-natural Solvent",
+                                "quantity": 3
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "Refined Solvent",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Polymerized Gel",
+                                "quantity": 9
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "Polymerization Preparation",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Incandescent Alloy Block",
+                                "quantity": 6
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 2,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 8
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Coagulating Gel",
+                                "quantity": 4
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "Orirock Concentration",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Grindstone Pentahydrate",
+                                "quantity": 9
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "D32 Steel",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Polymerized Gel",
+                                "quantity": 6
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 3,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 8
+                            },
+                            {
+                                "name": "Optimized Device",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Oriron Cluster",
+                                "quantity": 4
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "Polymerized Gel",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Orirock Concentration",
+                                "quantity": 10
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "Crystalline Electroassembly",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Orirock Concentration",
+                                "quantity": 4
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 30000
+                },
+                {
+                    "name": "Guard Chip",
+                    "quantity": 5
+                },
+                {
+                    "name": "Device",
+                    "quantity": 5
+                },
+                {
+                    "name": "Polyketon",
+                    "quantity": 4
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 180000
+                },
+                {
+                    "name": "Guard Dualchip",
+                    "quantity": 4
+                },
+                {
+                    "name": "Polymerization Preparation",
+                    "quantity": 4
+                },
+                {
+                    "name": "Polymerized Gel",
+                    "quantity": 8
+                }
+            ]
+        }
+    ]
+}
