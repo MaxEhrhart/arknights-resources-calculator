@@ -112,10 +112,12 @@ if __name__ == "__main__":
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')  # Last I checked this was necessary.
     with Chrome(service=Service("chromedriver95.exe"), options=options) as driver:
-        for iteration, operator in enumerate(operators[202:], start=1):
+        for iteration, operator in enumerate(operators[196:], start=1):
             print(f"Progress: {iteration}/{len(operators)}.")
+            print(f"Scraping operator {operator['name']}")
+
+            # poca in Cyrillic alphabet
             name = 'Роса' if operator["name"].strip().lower() == 'rosa' else operator["name"]
-            print(f"Scraping operator {name}")
             stars = int(operator['stars'])
 
             driver.get(f"https://aceship.github.io/AN-EN-Tags/akhrchars.html?opname={name}")
@@ -130,14 +132,14 @@ if __name__ == "__main__":
                 skills = get_skills_resources(stars=stars)
                 print("Skills ready.")
 
-                name = 'Rosa' if name.strip().lower() == 'pоса' else name
+                # poca in Cyrillic alphabet
+                name = 'Rosa' if name.strip().lower() == 'роса' else name
                 operator_data = {
                     "name": name,
                     "stars": stars,
                     "skills": skills,
                     "elite": elite
                 }
-
                 op_path = f'{json_path}/{stars}stars/{name}.json'
                 Path(op_path).parent.mkdir(parents=True, exist_ok=True)
                 with open(op_path, 'w+', encoding='utf-8') as f:
