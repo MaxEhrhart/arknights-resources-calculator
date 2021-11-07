@@ -243,13 +243,13 @@ class Operator:
         max_elite = int(list(constants.Paths.EXP_DATA.value[self.stars])[-1].replace("elite_", ''))
         max_level = list(constants.Paths.EXP_DATA.value[self.stars][f"elite_{max_elite}"])[-1]
         accumulated_exp = constants.Paths.EXP_DATA.value[self.stars][f"elite_{max_elite}"][max_level]['accumulated exp']
-        yellow_ticket = int(accumulated_exp/1000)
+        yellow_ticket = int(accumulated_exp / 1000)
         return yellow_ticket
 
     @property
     def spent_yellow_exp(self):
         exp = constants.Paths.EXP_DATA.value[self.stars][f"elite_{self.elite_level}"][self.level]['accumulated exp']
-        yellow_ticket = int(exp/1000)
+        yellow_ticket = int(exp / 1000)
         return yellow_ticket
 
     @property
@@ -261,6 +261,17 @@ class Operator:
         return round((self.spent_yellow_exp / self.total_yellow_exp) * 100, 2)
 
     # endregion EXP
+
+    @property
+    def overall_percentage(self):
+        # - Ambos sao 100% correlacionados, apenas um é necessário para media geral
+        # self.lmd_percentage | self.yellow_exp_percentage
+        percentages = [
+            self.yellow_exp_percentage,
+            self.lmd_percentage,
+            self.material_percentage,
+        ]
+        return round((sum(percentages) / len(percentages)), 2)
 
     def to_dict(self):
         attributes = {
@@ -300,7 +311,9 @@ class Operator:
             'total_yellow_exp': self.total_yellow_exp,
             'spent_yellow_exp': self.spent_yellow_exp,
             'needed_yellow_exp': self.needed_yellow_exp,
-            'yellow_exp_percentage': self.yellow_exp_percentage
+            'yellow_exp_percentage': self.yellow_exp_percentage,
+            # Overall
+            'overall_percentage': self.overall_percentage
         }
         return attributes
 

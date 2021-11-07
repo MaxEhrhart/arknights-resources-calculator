@@ -101,7 +101,10 @@ def resources_by_operator_report():
     for resource_column in resource_columns:
         resume[resource_column] = resume.apply(lambda row: operator_format_resources(row[resource_column]), axis=1)
     column_order = [
+        'overall_percentage',
         'material_percentage',
+        'lmd_percentage',
+        'yellow_exp_percentage',
         'stars',
         'elite',
         'skill_level',
@@ -110,14 +113,17 @@ def resources_by_operator_report():
         's3_mastery',
         'elite_resources',
         'mastery_resources',
-        'total_resources',
         'spent_resources',
         'needed_elite_resources',
         'needed_mastery_resources',
         'needed_skill_resources',
         'needed_resources',
         'needed_material_quantity',
-        'total_material_quantity'
+        'total_material_quantity',
+        'spent_yellow_exp',
+        'needed_yellow_exp',
+        'spent_lmd',
+        'needed_lmd'
     ]
     resume = resume[column_order]
     # resume['needed_lmd'] = resume.apply(lambda row: row['needed_resources']['lmd'], axis=1)
