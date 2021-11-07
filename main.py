@@ -179,7 +179,5 @@ if __name__ == '__main__':
 # TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
 # TODO: Calculo de recursos para fabricação de recurso tier 5
 # TODO: calculo de lmd necessario na fabricação
-# TODO: Estimar quantidade de LMD e passes de XP para LVL Maximo E0 E1 E2
-# TODO: Coluna Total LMD Elites1 e 2
-# TODO: Coluna Total Passes de XP amarelos LVL
-# TODO: Coluna total de LMD e recursos após fabricacao
+# TODO: Coluna total de LMD e recursos após fabricacao - Soma dos custo total em lmd de fabricacao mais os a quantidade
+#  total de recursos
