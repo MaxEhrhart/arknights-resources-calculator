@@ -159,7 +159,7 @@ def resources_report():
 
     print("Saving as xlsx.")
     save_as_xlsx(resume, f'{report_path}/{today}-resources-report.xlsx', show=True)
-    print(f"Report saved at {report_path}")
+    print(f"Report saved at {report_path}/{today}-resources-report.xlsx")
 
 
 if __name__ == '__main__':

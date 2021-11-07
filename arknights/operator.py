@@ -19,9 +19,10 @@ def get_operators_data():
 
 def instantiate_operator(operator_dict: dict):
     return Operator(
-        name=operator_dict.get('name', None),
+        name=operator_dict.get('name'),
+        level=int(operator_dict.get('level', 1)),
         elite_level=int(operator_dict.get('elite', 0)),
-        skill_level=int(operator_dict.get('skill_level', 0)),
+        skill_level=int(operator_dict.get('skill_level', 1)),
         s1_mastery=int(operator_dict.get('s1_mastery', 0)),
         s2_mastery=int(operator_dict.get('s2_mastery', 0)),
         s3_mastery=int(operator_dict.get('s3_mastery', 0)),
@@ -105,6 +106,7 @@ class Operator:
         total = Counter(total) + Counter(self.total_elite_resources)
         total = Counter(total) + Counter(self.total_mastery_resources)
         return dict(total)
+
     # endregion
 
     # region Spent
@@ -209,41 +211,56 @@ class Operator:
     @property
     def material_percentage(self):
         return round((self.spent_material_quantity / self.total_material_quantity) * 100, 2)
+
     # endregion
 
-    # LMD
-    # TODO
+    # region LMD
     @property
     def total_lmd(self):
-        for data in constants.Paths.LMD_EXP_DATA.value:
-            print(data)
-        return {}
+        max_elite = int(list(constants.Paths.EXP_DATA.value[self.stars])[-1].replace("elite_", ''))
+        max_level = list(constants.Paths.EXP_DATA.value[self.stars][f"elite_{max_elite}"])[-1]
+        accumulated_lmd = constants.Paths.EXP_DATA.value[self.stars][f"elite_{max_elite}"][max_level]['accumulated lmd']
+        return accumulated_lmd
 
-    # TODO
     @property
     def spent_lmd(self):
-        return {}
+        lmd = constants.Paths.EXP_DATA.value[self.stars][f"elite_{self.elite_level}"][self.level]['accumulated lmd']
+        return lmd
 
-    # TODO
     @property
     def needed_lmd(self):
-        return {}
+        return self.total_lmd - self.spent_lmd
 
-    # EXP
-    # TODO
+    @property
+    def lmd_percentage(self):
+        return round((self.spent_lmd / self.total_lmd) * 100, 2)
+
+    # endregion LMD
+
+    # region EXP
     @property
     def total_yellow_exp(self):
-        return 0
+        max_elite = int(list(constants.Paths.EXP_DATA.value[self.stars])[-1].replace("elite_", ''))
+        max_level = list(constants.Paths.EXP_DATA.value[self.stars][f"elite_{max_elite}"])[-1]
+        accumulated_exp = constants.Paths.EXP_DATA.value[self.stars][f"elite_{max_elite}"][max_level]['accumulated exp']
+        yellow_ticket = int(accumulated_exp/1000)
+        return yellow_ticket
 
-    # TODO
     @property
     def spent_yellow_exp(self):
-        return 0
+        exp = constants.Paths.EXP_DATA.value[self.stars][f"elite_{self.elite_level}"][self.level]['accumulated exp']
+        yellow_ticket = int(exp/1000)
+        return yellow_ticket
 
-    # TODO
     @property
     def needed_yellow_exp(self):
-        return 0
+        return self.total_yellow_exp - self.spent_yellow_exp
+
+    @property
+    def yellow_exp_percentage(self):
+        return round((self.spent_yellow_exp / self.total_yellow_exp) * 100, 2)
+
+    # endregion EXP
 
     def to_dict(self):
         attributes = {
@@ -273,16 +290,33 @@ class Operator:
             'needed_mastery_resources': self.needed_mastery_resources,
             'needed_skill_resources': self.needed_skill_resources,
             # Percentage
-            'material_percentage': self.material_percentage
+            'material_percentage': self.material_percentage,
+            # LMD
+            'total_lmd': self.total_lmd,
+            'spent_lmd': self.spent_lmd,
+            'needed_lmd': self.needed_lmd,
+            'lmd_percentage': self.lmd_percentage,
+            # EXP
+            'total_yellow_exp': self.total_yellow_exp,
+            'spent_yellow_exp': self.spent_yellow_exp,
+            'needed_yellow_exp': self.needed_yellow_exp,
+            'yellow_exp_percentage': self.yellow_exp_percentage
         }
         return attributes
 
 
 if __name__ == "__main__":
-    operator = Operator(name="Aak", elite_level=1, skill_level=7, s1_mastery=0, s2_mastery=0, s3_mastery=0)
+    operator = Operator(name="Aak", level=55, elite_level=1, skill_level=7)
     print(operator.spent_resources)
     print(operator.needed_resources)
     print(operator.total_resources)
     print(operator.total_material_quantity)
     print(operator.spent_material_quantity)
     print(operator.needed_material_quantity)
+    print(operator.spent_lmd)
+    print(operator.needed_lmd)
+    print(operator.total_lmd)
+    print(operator.lmd_percentage)
+    print(operator.total_yellow_exp)
+    print(operator.spent_yellow_exp)
+    print(operator.needed_yellow_exp)

@@ -36,7 +36,7 @@ Rope;4;55;1;7;0;0;0
 Scavenger;4;55;1;7;0;0;0
 Shaw;4;55;1;7;0;0;0
 Vermeil;4;55;1;7;0;0;0
-Sussurro;4;50;1;7;0;0;0
+Sussurro;4;55;1;7;0;0;0
 Gravel;4;35;2;7;0;1;0
 Jessica;4;30;2;7;0;0;0
 Utage;4;25;2;7;0;3;0
@@ -63,6 +63,7 @@ Mousse;4;15;1;7;0;0;0
 Myrrh;4;15;1;7;0;0;0
 Podenco;4;15;1;7;0;0;0
 Indigo;4;1;0;0;0;0;0
+Pudding;4;1;0;0;0;0;0
 Roberta;4;1;0;0;0;0;0
 Lappland;5;80;2;7;0;3;0
 Platinum;5;60;1;7;0;0;0
@@ -117,7 +118,7 @@ Leizi;5;20;2;7;0;1;0
 Silence;5;20;2;7;0;0;0
 Tomimi;5;16;1;3;0;0;0
 Aosta;5;15;1;7;0;0;0
-Asbestos;5;15;1;3;0;0;0
+Asbestos;5;25;1;3;0;0;0
 Beeswax;5;15;1;3;0;0;0
 Breeze;5;15;1;7;0;0;0
 Chiave;5;15;1;4;0;0;0
@@ -144,12 +145,15 @@ Vulcan;5;15;1;4;0;0;0
 Waai Fu;5;15;1;3;0;0;0
 Ashlock;5;1;0;0;0;0;0
 Bena;5;1;0;0;0;0;0
+Corroserum;5;1;0;0;0;0;0
 Flamebringer;5;1;0;0;0;0;0
+Honeyberry;5;1;0;0;0;0;0
 Kirara;5;1;0;0;0;0;0
 La Pluma;5;1;0;0;0;0;0
 Mulberry;5;1;0;0;0;0;0
 Snowsant;5;1;0;0;0;0;0
 Tequila;5;1;0;0;0;0;0
+Wild Mane;5;1;0;0;0;0;0
 Exusiai;6;90;2;7;0;0;3
 Saga;6;90;2;7;3;3;3
 Surtr;6;90;2;7;0;3;3
@@ -194,11 +198,7 @@ Weedy;6;15;2;7;0;0;0
 Carnelian;6;1;0;0;0;0;0
 Ch'en the Holungday;6;1;0;0;0;0;0
 Fartooth;6;1;0;0;0;0;0
-Mizuki;6;1;0;0;0;0;0
-Saileach;6;1;0;0;0;0;0
-Nearl the Radiant Knight;6;1;0;0;0;0;0
 Flametail;6;1;0;0;0;0;0
-Corroserum;5;1;0;0;0;0;0
-Honeyberry;5;1;0;0;0;0;0
-Wild Mane;5;1;0;0;0;0;0
-Pudding;4;1;0;0;0;0;0
+Mizuki;6;1;0;0;0;0;0
+Nearl the Radiant Knight;6;1;0;0;0;0;0
+Saileach;6;1;0;0;0;0;0

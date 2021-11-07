@@ -116,7 +116,7 @@ if __name__ == "__main__":
             print(f"Progress: {iteration}/{len(operators)}.")
             print(f"Scraping operator {operator['name']}")
 
-            # poca in Cyrillic alphabet
+            # Роса in Cyrillic alphabet
             name = 'Роса' if operator["name"].strip().lower() == 'rosa' else operator["name"]
             stars = int(operator['stars'])
 
