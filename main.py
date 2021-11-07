@@ -1,15 +1,23 @@
 # encoding: utf-8
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, date
+from enum import Enum
 from functools import reduce
 from pathlib import Path
 from typing import *
 
 import numpy as np
 import pandas as pd
+import pytz
 
 from arknights.operator import load_operators
 from arknights.resource import get_resources_data
+
+
+class Constants(Enum):
+    REPORTS_PATH: Path = Path(f'files/reports')
+    TODAY: date = datetime.now(pytz.timezone('America/Sao_Paulo')).date()
+
 
 operators = load_operators('files/user_operators.csv')
 df_resources = pd.DataFrame(get_resources_data()) \
@@ -87,10 +95,8 @@ def operator_format_resources(row):
 
 
 def resources_by_operator_report():
-    today = str(datetime.today()).split()[0]
-    reports_path = f'files/reports'
-    Path(reports_path).mkdir(parents=True, exist_ok=True)
-
+    Constants.REPORTS_PATH.value.mkdir(parents=True, exist_ok=True)
+    report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-resources-by-operator.csv'
     print("Global resources.")
     resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))) \
         .rename(columns={"name": "operator"}) \
@@ -128,10 +134,6 @@ def resources_by_operator_report():
         'total_lmd'
     ]
     resume = resume[column_order]
-    # resume['needed_lmd'] = resume.apply(lambda row: row['needed_resources']['lmd'], axis=1)
-    # resume['total_lmd'] = resume.apply(lambda row: row['total_resources']['lmd'], axis=1)
-    today = str(datetime.today()).split()[0]
-    report_path = f'{reports_path}/{today}-resources-by-operator-report.csv'
     resume.to_csv(report_path, sep=';')
     print(f"Report saved at {report_path}")
 
@@ -146,7 +148,6 @@ def get_operator_attribute_resource(attribute):
 
 
 def resources_report():
-    today = str(datetime.today()).split()[0]
     report_path = f'files/reports'
     Path(report_path).mkdir(parents=True, exist_ok=True)
 
@@ -166,8 +167,8 @@ def resources_report():
     resume = calc_resume(total_resources, spent_resources, needed_resources)
 
     print("Saving as xlsx.")
-    save_as_xlsx(resume, f'{report_path}/{today}-resources-report.xlsx', show=True)
-    print(f"Report saved at {report_path}/{today}-resources-report.xlsx")
+    save_as_xlsx(resume, f'{report_path}/{Constants.TODAY.value}-resources-report.xlsx', show=True)
+    print(f"Report saved at {report_path}/{Constants.TODAY.value}-resources-report.xlsx")
 
 
 if __name__ == '__main__':
