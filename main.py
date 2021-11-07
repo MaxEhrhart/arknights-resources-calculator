@@ -123,7 +123,9 @@ def resources_by_operator_report():
         'spent_yellow_exp',
         'needed_yellow_exp',
         'spent_lmd',
-        'needed_lmd'
+        'needed_lmd',
+        'total_yellow_exp',
+        'total_lmd'
     ]
     resume = resume[column_order]
     # resume['needed_lmd'] = resume.apply(lambda row: row['needed_resources']['lmd'], axis=1)
