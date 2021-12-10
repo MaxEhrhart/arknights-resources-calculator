@@ -184,3 +184,4 @@ if __name__ == '__main__':
 # TODO: calculo de lmd necessario na fabricação
 # TODO: Coluna total de LMD e recursos após fabricacao - Soma dos custo total em lmd de fabricacao mais os a quantidade
 #  total de recursos
+#  matriz operador x recurso
