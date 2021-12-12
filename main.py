@@ -94,7 +94,7 @@ def operator_format_resources(row):
 
 def resources_by_operator_report():
     Constants.REPORTS_PATH.value.mkdir(parents=True, exist_ok=True)
-    report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-resources-by-operator.csv'
+    report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-resources-by-operator.xlsx'
     print("Global resources.")
     resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))) \
         .rename(columns={"name": "operator"}) \
@@ -132,7 +132,7 @@ def resources_by_operator_report():
         'total_lmd'
     ]
     resume = resume[column_order]
-    resume.to_csv(report_path, sep=';')
+    resume.to_excel(report_path)
     print(f"Report saved at {report_path}")
 
 
