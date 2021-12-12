@@ -279,6 +279,7 @@ class Operator:
             'name': self.name,
             'stars': self.stars,
             'elite': self.elite_level,
+            'level': self.level,
             # Skills
             'skill_level': self.skill_level,
             # Masteries

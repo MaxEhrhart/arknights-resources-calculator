@@ -9,6 +9,7 @@ from typing import *
 import numpy as np
 import pandas as pd
 import pytz
+from pandas_xlsx_tables import df_to_xlsx_table
 
 from arknights.operator import load_operators
 from arknights.resource import get_resources_data
@@ -38,9 +39,6 @@ def calc_resume(df1, df2, df3) -> pd.DataFrame:
     resume['Percentage'] = np.round(resume['Spent'] / resume['Total'], decimals=4)
     return resume
 
-
-# with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-#     print(df.head(500)) if show else None
 
 def save_as_xlsx(df, file_path, show: bool = False):
     def get_col_widths(dataframe):
@@ -171,13 +169,46 @@ def resources_report():
     print(f"Report saved at {report_path}/{Constants.TODAY.value}-resources-report.xlsx")
 
 
+def operator_x_resource():
+    Constants.REPORTS_PATH.value.mkdir(parents=True, exist_ok=True)
+    report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-needed_operator_resource.xlsx'
+    resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))) \
+        .rename(columns={"name": "operator"}) \
+        .set_index(keys=['operator', 'stars', 'elite', 'level', 'overall_percentage'])
+    resume = resume[['needed_resources', 'needed_lmd', 'needed_yellow_exp']]
+    resume = resume[(resume.needed_resources != {}) & (resume.needed_lmd > 0) & (resume.needed_yellow_exp > 0)]
+    resume = pd.concat([resume.drop(['needed_resources'], axis=1), resume.needed_resources.apply(pd.Series)], axis=1)
+    resume = resume.rename(columns={'needed_yellow_exp': 'Yellow Exp'})
+    resume = resume.fillna(0)
+    resume['LMD'] = resume['LMD'] + resume['needed_lmd']
+    resume.drop(['needed_lmd'], axis=1, inplace=True)
+    resume = resume.reindex(sorted(resume.columns), axis=1)
+    resume = resume.sort_values(by=['overall_percentage', 'stars', 'elite', 'level', 'operator'])
+    resume = resume.astype('int64')
+    resume = resume.replace(0, np.nan)
+    df_to_xlsx_table(
+        df=resume,
+        table_name='NeededResources',
+        file=report_path,
+        header_orientation="diagonal",
+        table_style="Table Style Light 9"
+    )
+    print(f"Report saved at {report_path}")
+
+
 if __name__ == '__main__':
-    print("Generating resources report")
-    resources_report()
-    print("Generating resources report: done")
-    print("Generating resources by operator report")
-    resources_by_operator_report()
-    print("Generating resources by operator report: done")
+    # print("Generating resources report")
+    # resources_report()
+    # print("Generating resources report: done")
+    # print(40 * "#")
+    # print("Generating resources by operator report")
+    # resources_by_operator_report()
+    # print("Generating resources by operator report: done")
+    # print(40*"#")
+    # print("Generating operator_x_resource report")
+    operator_x_resource()
+    print("Generating operator_x_resource report: done")
+
 
 # TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
 # TODO: Calculo de recursos para fabricação de recurso tier 5
