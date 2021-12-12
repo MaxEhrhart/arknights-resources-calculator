@@ -169,21 +169,21 @@ def resources_report():
     print(f"Report saved at {report_path}/{Constants.TODAY.value}-resources-report.xlsx")
 
 
-def operator_x_resource():
+def needed_resource():
     Constants.REPORTS_PATH.value.mkdir(parents=True, exist_ok=True)
-    report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-needed_operator_resource.xlsx'
-    resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))) \
-        .rename(columns={"name": "operator"}) \
-        .set_index(keys=['operator', 'stars', 'elite', 'level', 'overall_percentage'])
+    report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-operator_needed_resource.xlsx'
+    index_columns = ['operator', 'stars', 'elite', 'level', 'skill_level', 'overall_percentage']
+    resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))).rename(columns={"name": "operator"})
+    resume = resume[(resume.overall_percentage > 0) & (resume.overall_percentage < 100)]
+    resume = resume.set_index(keys=index_columns)
     resume = resume[['needed_resources', 'needed_lmd', 'needed_yellow_exp']]
-    resume = resume[(resume.needed_resources != {}) & (resume.needed_lmd > 0) & (resume.needed_yellow_exp > 0)]
     resume = pd.concat([resume.drop(['needed_resources'], axis=1), resume.needed_resources.apply(pd.Series)], axis=1)
     resume = resume.rename(columns={'needed_yellow_exp': 'Yellow Exp'})
     resume = resume.fillna(0)
     resume['LMD'] = resume['LMD'] + resume['needed_lmd']
     resume.drop(['needed_lmd'], axis=1, inplace=True)
     resume = resume.reindex(sorted(resume.columns), axis=1)
-    resume = resume.sort_values(by=['overall_percentage', 'stars', 'elite', 'level', 'operator'])
+    resume = resume.sort_values(by=['overall_percentage', 'stars', 'elite', 'skill_level', 'level', 'operator'])
     resume = resume.astype('int64')
     resume = resume.replace(0, np.nan)
     df_to_xlsx_table(
@@ -196,18 +196,49 @@ def operator_x_resource():
     print(f"Report saved at {report_path}")
 
 
+def spent_resource():
+    Constants.REPORTS_PATH.value.mkdir(parents=True, exist_ok=True)
+    report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-operator_spent_resource.xlsx'
+    index_columns = ['operator', 'stars', 'elite', 'level', 'skill_level', 'overall_percentage']
+    resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))).rename(columns={"name": "operator"})
+    resume = resume[resume.overall_percentage > 0]
+    resume = resume.set_index(keys=index_columns)
+    resume = resume[['spent_resources', 'spent_lmd', 'spent_yellow_exp', 'spent_elite_lmd']]
+    resume = pd.concat([resume.drop(['spent_resources'], axis=1), resume.spent_resources.apply(pd.Series)], axis=1)
+    resume = resume.rename(columns={'spent_yellow_exp': 'Yellow Exp'})
+    resume = resume.fillna(0)
+    resume['LMD'] = resume['spent_elite_lmd'] + resume['spent_lmd']
+    resume.drop(['spent_lmd', 'spent_elite_lmd'], axis=1, inplace=True)
+    resume = resume.reindex(sorted(resume.columns), axis=1)
+    resume = resume.sort_values(by=['overall_percentage', 'stars', 'elite', 'skill_level', 'level', 'operator'])
+    resume = resume.astype('int64')
+    resume = resume.replace(0, np.nan)
+    df_to_xlsx_table(
+        df=resume,
+        table_name='SpentResources',
+        file=report_path,
+        header_orientation="diagonal",
+        table_style="Table Style Light 9"
+    )
+    print(f"Report saved at {report_path}")
+
+
 if __name__ == '__main__':
-    # print("Generating resources report")
-    # resources_report()
-    # print("Generating resources report: done")
-    # print(40 * "#")
-    # print("Generating resources by operator report")
-    # resources_by_operator_report()
-    # print("Generating resources by operator report: done")
-    # print(40*"#")
-    # print("Generating operator_x_resource report")
-    operator_x_resource()
-    print("Generating operator_x_resource report: done")
+    print("Generating resources report")
+    resources_report()
+    print("Generating resources report: done")
+    print(40 * "#")
+    print("Generating resources by operator report")
+    resources_by_operator_report()
+    print("Generating resources by operator report: done")
+    print(40*"#")
+    print("Generating needed_resource report")
+    needed_resource()
+    print("Generating needed_resource report: done")
+    print(40*"#")
+    print("Generating spent_resource report")
+    spent_resource()
+    print("Generating spent_resource report: done")
 
 
 # TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer

@@ -235,6 +235,10 @@ class Operator:
     def lmd_percentage(self):
         return round((self.spent_lmd / self.total_lmd) * 100, 2)
 
+    @property
+    def spent_elite_lmd(self):
+        return self.spent_elite_resources.get('LMD', 0)
+
     # endregion LMD
 
     # region EXP
@@ -304,6 +308,7 @@ class Operator:
             # Percentage
             'material_percentage': self.material_percentage,
             # LMD
+            'spent_elite_lmd': self.spent_elite_lmd,
             'total_lmd': self.total_lmd,
             'spent_lmd': self.spent_lmd,
             'needed_lmd': self.needed_lmd,
