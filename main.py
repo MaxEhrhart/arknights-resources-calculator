@@ -174,7 +174,7 @@ def needed_resource():
     report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-operator_needed_resource.xlsx'
     index_columns = ['operator', 'stars', 'elite', 'level', 'skill_level', 'overall_percentage']
     resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))).rename(columns={"name": "operator"})
-    resume = resume[(resume.overall_percentage > 0) & (resume.overall_percentage < 100)]
+    # resume = resume[(resume.overall_percentage > 0) & (resume.overall_percentage < 100)]
     resume = resume.set_index(keys=index_columns)
     resume = resume[['needed_resources', 'needed_lmd', 'needed_yellow_exp']]
     resume = pd.concat([resume.drop(['needed_resources'], axis=1), resume.needed_resources.apply(pd.Series)], axis=1)
@@ -201,7 +201,7 @@ def spent_resource():
     report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-operator_spent_resource.xlsx'
     index_columns = ['operator', 'stars', 'elite', 'level', 'skill_level', 'overall_percentage']
     resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))).rename(columns={"name": "operator"})
-    resume = resume[resume.overall_percentage > 0]
+    # resume = resume[resume.overall_percentage > 0]
     resume = resume.set_index(keys=index_columns)
     resume = resume[['spent_resources', 'spent_lmd', 'spent_yellow_exp', 'spent_elite_lmd']]
     resume = pd.concat([resume.drop(['spent_resources'], axis=1), resume.spent_resources.apply(pd.Series)], axis=1)
@@ -227,10 +227,6 @@ if __name__ == '__main__':
     print("Generating resources report")
     resources_report()
     print("Generating resources report: done")
-    print(40 * "#")
-    print("Generating resources by operator report")
-    resources_by_operator_report()
-    print("Generating resources by operator report: done")
     print(40*"#")
     print("Generating needed_resource report")
     needed_resource()
@@ -245,5 +241,3 @@ if __name__ == '__main__':
 # TODO: Calculo de recursos para fabricação de recurso tier 5
 # TODO: calculo de lmd necessario na fabricação
 # TODO: Coluna total de LMD e recursos após fabricacao - Soma dos custo total em lmd de fabricacao mais os a quantidade
-#  total de recursos
-#  matriz operador x recurso
