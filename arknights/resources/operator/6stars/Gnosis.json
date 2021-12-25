@@ -1,0 +1,312 @@
+{
+    "name": "Gnosis",
+    "stars": 6,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            },
+            {
+                "level": 2,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 5
+                    },
+                    {
+                        "name": "Ester",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Oriron Shard",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Oriron",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Polyketon",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Orirock Cube",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Crystalline Component",
+                        "quantity": 6
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 3",
+                        "quantity": 8
+                    },
+                    {
+                        "name": "Semi-natural Solvent",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "RMA70-12",
+                        "quantity": 4
+                    }
+                ]
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 8
+                            },
+                            {
+                                "name": "RMA70-24",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Manganese Ore",
+                                "quantity": 9
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "Optimized Device",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 6
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "Crystalline Electroassembly",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Grindstone Pentahydrate",
+                                "quantity": 4
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 2,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 8
+                            },
+                            {
+                                "name": "Crystalline Circuit",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Coagulating Gel",
+                                "quantity": 3
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "White Horse Kohl",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 8
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "Bipolar Nanoflake",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Manganese Trihydrate",
+                                "quantity": 5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 3,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 8
+                            },
+                            {
+                                "name": "Cutting Stock Solution",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Integrated Device",
+                                "quantity": 5
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 12
+                            },
+                            {
+                                "name": "Manganese Trihydrate",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Refined Solvent",
+                                "quantity": 8
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 15
+                            },
+                            {
+                                "name": "Polymerization Preparation",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "White Horse Kohl",
+                                "quantity": 7
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 30000
+                },
+                {
+                    "name": "Supporter Chip",
+                    "quantity": 5
+                },
+                {
+                    "name": "Sugar",
+                    "quantity": 8
+                },
+                {
+                    "name": "Oriron",
+                    "quantity": 5
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 180000
+                },
+                {
+                    "name": "Supporter Dualchip",
+                    "quantity": 4
+                },
+                {
+                    "name": "Crystalline Electroassembly",
+                    "quantity": 3
+                },
+                {
+                    "name": "Incandescent Alloy Block",
+                    "quantity": 7
+                }
+            ]
+        }
+    ]
+}

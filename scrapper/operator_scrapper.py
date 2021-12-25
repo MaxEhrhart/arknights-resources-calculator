@@ -112,7 +112,7 @@ if __name__ == "__main__":
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')  # Last I checked this was necessary.
     with Chrome(service=Service("chromedriver95.exe"), options=options) as driver:
-        for iteration, operator in enumerate(operators[196:], start=1):
+        for iteration, operator in enumerate(operators[206:], start=1):
             print(f"Progress: {iteration}/{len(operators)}.")
             print(f"Scraping operator {operator['name']}")
 
