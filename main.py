@@ -240,4 +240,4 @@ if __name__ == '__main__':
 # TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
 # TODO: Calculo de recursos para fabricação de recurso tier 5
 # TODO: calculo de lmd necessario na fabricação
-# TODO: Coluna total de LMD e recursos após fabricacao - Soma dos custo total em lmd de fabricacao mais os a quantidade
+# TODO: Coluna total de LMD recursos após fabricacao - Soma dos custo total em lmd de fabricacao mais os a quantidade
