@@ -223,6 +223,86 @@ def spent_resource():
     print(f"Report saved at {report_path}")
 
 
+def total_resource():
+    def get_total_resources():
+        index_columns = ['operator', 'stars', 'elite', 'level', 'skill_level', 'overall_percentage']
+        resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))).rename(columns={"name": "operator"})
+        resume = resume.set_index(keys=index_columns)
+        resume = resume[['total_resources', 'total_lmd', 'total_yellow_exp']]
+        resume = pd.concat([resume.drop(['total_resources'], axis=1), resume.total_resources.apply(pd.Series)], axis=1)
+        resume['LMD'] = resume['total_lmd'] + resume['LMD']
+        resume.drop(columns=['total_lmd'], inplace=True)
+        resume = resume.rename(columns={'total_yellow_exp': 'Yellow Exp'})
+        resume = resume.fillna(0)
+        resume = resume.sum(axis=0).to_frame(name='Quantity')
+        resume.index.names = ['Resource']
+        resume['Quantity'] = resume.Quantity.astype('int64')
+        resume = resume.sort_values(by=['Resource'])
+        resume = resume.replace(0, np.nan)
+        return resume
+
+    def get_spent_resources():
+        index_columns = ['operator', 'stars', 'elite', 'level', 'skill_level', 'overall_percentage']
+        resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))).rename(columns={"name": "operator"})
+        # resume = resume[resume.overall_percentage > 0]
+        resume = resume.set_index(keys=index_columns)
+        resume = resume[['spent_resources', 'spent_lmd', 'spent_yellow_exp', 'spent_elite_lmd']]
+        resume = pd.concat([resume.drop(['spent_resources'], axis=1), resume.spent_resources.apply(pd.Series)], axis=1)
+        resume = resume.rename(columns={'spent_yellow_exp': 'Yellow Exp'})
+        resume = resume.fillna(0)
+        resume['LMD'] = resume['spent_elite_lmd'] + resume['spent_lmd']
+        resume.drop(['spent_lmd', 'spent_elite_lmd'], axis=1, inplace=True)
+        resume = resume.fillna(0)
+        resume = resume.sum(axis=0).to_frame(name='Quantity')
+        resume.index.names = ['Resource']
+        resume['Quantity'] = resume.Quantity.astype('int64')
+        resume = resume.sort_values(by=['Resource'])
+        resume = resume.replace(0, np.nan)
+        return resume
+
+    def get_needed_resource():
+        Constants.REPORTS_PATH.value.mkdir(parents=True, exist_ok=True)
+        report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-operator_needed_resource.xlsx'
+        index_columns = ['operator', 'stars', 'elite', 'level', 'skill_level', 'overall_percentage']
+        resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))).rename(columns={"name": "operator"})
+        # resume = resume[(resume.overall_percentage > 0) & (resume.overall_percentage < 100)]
+        resume = resume.set_index(keys=index_columns)
+        resume = resume[['needed_resources', 'needed_lmd', 'needed_yellow_exp']]
+        resume = pd.concat([resume.drop(['needed_resources'], axis=1), resume.needed_resources.apply(pd.Series)],
+                           axis=1)
+        resume = resume.rename(columns={'needed_yellow_exp': 'Yellow Exp'})
+        resume = resume.fillna(0)
+        resume['LMD'] = resume['LMD'] + resume['needed_lmd']
+        resume.drop(['needed_lmd'], axis=1, inplace=True)
+        resume = resume.fillna(0)
+        resume = resume.sum(axis=0).to_frame(name='Quantity')
+        resume.index.names = ['Resource']
+        resume['Quantity'] = resume.Quantity.astype('int64')
+        resume = resume.sort_values(by=['Resource'])
+        resume = resume.replace(0, np.nan)
+        return resume
+
+    Constants.REPORTS_PATH.value.mkdir(parents=True, exist_ok=True)
+    report_path = f'{Constants.REPORTS_PATH.value}/{Constants.TODAY.value}-total_resources.xlsx'
+    total_resources = get_total_resources()
+    spent_resources = get_spent_resources()
+    needed_resources = get_needed_resource()
+    resume = calc_resume(total_resources, spent_resources, needed_resources)
+    resume = resume.fillna(0)
+    resume.Spent = resume.Spent.astype('int64')
+    resume.LMD = resume.LMD.astype('int64')
+    resume.Tier = resume.Tier.astype('int64')
+    resume.Percentage = (resume.Percentage * 100).round(2)
+    df_to_xlsx_table(
+        df=resume,
+        table_name='TotalResources',
+        file=report_path,
+        header_orientation="diagonal",
+        table_style="Table Style Light 9"
+    )
+    print(f"Report saved at {report_path}")
+
+
 if __name__ == '__main__':
     print("Generating resources report")
     resources_report()
@@ -235,6 +315,10 @@ if __name__ == '__main__':
     print("Generating spent_resource report")
     spent_resource()
     print("Generating spent_resource report: done")
+    print(40 * "#")
+    print("Generating resources report")
+    total_resource()
+    print("Generating resources report: done")
 
 
 # TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
