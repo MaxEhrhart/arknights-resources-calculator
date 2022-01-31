@@ -158,15 +158,15 @@ Aak;6;1;55;7;0;0;0
 Angelina;6;2;45;7;2;0;0
 Archetto;6;2;15;7;0;0;0
 Ash;6;1;80;7;0;0;0
-Bagpipe;6;2;45;7;0;2;3
+Bagpipe;6;2;70;7;0;3;3
 Blaze;6;2;55;7;0;3;0
 Blemishine;6;2;15;7;0;0;0
-Carnelian;6;1;56;7;0;0;0
+Carnelian;6;1;80;7;0;0;0
 Ceobe;6;2;15;7;0;0;0
 Ch'en;6;2;15;7;0;0;0
-Ch'en the Holungday;6;2;35;7;0;0;3
+Ch'en the Holungday;6;2;40;7;0;0;3
 Dusk;6;2;15;7;0;0;0
-Eunectes;6;1;55;7;0;0;0
+Eunectes;6;1;67;7;0;0;0
 Exusiai;6;2;90;7;0;0;3
 Eyjafjalla;6;2;45;7;0;3;3
 Fartooth;6;0;1;0;0;0;0
@@ -175,17 +175,17 @@ Gladiia;6;2;15;7;0;0;0
 Hellagur;6;1;55;7;0;0;0
 Hoshiguma;6;2;45;7;0;3;0
 Ifrit;6;2;40;7;0;3;0
-Kal'tsit;6;2;15;7;0;0;0
+Kal'tsit;6;2;30;7;0;0;1
 Magallan;6;2;15;7;0;0;0
 Mizuki;6;1;55;7;0;0;0
 Mostima;6;1;55;7;0;0;0
-Mountain;6;2;45;7;0;1;0
-Mudrock;6;2;40;7;0;3;0
+Mountain;6;2;50;7;0;3;0
+Mudrock;6;2;55;7;0;3;0
 Nearl the Radiant Knight;6;0;1;0;0;0;0
 Nian;6;2;55;7;0;0;0
 Nightingale;6;2;30;7;0;1;0
 Passenger;6;2;15;7;0;0;0
-Phantom;6;2;15;7;0;0;0
+Phantom;6;2;20;7;0;0;0
 Rosa;6;2;45;7;0;0;0
 Rosmontis;6;2;45;7;0;0;0
 Saga;6;2;90;7;3;3;3
@@ -196,13 +196,13 @@ Shining;6;2;30;7;0;3;0
 Siege;6;2;15;7;0;0;0
 SilverAsh;6;2;45;7;0;0;3
 Skadi;6;2;15;7;0;0;0
-Skadi the Corrupting Heart;6;2;45;7;0;1;0
+Skadi the Corrupting Heart;6;2;50;7;0;1;0
 Surtr;6;2;90;7;3;3;3
 Suzuran;6;2;15;7;0;0;0
-Thorns;6;2;50;7;0;0;3
+Thorns;6;2;55;7;0;0;3
 W;6;2;30;7;0;0;0
 Weedy;6;2;15;7;0;0;0
 Aurora;5;0;1;0;0;0;0
 Kjera;5;0;1;0;0;0;0
 Gnosis;6;0;1;0;0;0;0
-Pallas;6;1;80;7;0;0;0
+Pallas;6;2;20;7;0;0;0
