@@ -1,0 +1,248 @@
+{
+    "name": "Nine-colored Deer",
+    "stars": 5,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            },
+            {
+                "level": 2,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Sugar Substitute",
+                        "quantity": 7
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Polyester",
+                        "quantity": 3
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Oriron",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Incandescent Alloy",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 3",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Oriron Cluster",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Grindstone",
+                        "quantity": 3
+                    }
+                ]
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 5
+                            },
+                            {
+                                "name": "RMA70-24",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Manganese Ore",
+                                "quantity": 2
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Keton Colloid",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Refined Solvent",
+                                "quantity": 5
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 10
+                            },
+                            {
+                                "name": "Crystalline Electroassembly",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Refined Solvent",
+                                "quantity": 3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 2,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 5
+                            },
+                            {
+                                "name": "Crystalline Circuit",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Coagulating Gel",
+                                "quantity": 1
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Optimized Device",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 3
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 10
+                            },
+                            {
+                                "name": "Polymerization Preparation",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Cutting Stock Solution",
+                                "quantity": 4
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 20000
+                },
+                {
+                    "name": "Supporter Chip",
+                    "quantity": 4
+                },
+                {
+                    "name": "Orirock Cube",
+                    "quantity": 6
+                },
+                {
+                    "name": "Polyester",
+                    "quantity": 3
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 120000
+                },
+                {
+                    "name": "Supporter Dualchip",
+                    "quantity": 3
+                },
+                {
+                    "name": "Manganese Trihydrate",
+                    "quantity": 7
+                },
+                {
+                    "name": "Crystalline Component",
+                    "quantity": 14
+                }
+            ]
+        }
+    ]
+}

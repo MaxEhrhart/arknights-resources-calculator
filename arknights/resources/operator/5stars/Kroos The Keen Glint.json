@@ -1,0 +1,248 @@
+{
+    "name": "Kroos The Keen Glint",
+    "stars": 5,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            },
+            {
+                "level": 2,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 4
+                    }
+                ]
+            },
+            {
+                "level": 3,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 1",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Diketon",
+                        "quantity": 5
+                    }
+                ]
+            },
+            {
+                "level": 4,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Device",
+                        "quantity": 2
+                    }
+                ]
+            },
+            {
+                "level": 5,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Orirock Cube",
+                        "quantity": 8
+                    }
+                ]
+            },
+            {
+                "level": 6,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 2",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Integrated Device",
+                        "quantity": 3
+                    }
+                ]
+            },
+            {
+                "level": 7,
+                "resources": [
+                    {
+                        "name": "Skill Summary - 3",
+                        "quantity": 6
+                    },
+                    {
+                        "name": "Loxic Kohl",
+                        "quantity": 3
+                    },
+                    {
+                        "name": "Aketon",
+                        "quantity": 3
+                    }
+                ]
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 5
+                            },
+                            {
+                                "name": "Incandescent Alloy Block",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "RMA70-12",
+                                "quantity": 3
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Crystalline Circuit",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Polymerized Gel",
+                                "quantity": 5
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 10
+                            },
+                            {
+                                "name": "Bipolar Nanoflake",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Optimized Device",
+                                "quantity": 3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "skill": 2,
+                "upgrade": [
+                    {
+                        "level": 1,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 5
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Semi-natural Solvent",
+                                "quantity": 1
+                            }
+                        ]
+                    },
+                    {
+                        "level": 2,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 6
+                            },
+                            {
+                                "name": "Cutting Stock Solution",
+                                "quantity": 3
+                            },
+                            {
+                                "name": "Optimized Device",
+                                "quantity": 4
+                            }
+                        ]
+                    },
+                    {
+                        "level": 3,
+                        "resources": [
+                            {
+                                "name": "Skill Summary - 3",
+                                "quantity": 10
+                            },
+                            {
+                                "name": "Polymerization Preparation",
+                                "quantity": 4
+                            },
+                            {
+                                "name": "Oriron Block",
+                                "quantity": 4
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 20000
+                },
+                {
+                    "name": "Sniper Chip",
+                    "quantity": 4
+                },
+                {
+                    "name": "Polyester",
+                    "quantity": 5
+                },
+                {
+                    "name": "Polyketon",
+                    "quantity": 2
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "resources": [
+                {
+                    "name": "LMD",
+                    "quantity": 120000
+                },
+                {
+                    "name": "Sniper Dualchip",
+                    "quantity": 3
+                },
+                {
+                    "name": "Crystalline Circuit",
+                    "quantity": 7
+                },
+                {
+                    "name": "Oriron Cluster",
+                    "quantity": 10
+                }
+            ]
+        }
+    ]
+}
