@@ -178,7 +178,7 @@ def needed_resource():
     resume = resume.set_index(keys=index_columns)
     resume = resume[['needed_resources', 'needed_lmd', 'needed_yellow_exp']]
     resume = pd.concat([resume.drop(['needed_resources'], axis=1), resume.needed_resources.apply(pd.Series)], axis=1)
-    resume = resume.rename(columns={'needed_yellow_exp': 'Yellow Exp'})
+    resume = resume.rename(columns={'needed_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
     resume = resume.fillna(0)
     resume['LMD'] = resume['LMD'] + resume['needed_lmd']
     resume.drop(['needed_lmd'], axis=1, inplace=True)
@@ -205,7 +205,7 @@ def spent_resource():
     resume = resume.set_index(keys=index_columns)
     resume = resume[['spent_resources', 'spent_lmd', 'spent_yellow_exp', 'spent_elite_lmd']]
     resume = pd.concat([resume.drop(['spent_resources'], axis=1), resume.spent_resources.apply(pd.Series)], axis=1)
-    resume = resume.rename(columns={'spent_yellow_exp': 'Yellow Exp'})
+    resume = resume.rename(columns={'spent_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
     resume = resume.fillna(0)
     resume['LMD'] = resume['spent_elite_lmd'] + resume['spent_lmd']
     resume.drop(['spent_lmd', 'spent_elite_lmd'], axis=1, inplace=True)
@@ -232,7 +232,7 @@ def total_resource():
         resume = pd.concat([resume.drop(['total_resources'], axis=1), resume.total_resources.apply(pd.Series)], axis=1)
         resume['LMD'] = resume['total_lmd'] + resume['LMD']
         resume.drop(columns=['total_lmd'], inplace=True)
-        resume = resume.rename(columns={'total_yellow_exp': 'Yellow Exp'})
+        resume = resume.rename(columns={'total_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
         resume = resume.fillna(0)
         resume = resume.sum(axis=0).to_frame(name='Quantity')
         resume.index.names = ['Resource']
@@ -248,7 +248,7 @@ def total_resource():
         resume = resume.set_index(keys=index_columns)
         resume = resume[['spent_resources', 'spent_lmd', 'spent_yellow_exp', 'spent_elite_lmd']]
         resume = pd.concat([resume.drop(['spent_resources'], axis=1), resume.spent_resources.apply(pd.Series)], axis=1)
-        resume = resume.rename(columns={'spent_yellow_exp': 'Yellow Exp'})
+        resume = resume.rename(columns={'spent_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
         resume = resume.fillna(0)
         resume['LMD'] = resume['spent_elite_lmd'] + resume['spent_lmd']
         resume.drop(['spent_lmd', 'spent_elite_lmd'], axis=1, inplace=True)
@@ -270,7 +270,7 @@ def total_resource():
         resume = resume[['needed_resources', 'needed_lmd', 'needed_yellow_exp']]
         resume = pd.concat([resume.drop(['needed_resources'], axis=1), resume.needed_resources.apply(pd.Series)],
                            axis=1)
-        resume = resume.rename(columns={'needed_yellow_exp': 'Yellow Exp'})
+        resume = resume.rename(columns={'needed_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
         resume = resume.fillna(0)
         resume['LMD'] = resume['LMD'] + resume['needed_lmd']
         resume.drop(['needed_lmd'], axis=1, inplace=True)

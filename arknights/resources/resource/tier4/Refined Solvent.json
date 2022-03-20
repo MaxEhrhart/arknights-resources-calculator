@@ -1,0 +1,20 @@
+{
+    "name": "Refined Solvent",
+    "tier": 4,
+    "droppable": true,
+    "lmd": 300,
+    "recipe": [
+        {
+            "name": "Semi-natural Solvent",
+            "quantity": 1
+        },
+        {
+            "name": "Compound Cutting Fluid",
+            "quantity": 1
+        },
+        {
+            "name": "Coagulating Gel",
+            "quantity": 1
+        }
+    ]
+}
