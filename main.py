@@ -1,4 +1,5 @@
 # encoding: utf-8
+import sys
 from collections import Counter
 from datetime import datetime, date
 from enum import Enum
@@ -16,8 +17,9 @@ from arknights.resource import get_resources_data
 
 
 class Constants(Enum):
-    REPORTS_PATH: Path = Path(f'files/reports')
+    REPORTS_PATH: Path = Path(f'{sys.argv[0].rsplit("/", maxsplit=1)[0]}/files/reports')
     TODAY: date = datetime.now(pytz.timezone('America/Sao_Paulo')).date()
+    BACKSLASH: str = '\\'
 
 
 operators = load_operators('files/user_operators.csv')
@@ -133,7 +135,7 @@ def resources_by_operator_report():
     ]
     resume = resume[column_order]
     resume.to_excel(report_path)
-    print(f"Report saved at {report_path}")
+    print(f"Report saved at {report_path.replace(Constants.BACKSLASH.value, '/')}")
 
 
 def get_operator_attribute_resource(attribute):
@@ -166,7 +168,8 @@ def resources_report():
 
     print("Saving as xlsx.")
     save_as_xlsx(resume, f'{report_path}/{Constants.TODAY.value}-resources-report.xlsx', show=True)
-    print(f"Report saved at {report_path}/{Constants.TODAY.value}-resources-report.xlsx")
+    print(f"Report saved at {report_path.replace(Constants.BACKSLASH.value, '/')}"
+          f"/{Constants.TODAY.value}-resources-report.xlsx")
 
 
 def needed_resource():
@@ -177,7 +180,13 @@ def needed_resource():
     # resume = resume[(resume.overall_percentage > 0) & (resume.overall_percentage < 100)]
     resume = resume.set_index(keys=index_columns)
     resume = resume[['needed_resources', 'needed_lmd', 'needed_yellow_exp']]
-    resume = pd.concat([resume.drop(['needed_resources'], axis=1), resume.needed_resources.apply(pd.Series)], axis=1)
+
+    # Transforms dict column to resource column
+    resume.reset_index(inplace=True)
+    resume = resume.join(pd.json_normalize(resume['needed_resources']))
+    resume.drop(columns=['needed_resources'], inplace=True)
+    resume = resume.set_index(keys=index_columns)
+
     resume = resume.rename(columns={'needed_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
     resume = resume.fillna(0)
     resume['LMD'] = resume['LMD'] + resume['needed_lmd']
@@ -193,7 +202,7 @@ def needed_resource():
         header_orientation="diagonal",
         table_style="Table Style Light 9"
     )
-    print(f"Report saved at {report_path}")
+    print(f"Report saved at {report_path.replace(Constants.BACKSLASH.value, '/')}")
 
 
 def spent_resource():
@@ -204,7 +213,13 @@ def spent_resource():
     # resume = resume[resume.overall_percentage > 0]
     resume = resume.set_index(keys=index_columns)
     resume = resume[['spent_resources', 'spent_lmd', 'spent_yellow_exp', 'spent_elite_lmd']]
-    resume = pd.concat([resume.drop(['spent_resources'], axis=1), resume.spent_resources.apply(pd.Series)], axis=1)
+
+    # Transforma coluna de dicionario em colunas de recursos
+    resume.reset_index(inplace=True)
+    resume = resume.join(pd.json_normalize(resume['spent_resources']))
+    resume.drop(columns=['spent_resources'], inplace=True)
+    resume = resume.set_index(keys=index_columns)
+
     resume = resume.rename(columns={'spent_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
     resume = resume.fillna(0)
     resume['LMD'] = resume['spent_elite_lmd'] + resume['spent_lmd']
@@ -220,7 +235,7 @@ def spent_resource():
         header_orientation="diagonal",
         table_style="Table Style Light 9"
     )
-    print(f"Report saved at {report_path}")
+    print(f"Report saved at {report_path.replace(Constants.BACKSLASH.value, '/')}")
 
 
 def total_resource():
@@ -247,7 +262,13 @@ def total_resource():
         # resume = resume[resume.overall_percentage > 0]
         resume = resume.set_index(keys=index_columns)
         resume = resume[['spent_resources', 'spent_lmd', 'spent_yellow_exp', 'spent_elite_lmd']]
-        resume = pd.concat([resume.drop(['spent_resources'], axis=1), resume.spent_resources.apply(pd.Series)], axis=1)
+
+        # Transforms dict column to resource column
+        resume.reset_index(inplace=True)
+        resume = resume.join(pd.json_normalize(resume['spent_resources']))
+        resume.drop(columns=['spent_resources'], inplace=True)
+        resume = resume.set_index(keys=index_columns)
+
         resume = resume.rename(columns={'spent_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
         resume = resume.fillna(0)
         resume['LMD'] = resume['spent_elite_lmd'] + resume['spent_lmd']
@@ -268,8 +289,13 @@ def total_resource():
         # resume = resume[(resume.overall_percentage > 0) & (resume.overall_percentage < 100)]
         resume = resume.set_index(keys=index_columns)
         resume = resume[['needed_resources', 'needed_lmd', 'needed_yellow_exp']]
-        resume = pd.concat([resume.drop(['needed_resources'], axis=1), resume.needed_resources.apply(pd.Series)],
-                           axis=1)
+
+        # Transforms dict column to resource column
+        resume.reset_index(inplace=True)
+        resume = resume.join(pd.json_normalize(resume['needed_resources']))
+        resume.drop(columns=['needed_resources'], inplace=True)
+        resume = resume.set_index(keys=index_columns)
+
         resume = resume.rename(columns={'needed_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
         resume = resume.fillna(0)
         resume['LMD'] = resume['LMD'] + resume['needed_lmd']
@@ -300,10 +326,11 @@ def total_resource():
         header_orientation="diagonal",
         table_style="Table Style Light 9"
     )
-    print(f"Report saved at {report_path}")
+    print(f"Report saved at {report_path.replace(Constants.BACKSLASH.value, '/')}")
 
 
 if __name__ == '__main__':
+    print()
     print("Generating resources report")
     resources_report()
     print("Generating resources report: done")
