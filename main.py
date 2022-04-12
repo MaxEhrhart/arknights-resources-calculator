@@ -330,11 +330,11 @@ def total_resource():
 
 
 if __name__ == '__main__':
-    print()
-    print("Generating resources report")
-    resources_report()
-    print("Generating resources report: done")
-    print(40*"#")
+    # print()
+    # print("Generating resources report")
+    # resources_report()
+    # print("Generating resources report: done")
+    # print(40*"#")
     print("Generating needed_resource report")
     needed_resource()
     print("Generating needed_resource report: done")
@@ -348,6 +348,7 @@ if __name__ == '__main__':
     print("Generating resources report: done")
 
 
+# TODO: Modules
 # TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
 # TODO: Calculo de recursos para fabricação de recurso tier 5
 # TODO: calculo de lmd necessario na fabricação
