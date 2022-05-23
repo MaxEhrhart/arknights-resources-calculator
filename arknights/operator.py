@@ -210,7 +210,10 @@ class Operator:
 
     @property
     def material_percentage(self):
-        return round((self.spent_material_quantity / self.total_material_quantity) * 100, 2)
+        if self.total_material_quantity == 0:
+            return 100.00
+        else:
+            return round((self.spent_material_quantity / self.total_material_quantity) * 100, 2)
 
     # endregion
 

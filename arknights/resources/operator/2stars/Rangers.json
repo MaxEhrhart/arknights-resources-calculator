@@ -1,0 +1,28 @@
+{
+    "name": "Rangers",
+    "stars": 2,
+    "skills": {
+        "upgrade": [
+            {
+                "level": 1,
+                "resources": []
+            }
+        ],
+        "mastery": [
+            {
+                "skill": 1,
+                "upgrade": []
+            }
+        ]
+    },
+    "elite": [
+        {
+            "level": 1,
+            "resources": []
+        },
+        {
+            "level": 2,
+            "resources": {}
+        }
+    ]
+}

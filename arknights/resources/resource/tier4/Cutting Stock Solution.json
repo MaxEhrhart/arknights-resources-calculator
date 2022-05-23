@@ -1,0 +1,20 @@
+{
+    "name": "Cutting Stock Solution",
+    "tier": 4,
+    "droppable": true,
+    "lmd": 300,
+    "recipe": [
+        {
+            "name": "Compound Cutting Fluid",
+            "quantity": 1
+        },
+        {
+            "name": "Crystalline Component",
+            "quantity": 1
+        },
+        {
+            "name": "RMA70-12",
+            "quantity": 1
+        }
+    ]
+}

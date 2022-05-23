@@ -244,7 +244,9 @@ def total_resource():
         resume = pd.DataFrame(list(map(lambda op: op.to_dict(), operators))).rename(columns={"name": "operator"})
         resume = resume.set_index(keys=index_columns)
         resume = resume[['total_resources', 'total_lmd', 'total_yellow_exp']]
-        resume = pd.concat([resume.drop(['total_resources'], axis=1), resume.total_resources.apply(pd.Series)], axis=1)
+        resume = pd.concat(
+            [resume.drop(['total_resources'], axis=1), resume.total_resources.apply(pd.Series, dtype='int')],
+            axis=1)
         resume['LMD'] = resume['total_lmd'] + resume['LMD']
         resume.drop(columns=['total_lmd'], inplace=True)
         resume = resume.rename(columns={'total_yellow_exp': 'Tactical Battle Record - Yellow Exp'})
@@ -338,7 +340,7 @@ if __name__ == '__main__':
     print("Generating needed_resource report")
     needed_resource()
     print("Generating needed_resource report: done")
-    print(40*"#")
+    print(40 * "#")
     print("Generating spent_resource report")
     spent_resource()
     print("Generating spent_resource report: done")
@@ -346,7 +348,6 @@ if __name__ == '__main__':
     print("Generating resources report")
     total_resource()
     print("Generating resources report: done")
-
 
 # TODO: Modules
 # TODO: Testes Unitários https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
