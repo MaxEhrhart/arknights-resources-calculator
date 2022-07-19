@@ -9,9 +9,10 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
-import json
 import csv
 from selenium.webdriver.chrome.service import Service
+# import ruamel.yaml
+
 
 def get_materials(soup):
     items = map(lambda x: x.contents[0], soup.findAll(class_="item-name", recursive=True))
@@ -29,17 +30,36 @@ def get_elite_resources(stars):
             resources.append({"name": name, "quantity": quantity})
         return resources
 
+    wait = WebDriverWait(driver, delay)
     elite1_resources = dict()
     elite2_resources = dict()
     if stars >= 3:
-        element = WebDriverWait(driver, delay).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="elite1Stats"]/div[2]/div[2]')))
-        elite1_resources = parse(element)
+        retry, max_retries = 0, 3
+        while retry <= max_retries:
+            try:
+                element = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="elite1Stats"]/div[2]/div[2]')))
+                elite1_resources = parse(element)
+                break
+            except TimeoutException:
+                driver.refresh()
+                retry += 1
+                print(f'{retry=}')
+                if retry == max_retries:
+                    raise TimeoutException
 
     if stars > 3:
-        element = WebDriverWait(driver, delay).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="elite2Stats"]/div[2]/div[2]')))
-        elite2_resources = parse(element)
+        retry, max_retries = 0, 3
+        while retry <= max_retries:
+            try:
+                element = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="elite2Stats"]/div[2]/div[2]')))
+                elite2_resources = parse(element)
+                break
+            except TimeoutException:
+                driver.refresh()
+                retry += 1
+                print(f'{retry=}')
+                if retry == max_retries:
+                    raise TimeoutException
 
     return [{"level": 1, "resources": elite1_resources}, {"level": 2, "resources": elite2_resources}]
 
@@ -111,8 +131,8 @@ if __name__ == "__main__":
     options = Options()
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')  # Last I checked this was necessary.
-    with Chrome(service=Service("chromedriver98.exe"), options=options) as driver:
-        for iteration, operator in enumerate(operators[215:], start=1):
+    with Chrome(service=Service("chromedriver103.exe"), options=options) as driver:
+        for iteration, operator in enumerate(operators[224:225], start=1):
             print(f"Progress: {iteration}/{len(operators)}.")
             print(f"Scraping operator {operator['name']}")
 
@@ -121,8 +141,8 @@ if __name__ == "__main__":
             stars = int(operator['stars'])
 
             driver.get(f"https://aceship.github.io/AN-EN-Tags/akhrchars.html?opname={name}")
-            sleep(5)
-            delay = 10
+            sleep(3.5)
+            delay = 5
             try:
                 print("Scraping elite resources.")
                 elite = get_elite_resources(stars=stars)
@@ -142,9 +162,19 @@ if __name__ == "__main__":
                 }
                 op_path = f'{json_path}/{stars}stars/{name}.json'
                 Path(op_path).parent.mkdir(parents=True, exist_ok=True)
+                print(operator_data)
                 with open(op_path, 'w+', encoding='utf-8') as f:
-                    json.dump(operator_data, f, indent=4)
+                    # json.dump(operator_data, f, indent=4)
+                    # yaml = ruamel.yaml.YAML(pure=True, typ='safe')
+                    # yaml.indent(mapping=4, sequence=4, offset=4)
+                    from ruamel import yaml
+                    yaml = yaml.YAML()
+                    # yaml.register_class(User)
+                    # yaml.dump([User('Anthon', 18)], sys.stdout)
+                    # yaml.dump(operator_data, Dumper=yaml.RoundTripDumper, f)
                 print("Done.")
                 print("============================\n")
             except TimeoutException:
                 print("Loading took too much time!")
+
+

@@ -1,59 +1,60 @@
-LMD,385065
-Purchase Certificate,20
+LMD,362007
+Purchase Certificate,69
 Strategic Battle Record,0
 Tactical Battle Record,0
 Frontline Battle Record,0
 Drill Battle Record,0
-Skill Summary - 3,15
-Skill Summary - 2,114
-Skill Summary - 1,93
-D32 Steel,2
-Bipolar Nanoflake,18
-Polymerization Preparation,8
-White Horse Kohl,55
-Loxic Kohl,219
-Manganese Trihydrate,13
-Manganese Ore,6
-Grindstone Pentahydrate,0
-Grindstone,38
-RMA70-24,12
-RMA70-12,11
+Skill Summary - 3,18
+Skill Summary - 2,37
+Skill Summary - 1,38
+Module Data Block,30
+D32 Steel,14
+Bipolar Nanoflake,36
+Polymerization Preparation,5
+White Horse Kohl,27
+Loxic Kohl,194
+Manganese Trihydrate,0
+Manganese Ore,0
+Grindstone Pentahydrate,6
+Grindstone,0
+RMA70-24,0
+RMA70-12,0
 Orirock Concentration,0
-Orirock Cluster,1
-Orirock Cube,2
-Orirock,31
+Orirock Cluster,3
+Orirock Cube,4
+Orirock,2
 Optimized Device,0
-Integrated Device,93
-Device,45
-Damaged Device,15
-Polyester Lump,27
+Integrated Device,63
+Device,3
+Damaged Device,16
+Polyester Lump,28
 Polyester Pack,0
-Polyester,45
-Ester,30
-Sugar Lump,13
-Sugar Pack,5
-Sugar,73
-Sugar Substitute,41
-Oriron Block,1
-Oriron Cluster,0
-Oriron,27
-Oriron Shard,13
+Polyester,6
+Ester,31
+Sugar Lump,10
+Sugar Pack,17
+Sugar,1
+Sugar Substitute,40
+Oriron Block,0
+Oriron Cluster,5
+Oriron,1
+Oriron Shard,22
 Keton Colloid,1
-Aketon,27
-Polyketon,48
+Aketon,15
+Polyketon,7
 Diketon,27
-Polymerized Gel,0
-Coagulating Gel,57
-Incandescent Alloy Block,11
+Polymerized Gel,1
+Coagulating Gel,59
+Incandescent Alloy Block,7
 Incandescent Alloy,0
 Crystalline Electronic Unit,3
 Crystalline Circuit,15
 Crystalline Component,176
-Refined Solvent,18
-Semi-Synthetic Solvent,0
-Cutting Fluid Solution,30
-Compound Cutting Fluid,21
-Chip Catalyst,0
+Refined Solvent,22
+Semi-Synthetic Solvent,1
+Cutting Fluid Solution,27
+Compound Cutting Fluid,16
+Chip Catalyst,2
 Vanguard Dualchip,0
 Guard Dualchip,0
 Sniper Dualchip,0
@@ -64,7 +65,7 @@ Caster Dualchip,5
 Specialist Dualchip,0
 Vanguard Chip Pack,0
 Guard Chip Pack,1
-Sniper Chip Pack,2
+Sniper Chip Pack,3
 Defender Chip Pack,3
 Medic Chip Pack,0
 Supporter Chip Pack,13
@@ -77,4 +78,4 @@ Defender Chip,5
 Medic Chip,0
 Supporter Chip,7
 Caster Chip,5
-Specialist Chip,13
+Specialist Chip,17
