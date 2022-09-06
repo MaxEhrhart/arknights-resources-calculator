@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 import csv
 from selenium.webdriver.chrome.service import Service
 # import ruamel.yaml
+import json
 
 
 def get_materials(soup):
@@ -132,7 +133,7 @@ if __name__ == "__main__":
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')  # Last I checked this was necessary.
     with Chrome(service=Service("chromedriver103.exe"), options=options) as driver:
-        for iteration, operator in enumerate(operators[224:225], start=1):
+        for iteration, operator in enumerate(operators[224:], start=1):
             print(f"Progress: {iteration}/{len(operators)}.")
             print(f"Scraping operator {operator['name']}")
 
@@ -162,13 +163,12 @@ if __name__ == "__main__":
                 }
                 op_path = f'{json_path}/{stars}stars/{name}.json'
                 Path(op_path).parent.mkdir(parents=True, exist_ok=True)
-                print(operator_data)
                 with open(op_path, 'w+', encoding='utf-8') as f:
-                    # json.dump(operator_data, f, indent=4)
+                    json.dump(operator_data, f, indent=4)
                     # yaml = ruamel.yaml.YAML(pure=True, typ='safe')
                     # yaml.indent(mapping=4, sequence=4, offset=4)
-                    from ruamel import yaml
-                    yaml = yaml.YAML()
+                    # from ruamel import yaml
+                    # yaml = yaml.YAML()
                     # yaml.register_class(User)
                     # yaml.dump([User('Anthon', 18)], sys.stdout)
                     # yaml.dump(operator_data, Dumper=yaml.RoundTripDumper, f)
